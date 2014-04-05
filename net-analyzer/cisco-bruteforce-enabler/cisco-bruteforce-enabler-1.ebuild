@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="cisco internal bruteforcer"
 HOMEPAGE="http://packetstormsecurity.org/cisco/enabler.c"
-SRC_URI="http://packetstormsecurity.org/cisco/enabler.c"
+SRC_URI="http://packetstorm.interhost.co.il/cisco/enabler.c"
 
 LICENSE="as-is"
 SLOT="0"

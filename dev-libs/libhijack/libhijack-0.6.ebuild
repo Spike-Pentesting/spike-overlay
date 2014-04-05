@@ -8,7 +8,7 @@ inherit multilib
 
 DESCRIPTION="Make injecting arbitrary code and other shared objects into another process during runtime easy"
 HOMEPAGE="http://0xfeedface.org/"
-SRC_URI="https://github.com/downloads/lattera/libhijack/${P}.tgz"
+SRC_URI="https://github.com/downloads/SoldierX/libhijack/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"

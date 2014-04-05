@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="scan a network for cisco routers with default passwords"
 HOMEPAGE="http://packetstormsecurity.org/cisco/ciscos.c"
-SRC_URI="http://packetstormsecurity.org/cisco/ciscos.c"
+SRC_URI="http://packetstorm.interhost.co.il/cisco/ciscos.c"
 
 LICENSE="as-is"
 SLOT="0"

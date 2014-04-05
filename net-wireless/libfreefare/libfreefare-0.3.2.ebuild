@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-lib/libnfc"
+DEPEND="dev-libs/libnfc"
 RDEPEND="${DEPEND}"
 
 src_install() {

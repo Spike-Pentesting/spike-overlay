@@ -6,7 +6,7 @@ EAPI=2
 
 DESCRIPTION="Perl script which scans cisco routers for common vulnerabilities."
 HOMEPAGE="http://www.scrypt.net/~g0ne"
-SRC_URI="http://www.packetstormsecurity.org/cisco/CiscoAuditingTool-v${PV}.tar.gz"
+SRC_URI="http://packetstorm.interhost.co.il/cisco/CiscoAuditingTool-v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

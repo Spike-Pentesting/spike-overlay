@@ -20,7 +20,7 @@ IUSE="+wep +extra"
 DEPEND=">=virtual/jre-1.5
 	net-wireless/wpa_supplicant
 	wep? ( net-analyzer/macchanger )
-	extra? ( app-crypt/crunch
+	extra? ( app-misc/crunch
 		net-analyzer/wireshark
 		net-analyzer/hydra
 		app-crypt/pyrit )"
