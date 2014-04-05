@@ -8,19 +8,23 @@ inherit versionator
 
 MY_DATE="$(get_version_component_range 3)"
 
-DESCRIPTION="Library for accessing Personal Folder Files."
-HOMEPAGE="http://sf.net/projects/libpff"
-SRC_URI="mirror://sourceforge/project/${PN}/${PN}-alpha/${PN}-alpha-${MY_DATE}/${PN}-alpha-${MY_DATE}.tar.gz"
+DESCRIPTION="Library for providing a basic file input/output abstraction layer."
+HOMEPAGE="https://code.google.com/p/libbfio/"
+SRC_URI="https://googledrive.com/host/0B3fBvzttpiiSTERGV3V4bnZ3dlk/${PN}-alpha-${MY_DATE}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="unicode"
 
-DEPEND="app-forensics/libbfio"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_DATE}"
+
+src_configure() {
+	econf $(use_enable unicode wide-character-type)
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Failed to install"

@@ -7,7 +7,7 @@ inherit eutils subversion
 DESCRIPTION="N00b scripts for aircrack-ng :-)"
 HOMEPAGE="http://www.aircrack-ng.org/"
 SRC_URI=""
-ESVN_REPO_URI="http://trac.aircrack-ng.org/svn/branch/airoscript-ng"
+ESVN_REPO_URI="http://svn.aircrack-ng.org/branch/airoscript-ng/"
 
 LICENSE="GPL-2"
 SLOT="0"
