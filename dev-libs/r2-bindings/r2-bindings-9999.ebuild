@@ -4,11 +4,11 @@
 # /var/cvsroot/gentoo-x86/dev-util/r2-bindings/r2-bindings-9999.ebuild,v 1.0 2011/12/12 06:20:21 akochkov Exp $
 
 EAPI="4"
-inherit base eutils mercurial python
+inherit base eutils git-2 python
 
 DESCRIPTION="Language bindings for radare2"
 HOMEPAGE="http://www.radare.org"
-EHG_REPO_URI="http://radare.org/hg/radare2"
+EGIT_REPO_URI="https://github.com/radare/radare2-bindings.git"
 
 LICENSE="GPL-2"
 SLOT="0"

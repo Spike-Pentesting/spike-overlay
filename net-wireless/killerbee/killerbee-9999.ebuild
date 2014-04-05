@@ -21,7 +21,8 @@ DEPEND="doc? ( dev-python/epydoc )
 RDEPEND="dev-python/pycairo
 	dev-python/pyusb
 	dev-python/pycrypto
-	dev-python/pygtk"
+	dev-python/pygtk
+	dev-python/pyserial"
 
 src_compile() {
 	if use doc; then
