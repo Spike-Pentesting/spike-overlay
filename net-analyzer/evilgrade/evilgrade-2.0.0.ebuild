@@ -43,4 +43,5 @@ src_install() {
 	doins modules/*
 
 	dosbin "${FILESDIR}"/evilgrade
+	fperms +s "${FILESDIR}"/evilgrade
 }
