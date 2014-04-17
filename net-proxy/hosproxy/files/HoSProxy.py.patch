@@ -1,0 +1,17 @@
+--- HoSProxy.py	2007-09-04 07:27:29.000000000 +0200
++++ HoSProxy.py	2012-11-12 02:21:33.803592491 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python
++#!/usr/bin/python
+ #Covered by GPL V2.0
+ # Coded By deepbit (Carlos del Ojo Elias)
+ # email deepbit@gmail.com
+@@ -235,7 +235,7 @@
+ print "\r\nReading configuration file: hosproxy.cfg...\r\n"
+ 
+ config = ConfigParser.ConfigParser()
+-config.readfp(open('hosproxy.cfg'))
++config.readfp(open('/etc/hosproxy.cfg'))
+ config=dict(config.items("CFG"))
+ 		
+ smtp_host=config["local_smtp_server"]
