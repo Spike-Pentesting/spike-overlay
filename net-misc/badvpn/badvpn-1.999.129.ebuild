@@ -19,7 +19,7 @@ RDEPEND="
 	ncd? ( dev-libs/openssl )
 	badvpn? ( dev-libs/nss )
 	ncd? (
-		>=sys-fs/udev-171
+		virtual/udev
 		sys-apps/iproute2
 		net-firewall/iptables
 		net-wireless/wpa_supplicant
