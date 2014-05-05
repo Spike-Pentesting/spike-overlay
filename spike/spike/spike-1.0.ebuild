@@ -200,6 +200,8 @@ DEPEND="
           www-plugins/user-agent-switcher
           www-plugins/web_developer
           www-plugins/xss-me
+          spike/spike-skel
+		  spike/spike-version
 "
 RDEPEND="${DEPEND}"
 pkg_install(){
