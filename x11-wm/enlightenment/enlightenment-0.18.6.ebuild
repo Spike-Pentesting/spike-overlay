@@ -76,12 +76,12 @@ RDEPEND="
 	pam? ( sys-libs/pam )
 	tracker? ( app-misc/tracker )
 	pm-utils? ( sys-power/pm-utils )
-	>=dev-libs/efl-9999[opengl?]
+	>=dev-libs/efl-1.9.2[opengl?]
 
-	eeze? ( >=dev-libs/efl-9999[mount] )
+	eeze? ( >=dev-libs/efl-1.9.2[mount] )
 
-	|| ( >=dev-libs/efl-9999[X] >=dev-libs/efl-9999[xcb] )
-	elementary? ( >=media-libs/elementary-9999 )
+	|| ( >=dev-libs/efl-1.9.2[X] >=dev-libs/efl-1.9.2[xcb] )
+	elementary? ( >=media-libs/elementary-1.9.2 )
 	udev? ( virtual/udev )
 	systemd? ( sys-apps/systemd )
 	wayland? ( dev-libs/efl[wayland?]
@@ -89,7 +89,7 @@ RDEPEND="
 		>=x11-libs/pixman-0.31.1
 		>=x11-libs/libxkbcommon-0.3.1 )
 	enlightenment_modules_mixer? ( media-libs/alsa-lib )
-	enlightenment_modules_physics? ( >=dev-libs/efl-9999[physics] )
+	enlightenment_modules_physics? ( >=dev-libs/efl-1.9.2[physics] )
 	enlightenment_modules_everything? ( app-text/aspell sys-devel/bc )
 
 	debug? ( sys-devel/gdb )

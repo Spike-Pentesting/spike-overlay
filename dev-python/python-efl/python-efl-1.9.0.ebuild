@@ -23,4 +23,4 @@ IUSE=""
 
 RDEPEND="
 	>=dev-python/cython-0.17.3
-	>=dev-libs/efl-9999"
+	>=dev-libs/efl-1.9.2"
