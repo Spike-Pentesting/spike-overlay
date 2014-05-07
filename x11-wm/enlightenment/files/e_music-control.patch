@@ -1,0 +1,10 @@
+--- src/modules/e_mod_main.c.old	2013-06-08 19:44:38.000000000 +0200
++++ src/modules/e_mod_main.c		2013-06-08 19:49:16.805289328 +0200
+@@ -17,6 +17,7 @@
+    {"BMP", "org.mpris.MediaPlayer2.bmp"},
+    {"XMMS2", "org.mpris.MediaPlayer2.xmms2"},
+    {"DeaDBeeF", "org.mpris.MediaPlayer2.deadbeef"},
++   {"Clementine", "org.mpris.MediaPlayer2.clementine"},
+    {"Rhythmbox", "org.gnome.Rhythmbox3"},
+    {NULL, NULL}
+ };
