@@ -98,7 +98,7 @@ E_LIVE_SERVER_DEFAULT_SVN="http://svn.enlightenment.org/svn/e/trunk"
 : ${EFL_GIT_REPO_CATEGORY:=}
 
 E_STATE="release"
-if [[ ${PV/9999} != ${PV} ]] ; then
+#if [[ ${PV/9999} != ${PV} ]] ; then
 	E_STATE="live"
 
 	# TODO live is not a permitted token according to pms.
@@ -126,7 +126,7 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 			inherit git-2
 		fi
 	fi
-fi
+#fi
 
 if [[ -n "${E_PYTHON}" ]]; then
 	PYTHON_DEPEND="2:2.6"
