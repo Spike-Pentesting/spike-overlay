@@ -15,6 +15,8 @@ inherit efl
 DESCRIPTION="Basic widget set, based on EFL with focus mobile touch-screen devices."
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Elementary"
 
+KEYWORDS="~amd64 ~x86"
+
 LICENSE="LGPL-2.1"
 
 IUSE="emap fbcon location opengl quicklaunch sdl static-libs thumbnails video wayland weather X xcb xdg"

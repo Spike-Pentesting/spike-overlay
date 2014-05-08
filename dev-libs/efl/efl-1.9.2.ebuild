@@ -15,6 +15,8 @@ inherit efl
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/EFL"
 
+KEYWORDS="~amd64 ~x86"
+
 IUSE="gnutls openssl glib
 	wayland fbcon sdl egl -pixman
 	gif webp tiff
