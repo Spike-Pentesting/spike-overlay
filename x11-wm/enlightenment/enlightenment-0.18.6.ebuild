@@ -16,6 +16,8 @@ HOMEPAGE="http://www.enlightenment.org/"
 
 SLOT="0.17"
 
+KEYWORDS="~amd64 ~x86"
+
 IUSE="eeze elementary illume2 opengl pam pm-utils +sysactions systemd tracker
 		+udev udisks wayland xinerama xscreensaver debug"
 
