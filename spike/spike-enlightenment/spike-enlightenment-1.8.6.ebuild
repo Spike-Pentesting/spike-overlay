@@ -13,7 +13,6 @@ S="${WORKDIR}"
 
 DEPEND="
 	x11-wm/enlightenment
-	dev-libs/e_dbus
 	x11-terms/terminology
 	dev-libs/efl
 	media-libs/elementary
