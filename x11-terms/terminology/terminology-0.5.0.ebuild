@@ -7,6 +7,7 @@ EAPI="4"
 EFL_USE_GIT="yes"
 EFL_GIT_REPO_CATEGORY="apps"
 EGIT_COMMIT="v${PV}"
+KEYWORDS="~amd64 ~x86"
 
 inherit efl
 
@@ -16,7 +17,7 @@ HOMEPAGE="http://www.enlightenment.org/p.php?p=about/terminology"
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/efl-9999
-	>=media-libs/elementary-9999"
+	dev-libs/efl
+	media-libs/elementary"
 
 DEPEND="${RDEPEND}"
