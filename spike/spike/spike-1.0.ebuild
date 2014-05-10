@@ -201,7 +201,7 @@ DEPEND="
           www-plugins/web_developer
           www-plugins/xss-me
           spike/spike-skel
-		  spike/spike-version
+          spike/spike-version
 "
 RDEPEND="${DEPEND}"
 pkg_install(){
