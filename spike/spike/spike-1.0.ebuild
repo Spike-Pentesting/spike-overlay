@@ -18,7 +18,6 @@ S="${WORKDIR}"
 DEPEND="
           app-admin/eselect-metasploit
           app-antivirus/malheur
-          app-benchmarks/expedite
           app-cdr/dumpet
           app-crypt/SIPcrack
           app-crypt/WiRouterKeyRec
