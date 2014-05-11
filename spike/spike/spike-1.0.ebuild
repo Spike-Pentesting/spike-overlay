@@ -132,7 +132,6 @@ DEPEND="
           net-analyzer/thc-pptp-bruter
           net-analyzer/thc-ssl-dos
           net-analyzer/theHarvester
-          net-analyzer/upnpwn
           net-analyzer/voiphopper
           net-analyzer/waffit
           net-analyzer/wafp
