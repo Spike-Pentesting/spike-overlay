@@ -146,7 +146,6 @@ DEPEND="
           net-analyzer/zarp
           net-fs/afpfs-ng
           net-fs/winexe
-          net-misc/bfgminer
           net-misc/f5vpn-login
           net-misc/faifa
           net-misc/fwknop
