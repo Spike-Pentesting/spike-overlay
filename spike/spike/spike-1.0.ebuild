@@ -78,7 +78,6 @@ DEPEND="
           dev-util/apktool
           dev-util/ati-app-sdk-bin
           dev-util/capstone
-          dev-util/clouseau
           dev-util/collabreate
           dev-util/dex2jar
           dev-util/radare
