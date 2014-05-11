@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/$PN/$PN-linux-$PV.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="${RDEPEND}"
