@@ -12,11 +12,11 @@ IUSE=""
 S="${WORKDIR}"
 
 DEPEND="
-	x11-wm/enlightenment
-	x11-terms/terminology
-	dev-libs/efl
-	media-libs/elementary
-	media-libs/imlib2
+	<x11-wm/enlightenment-9999
+	<x11-terms/terminology-9999
+	<dev-libs/efl-9999
+	<media-libs/elementary-9999
+	<media-libs/imlib2-9999
 "
 RDEPEND="${DEPEND}"
 pkg_install(){
