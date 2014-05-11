@@ -30,19 +30,19 @@ RDEPEND=">=dev-lang/ruby-1.9.2
 	dev-libs/mpfr
 	dev-libs/libyaml
 	virtual/ruby-ffi
-	=dev-ruby/addressable-2.3* >=dev-ruby/addressable-2.3.2
+	>=dev-ruby/addressable-2.3.2
 	dev-ruby/awesome_print
 	>=dev-ruby/nokogiri-1.5.7_rc1
 	>=dev-ruby/terminal-table-1.4.2
 
-	=dev-ruby/arachni-rpc-em-0.2
-	=dev-ruby/typhoeus-0.3* >=dev-ruby/typhoeus-0.3.3
+	>=dev-ruby/arachni-rpc-em-0.2
+	>=dev-ruby/typhoeus-0.3.3
 	dev-ruby/pony
 	dev-ruby/rb-readline
 	>=dev-ruby/sys-proctable-0.9.1
 	dev-ruby/highline
-	=dev-ruby/sinatra-1.3* >=dev-ruby/sinatra-1.3.2
-	=dev-ruby/sinatra-contrib-1.3* >=dev-ruby/sinatra-contrib-1.3.1
+	>=dev-ruby/sinatra-1.3.2
+	>=dev-ruby/sinatra-contrib-1.3.1
 
 	dev-ruby/bundler
 	dev-ruby/rspec
