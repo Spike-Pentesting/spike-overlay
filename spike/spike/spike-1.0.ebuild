@@ -83,7 +83,6 @@ DEPEND="
           dev-util/radare2
           net-analyzer/armitage
           net-analyzer/arpantispoofer
-          net-analyzer/blindelephant
           net-analyzer/bro
           net-analyzer/cisco-auditing-tool
           net-analyzer/cisco-bruteforce-enabler
@@ -104,7 +103,6 @@ DEPEND="
           net-analyzer/loki
           net-analyzer/maketh
           net-analyzer/masscan
-          net-analyzer/metacoretex-ng
           net-analyzer/metasploit
           net-analyzer/nacker
           net-analyzer/netmap
@@ -181,23 +179,11 @@ DEPEND="
           net-wireless/mfoc
           net-wireless/reaver
           net-wireless/rfidtool
-          net-wireless/sdrsharp
           net-wireless/ska
           net-wireless/virtualradar-bin
           net-wireless/wifite
           www-apps/arachni
           www-apps/beef
-          www-plugins/chrome-binary-plugins
-          www-plugins/exif_viewer
-          www-plugins/firecat
-          www-plugins/hackbar
-          www-plugins/hackplugins-meta
-          www-plugins/live-http-headers
-          www-plugins/multi_links
-          www-plugins/ringleader
-          www-plugins/user-agent-switcher
-          www-plugins/web_developer
-          www-plugins/xss-me
           spike/spike-skel
           spike/spike-version
 "
