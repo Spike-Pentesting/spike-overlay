@@ -182,8 +182,6 @@ DEPEND="
           net-wireless/wifite
           www-apps/arachni
           www-apps/beef
-          spike/spike-skel
-          spike/spike-version
 "
 RDEPEND="${DEPEND}"
 pkg_install(){
