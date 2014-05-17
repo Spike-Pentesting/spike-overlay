@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-lang/ruby-1.8"
+RDEPEND="dev-lang/ruby"
 
 S=${WORKDIR}/UPnPwn-${PV}-bh
 
