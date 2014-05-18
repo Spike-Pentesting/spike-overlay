@@ -178,7 +178,6 @@ DEPEND="
           net-wireless/mfoc
           net-wireless/reaver
           net-wireless/rfidtool
-          net-wireless/ska
           net-wireless/virtualradar-bin
           net-wireless/wifite
           www-apps/arachni
