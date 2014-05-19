@@ -12,7 +12,7 @@ SRC_URI="https://nfc-tools.googlecode.com/files/mfoc-0.10.2.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
