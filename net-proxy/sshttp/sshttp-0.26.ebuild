@@ -10,7 +10,7 @@ SRC_URI="http://stealth.openwall.net/networking/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap"
