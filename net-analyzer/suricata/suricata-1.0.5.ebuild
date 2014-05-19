@@ -10,7 +10,7 @@ SRC_URI="http://www.openinfosecfoundation.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="hardened +netfilter cuda debug +prelude caps"
 
 RDEPEND="dev-libs/libyaml
