@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="http"
 
 DEPEND="dev-ruby/rake"
-RDEPEND="net-misc/iaxclient
+RDEPEND="
 	media-sound/sox
 	media-sound/lame
 	dev-ruby/sqlite3
