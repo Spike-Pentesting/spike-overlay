@@ -79,7 +79,6 @@ DEPEND="
           dev-util/capstone
           dev-util/collabreate
           dev-util/dex2jar
-          dev-util/radare
           dev-util/radare2
           net-analyzer/armitage
           net-analyzer/arpantispoofer
