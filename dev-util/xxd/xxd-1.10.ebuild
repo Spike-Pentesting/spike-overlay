@@ -6,7 +6,7 @@ EAPI="2"
 
 DESCRIPTION="Make a hexdump or do the reverse"
 HOMEPAGE="http://ftp.uni-erlangen.de/pub/utilities/etc/?order=s"
-SRC_URI="http://ftp.uni-erlangen.de/pub/utilities/etc/${P}.tar.gz"
+SRC_URI="http://grail.cba.csuohio.edu/~somos/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
