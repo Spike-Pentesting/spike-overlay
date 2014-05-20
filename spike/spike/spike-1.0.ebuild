@@ -152,6 +152,7 @@ DEPEND="
           net-misc/karma
           net-misc/rdesktop-brute
           net-misc/sipp
+          net-misc/httpfs
           net-misc/t50
           net-misc/tcpick
           net-misc/voipong
