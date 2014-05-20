@@ -154,7 +154,6 @@ DEPEND="
           net-misc/t50
           net-misc/tcpick
           net-misc/voipong
-          net-misc/warvox
           net-misc/wlan2eth
           net-proxy/burpsuite
           net-proxy/pbounce
