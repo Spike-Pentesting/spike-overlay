@@ -133,7 +133,7 @@ DEPEND="
           net-analyzer/thc-ssl-dos
           net-analyzer/theHarvester
           net-analyzer/upnpwn
-	  net-analyzer/voiphopper
+          net-analyzer/voiphopper
           net-analyzer/waffit
           net-analyzer/wafp
           net-analyzer/wapiti
@@ -145,7 +145,6 @@ DEPEND="
           net-analyzer/xplico
           net-analyzer/zarp
           net-fs/afpfs-ng
-          net-fs/winexe
           net-misc/f5vpn-login
           net-misc/faifa
           net-misc/fwknop
@@ -182,7 +181,7 @@ DEPEND="
           www-apps/arachni
           www-apps/beef
 "
-#net-wireless/ska e net-wireless/afrag
+#net-wireless/ska e net-wireless/afrag net-fs/winexe removed
 RDEPEND="${DEPEND}"
 pkg_install(){
 einfo "Meta ebuild for dependencies"
