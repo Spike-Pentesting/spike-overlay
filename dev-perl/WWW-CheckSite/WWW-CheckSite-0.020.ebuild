@@ -4,16 +4,15 @@
 
 inherit perl-module
 
-MY_P="${P}"_52
 DESCRIPTION="Interface to an iterator that checks a website"
-SRC_URI="mirror://cpan/authors/id/A/AB/ABELTJE/snapdir/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.auckland.ac.nz/pub/perl/CPAN/authors/id/A/AB/ABELTJE/${P}.tar.gz" #cpan mirrors are dead for that dist
 HOMEPAGE="http://search.cpan.org/dist/WWW-CheckSite/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE=""
-S="${WORKDIR}"/"${MY_P}"
+S="${WORKDIR}"/"${P}"
 
 SRC_TEST="do"
 
