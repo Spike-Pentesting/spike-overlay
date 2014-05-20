@@ -174,7 +174,6 @@ DEPEND="
           net-wireless/horst
           net-wireless/karmetasploit
           net-wireless/killerbee
-          net-wireless/mfoc
           net-wireless/reaver
           net-wireless/rfidtool
           net-wireless/virtualradar-bin
@@ -182,7 +181,7 @@ DEPEND="
           www-apps/arachni
           www-apps/beef
 "
-#net-wireless/ska e net-wireless/afrag net-fs/winexe removed
+#net-wireless/ska e net-wireless/afrag net-fs/winexe net-wireless/mfoc removed
 RDEPEND="${DEPEND}"
 pkg_install(){
 einfo "Meta ebuild for dependencies"
