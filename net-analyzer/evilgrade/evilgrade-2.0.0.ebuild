@@ -3,8 +3,8 @@
 # $Header: $
 
 DESCRIPTION="A modular framework that takes advantage of poor upgrade implementations by injecting fake updates."
-SRC_URI="http://www.infobyte.com.ar/down/isr-${P}.tar.gz"
-HOMEPAGE="http://www.infobyte.com.ar/developments.html"
+SRC_URI="http://www.infobytesec.com/down/isr-${P}.tar.gz"
+HOMEPAGE="http://www.infobytesec.com/developments.html"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
