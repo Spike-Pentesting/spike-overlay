@@ -148,7 +148,6 @@ DEPEND="
           net-misc/f5vpn-login
           net-misc/faifa
           net-misc/fwknop
-          net-misc/iaxclient
           net-misc/karma
           net-misc/rdesktop-brute
           net-misc/sipp
