@@ -164,7 +164,6 @@ DEPEND="
           net-proxy/redsocks
           net-proxy/sshttp
           net-proxy/zaproxy
-          net-wireless/afrag
           net-wireless/bt-audit
           net-wireless/btscanner
           net-wireless/bully
@@ -183,6 +182,7 @@ DEPEND="
           www-apps/arachni
           www-apps/beef
 "
+#net-wireless/ska e net-wireless/afrag
 RDEPEND="${DEPEND}"
 pkg_install(){
 einfo "Meta ebuild for dependencies"
