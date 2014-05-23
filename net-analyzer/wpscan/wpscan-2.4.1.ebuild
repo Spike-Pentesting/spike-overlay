@@ -18,7 +18,7 @@ IUSE="hardened test"
 DEPEND=""
 RDEPEND="dev-lang/ruby
 	dev-ruby/rubygems
-	>=dev-ruby/typhoeus-0.6.8
+	dev-ruby/typhoeus
 	dev-ruby/nokogiri
 	dev-ruby/json
 	dev-ruby/terminal-table
