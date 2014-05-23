@@ -1,0 +1,20 @@
+# ChangeLog for app-forensics/yim2text
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  19 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  yim2text-0.1.0.ebuild:
+  Forced move to EAPI-3 from distutils eclass
+
+  20 Jul 2010; Johan Bergström (jbergstroem) <bugs@bergstroem.nu>
+  yim2text-0.1.0.ebuild:
+  Replace NEED_PYTHON with PYTHON_DEPEND
+
+  21 Sep 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  yim2text-0.1.0.ebuild:
+  Keyword ~amd64 per request in bug 268519
+
+  25 Mar 2007; Ali Polatel (hawking) <polatel@gmail.com>
+  +yim2text-0.1.0.ebuild, +metadata.xml:
+  New ebuild for bug 123203
+

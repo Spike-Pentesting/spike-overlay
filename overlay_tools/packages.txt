@@ -20,3 +20,4 @@ dev-python/lxml
 net-analyzer/armitage
 dev-db/sqlmap
 dev-python/xdot
+app-forensics/yim2text
