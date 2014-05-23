@@ -34,11 +34,11 @@ S="${WORKDIR}/Weevely-${PV}"
 src_install() {
 	dodir /usr/share/weevely
 	WEEVELY="/usr/share/weevely"
-    cp -R "${S}"/* "${D}/${WEEVELY}" || die "Install failed!"
+    	cp -R "${S}"/* "${D}/${WEEVELY}" || die "Install failed!"
 	dodir /usr/bin
 	insinto /usr/bin
-	echo -e "#!/bin/sh \n\ncd ${WEEVELY}\n" > weevely
-	echo -e "./${PN}.py \$@\n" >> weevely
+	echo -e "#!/bin/sh\n" > weevely
+	echo -e "${WEEVELY}/${PN}.py \$@\n" >> weevely
 	doins weevely
 	fperms +x /usr/bin/weevely
 	fperms +x "${WEEVELY}"/weevely.py
