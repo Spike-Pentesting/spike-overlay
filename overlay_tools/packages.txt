@@ -6,7 +6,7 @@ dev-python/guess-language
 net-misc/sipp
 net-analyzer/set
 dev-python/phply
-app-text/pdfminer
+=app-text/pdfminer-20110515
 dev-python/esmre
 net-analyzer/wpscan
 net-analyzer/whatweb
