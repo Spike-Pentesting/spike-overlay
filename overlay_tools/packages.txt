@@ -15,7 +15,7 @@ dev-python/python-ntlm
 net-wireless/mfoc
 net-dialup/freeradius
 net-analyzer/w3af
-app-pda/usbmuxd 
+app-pda/usbmuxd
 dev-python/lxml
 net-analyzer/armitage
 dev-db/sqlmap
