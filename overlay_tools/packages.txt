@@ -24,3 +24,4 @@ dev-util/valabind
 app-exploits/packetstormexploits
 app-exploits/weevely
 app-crypt/crunch
+spike/spike
