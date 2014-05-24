@@ -19,7 +19,7 @@ DEPEND="virtual/opencl"
 RDEPEND="${DEPEND}
 	dev-libs/openssl
 	mpi? ( virtual/mpi )
-	dev-util/xxd"
+	app-editors/vim"
 
 export OPENCL_ROOT="/usr"
 
