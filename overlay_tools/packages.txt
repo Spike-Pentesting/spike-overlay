@@ -22,3 +22,6 @@ dev-db/sqlmap
 dev-python/xdot
 app-forensics/yim2text
 net-misc/httpfs
+dev-python/clamd
+dev-util/valabind
+app-exploits/packetstormexploits
