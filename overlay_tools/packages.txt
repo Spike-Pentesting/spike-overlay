@@ -13,7 +13,6 @@ dev-python/halberd
 dev-python/python-ntlm
 net-wireless/mfoc
 net-dialup/freeradius
-net-analyzer/w3af
 dev-python/lxml
 net-analyzer/armitage
 dev-db/sqlmap
