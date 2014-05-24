@@ -1,4 +1,3 @@
-app-crypt/wisecracker
 dev-util/radare2
 dev-util/valabind
 dev-util/bokken
