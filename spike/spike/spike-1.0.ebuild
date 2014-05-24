@@ -49,6 +49,7 @@ DEPEND="
           app-forensics/tcpxtract
           app-forensics/volatility
           app-forensics/yara
+          app-forensics/yim2text
           app-fuzz/Peach
           app-fuzz/bed
           app-fuzz/bss
@@ -64,7 +65,7 @@ DEPEND="
           app-misc/ddate
           app-misc/dradis
           app-misc/libmsr
-	  app-text/pdfminer
+          app-text/pdfminer
           dev-db/minimysqlator
           dev-db/mssqlscan
           dev-db/oat
@@ -77,6 +78,7 @@ DEPEND="
           dev-db/themole
           dev-util/apktool
           dev-util/ati-app-sdk-bin
+          dev-util/bokken
           dev-util/capstone
           dev-util/collabreate
           dev-util/dex2jar
@@ -137,6 +139,7 @@ DEPEND="
           net-analyzer/waffit
           net-analyzer/wafp
           net-analyzer/wapiti
+          net-analyzer/w3af
           net-analyzer/webshag
           net-analyzer/wfuzz
           net-analyzer/whatweb
@@ -172,6 +175,7 @@ DEPEND="
           net-wireless/horst
           net-wireless/karmetasploit
           net-wireless/killerbee
+          net-wireless/mfoc
           net-wireless/reaver
           net-wireless/rfidtool
           net-wireless/virtualradar-bin
