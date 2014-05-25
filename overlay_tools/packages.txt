@@ -21,3 +21,4 @@ dev-util/valabind
 app-exploits/packetstormexploits
 app-exploits/weevely
 spike/spike
+spike/spike-menu
