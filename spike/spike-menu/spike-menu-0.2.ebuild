@@ -13,7 +13,7 @@ EGIT_REPO_URI="http://dev.dark-lab.net/spike/genmenu.git"
 EGIT_COMMIT="v${PV}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=">=dev-python/lxml-1.3.6
 	gnome-base/gnome-menus"
