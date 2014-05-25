@@ -57,7 +57,7 @@ src_prepare(){
 	find "${S}" -type d -name .svn -exec rm -R {} +
 	#bundled sqlmap
 	rm -r w3af/plugins/attack/db/sqlmap || die
-	use clamav || rm w3af/plugins/grep/clamav.py
+	rm w3af/plugins/grep/clamav.py
 	#Halberd hmap is also bundled
 	epatch "${FILESDIR}"/disable_dependency_check
 }
