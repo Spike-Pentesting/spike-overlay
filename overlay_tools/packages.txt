@@ -12,7 +12,6 @@ dev-python/halberd
 dev-python/python-ntlm
 net-wireless/mfoc
 net-dialup/freeradius
-dev-python/lxml
 net-analyzer/armitage
 dev-db/sqlmap
 dev-python/xdot
