@@ -7,7 +7,7 @@ EAPI=4
 inherit git-2
 
 
-DESCRIPTION="a tool for generating freedesktop-compliant menus"
+DESCRIPTION="a tool for generating freedesktop-compliant menus for Spike distribution"
 HOMEPAGE="https://code.google.com/p/pentoo/source/browse"
 EGIT_REPO_URI="http://dev.dark-lab.net/spike/genmenu.git"
 EGIT_COMMIT="v${PV}"
@@ -29,8 +29,8 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "The genmenu has been updated."
-	einfo "You should run the following command to regenerate the main Pentoo menu for a local user:"
-	einfo "E17:  genmenu.py -e"
+	einfo "You should run the following command to regenerate the main Spike menu:"
+	einfo "E17:  sudo genmenu.py -e"
 	einfo "Xfce: genmenu.py -x"
 	einfo "KDE:  genmenu.py -k"
 	einfo
