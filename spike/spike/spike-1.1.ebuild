@@ -187,7 +187,6 @@ DEPEND="
           net-wireless/mfoc
           net-wireless/reaver
           net-wireless/rfidtool
-          net-wireless/sdrsharp
           net-wireless/virtualradar-bin
           net-wireless/wifite
           sys-apps/become
