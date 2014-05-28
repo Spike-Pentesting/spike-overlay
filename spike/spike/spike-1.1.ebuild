@@ -175,7 +175,6 @@ DEPEND="
           net-proxy/redsocks
           net-proxy/sshttp
           net-proxy/zaproxy
-          net-wireless/afrag
           net-wireless/bt-audit
           net-wireless/btscanner
           net-wireless/bully
