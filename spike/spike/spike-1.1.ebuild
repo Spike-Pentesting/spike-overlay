@@ -161,6 +161,7 @@ DEPEND="
           net-misc/voipong
           net-misc/wlan2eth
           net-proxy/burpsuite
+          net-proxy/hosproxy
           net-proxy/pbounce
           net-proxy/proxystrike
           net-proxy/redsocks
