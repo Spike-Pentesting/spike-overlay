@@ -87,7 +87,6 @@ DEPEND="
           dev-util/radare2
           net-analyzer/armitage
           net-analyzer/arpantispoofer
-          net-analyzer/blindelephant
           net-analyzer/bro
           net-analyzer/cisco-auditing-tool
           net-analyzer/cisco-bruteforce-enabler
