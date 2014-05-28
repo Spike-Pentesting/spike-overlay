@@ -66,6 +66,7 @@ DEPEND="
           app-misc/ddate
           app-misc/dradis
           app-misc/libmsr
+          app-text/cewl
           app-text/pdfminer
           dev-db/minimysqlator
           dev-db/mssqlscan
@@ -86,6 +87,7 @@ DEPEND="
           dev-util/radare2
           net-analyzer/armitage
           net-analyzer/arpantispoofer
+          net-analyzer/blindelephant
           net-analyzer/bro
           net-analyzer/cisco-auditing-tool
           net-analyzer/cisco-bruteforce-enabler
@@ -149,6 +151,10 @@ DEPEND="
           net-analyzer/xplico
           net-analyzer/zarp
           net-fs/afpfs-ng
+          net-misc/badvpn
+          net-misc/bfgminer
+          net-misc/brutessh
+          net-misc/edgessh
           net-misc/f5vpn-login
           net-misc/faifa
           net-misc/fwknop
@@ -160,13 +166,16 @@ DEPEND="
           net-misc/tcpick
           net-misc/voipong
           net-misc/wlan2eth
+          net-proxy/3proxy
           net-proxy/burpsuite
           net-proxy/hosproxy
           net-proxy/pbounce
           net-proxy/proxystrike
+          net-proxy/pwnat
           net-proxy/redsocks
           net-proxy/sshttp
           net-proxy/zaproxy
+          net-wireless/afrag
           net-wireless/bt-audit
           net-wireless/btscanner
           net-wireless/bully
@@ -180,8 +189,10 @@ DEPEND="
           net-wireless/mfoc
           net-wireless/reaver
           net-wireless/rfidtool
+          net-wireless/sdrsharp
           net-wireless/virtualradar-bin
           net-wireless/wifite
+          sys-apps/become
           www-apps/arachni
           www-apps/beef
 "
