@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc gtk"
 
 RDEPEND=">=dev-python/fpconst-0.7.2
-	=app-text/pdfminer-20110515
+	app-text/pdfminer
 	dev-python/chardet
 	dev-python/esmre
 	dev-python/git-python
