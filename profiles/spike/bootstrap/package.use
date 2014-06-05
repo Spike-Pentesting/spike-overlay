@@ -1,0 +1,7 @@
+sys-auth/polkit -pam
+
+x11-libs/cairo -opengl
+
+sys-apps/util-linux -udev
+
+dev-lang/python -tk
