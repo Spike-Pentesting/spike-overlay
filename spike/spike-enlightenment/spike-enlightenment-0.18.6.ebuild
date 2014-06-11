@@ -4,7 +4,7 @@
 EAPI="3"
 KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Spike meta-ebuild for enlightenment flavour"
-HOMEPAGE="http://www.spikepentesting.org"
+HOMEPAGE="http://www.spike-pentesting.org"
 SLOT="0"
 LICENSE="GPL"
 IUSE=""
