@@ -189,6 +189,9 @@ DEPEND="
           net-wireless/rfidtool
           net-wireless/virtualradar-bin
           net-wireless/wifite
+          spike/spike-skel
+          spike/spike-version
+          spike/spike-menu
           sys-apps/become
           www-apps/arachni
           www-apps/beef
