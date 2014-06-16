@@ -4,7 +4,7 @@
 
 inherit gems
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby19"
 
 DESCRIPTION="wrapper for exiftool"
 HOMEPAGE="http://rubyforge.org/projects/miniexiftool/"
