@@ -66,7 +66,6 @@ DEPEND="
           app-misc/ddate
           app-misc/dradis
           app-misc/libmsr
-          app-text/cewl
           app-text/pdfminer
           dev-db/minimysqlator
           dev-db/mssqlscan
