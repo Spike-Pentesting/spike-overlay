@@ -4,17 +4,18 @@
 
 EAPI="4"
 
+MY_PV="${PV/_/-}"
 E_PKG_IUSE="doc nls"
 EFL_USE_GIT="yes"
 EFL_GIT_REPO_CATEGORY="core"
-EGIT_COMMIT="v${PV}"
+EGIT_COMMIT="v${MY_PV}"
 
 inherit eutils efl
 
 DESCRIPTION="Enlightenment DR17 window manager"
 HOMEPAGE="http://www.enlightenment.org/"
 
-SLOT="0.18"
+SLOT="0.19"
 
 KEYWORDS="~amd64 ~x86"
 
