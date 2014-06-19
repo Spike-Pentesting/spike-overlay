@@ -19,9 +19,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc gtk clamav"
 
 RDEPEND=">=dev-python/fpconst-0.7.2
-	=app-text/pdfminer-20110515
+	app-text/pdfminer
 	dev-python/chardet
-	clamav? ( dev-python/clamd )
+	clamav? ( dev-python/phplyclamd )
 	dev-python/esmre
 	dev-python/git-python
 	dev-python/esmre
@@ -45,6 +45,7 @@ RDEPEND=">=dev-python/fpconst-0.7.2
 	>=net-analyzer/scapy-2
 	dev-db/sqlmap
 	dev-python/lxml
+	dev-python/pip
 	dev-python/pybloomfiltermmap
 	=dev-python/futures-2.1.5
 	gtk? ( dev-python/pygraphviz
