@@ -12,7 +12,7 @@ profiles
 prism54
 compat-drivers
 acpid
-layout\.conf
+layout.conf
 linux-sources
 genmenu
 nvidia-drivers
@@ -23,7 +23,7 @@ genkernel
 app-admin
 eclass
 gnome-base
-compat\-wireless
+compat-wireless
 app-crypt/bob-the-butcher/bob-the-butcher-0.7.1.ebuild
 app-crypt/plaintoo/plaintoo-0.1.ebuild
 app-forensics/libpff/libpff-0.0.20110413_alpha.ebuild
@@ -49,9 +49,8 @@ net-wireless/ska
 dev-python/cxoracle
 net-analyzer/sslyze
 app-text/cewl
-dev-ruby/mini_exiftool
-dev-ruby/mini_exiftool
+mini_exiftool
 net-analyzer/xplico
-net-wireless/rtl8812au
-net-wireless/rtl8812au
-net-wireless/rtl8812au
+rtl8812au
+warvox
+app-pda
