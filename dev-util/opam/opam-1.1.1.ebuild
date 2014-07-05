@@ -20,8 +20,9 @@ else
 	EGIT_REPO_URI="https://github.com/ocaml/opam.git"
 fi
 
-DEPEND="dev-lang/ocaml:=
-	|| ( net-misc/wget net-misc/curl )
+DEPEND=">=dev-lang/ocaml-3.11
+	net-misc/wget
+	net-misc/curl
 "
 RDEPEND="${DEPEND}
 	darcs? ( dev-vcs/darcs )
