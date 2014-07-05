@@ -13,10 +13,11 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
 RDEPEND="dev-perl/Data-Dump
 	virtual/perl-Digest-MD5
 	virtual/perl-Time-HiRes"
+DEPEND="${RDEPEND}"
+
 
 src_prepare() {
         rm trash
