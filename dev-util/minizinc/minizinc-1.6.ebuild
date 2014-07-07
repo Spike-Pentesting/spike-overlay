@@ -11,7 +11,7 @@ HOMEPAGE="http://www.minizinc.org/"
 LICENSE="NICTA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 SRC_URI="http://www.minizinc.org/downloads/release-${PV}/${P}-x86_64-unknown-linux-gnu.tar.gz
 	 x86?   ( http://www.minizinc.org/downloads/release-${PV}/${P}-i686-pc-linux-gnu.tar.gz )"
@@ -28,13 +28,17 @@ src_prepare() {
 }
 
 src_install() {
-        dodoc -r doc/man/*
-        rm -r doc
+	if use doc; then
+        	dodoc -r doc/man/*
+        	rm -r doc
+	fi
 
         insinto /usr/share/${PN}
-        doins -r *
+	cp -p -R ${S}/* ${D}usr/share/${PN}
 
         dobin "${FILESDIR}"/mzn2fzn
+	dobin "${FILESDIR}"/flatzinc
+
 }
 
 
