@@ -10,11 +10,11 @@ DESCRIPTION="A source-based package manager for OCaml"
 HOMEPAGE="http://opam.ocaml.org/"
 LICENSE="LGPL-3-with-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="darcs git mercurial rsync"
 
 if [[ ${PV} != 9999 ]]; then
 	SRC_URI="https://github.com/ocaml/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
 else
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ocaml/opam.git"
