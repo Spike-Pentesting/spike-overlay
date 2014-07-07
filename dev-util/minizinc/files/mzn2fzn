@@ -4,4 +4,4 @@ INSTALL_PATH="/usr/share/minizinc"
 EXEEXT=""
 
 export MZN_STDLIB_DIR="$INSTALL_PATH/lib/minizinc"
-exec "$INSTALL_PATH/bin/private/mzn2fzn${EXEEXT}" "\$@"
+exec "$INSTALL_PATH/bin/private/mzn2fzn${EXEEXT}" "$@"
