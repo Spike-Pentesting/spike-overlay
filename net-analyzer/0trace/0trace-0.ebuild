@@ -18,7 +18,7 @@ SRC_URI="http://jon.oberheide.org/0trace/downloads/$PN.py"
 # License of the package.  This must match the name of file(s) in
 # /usr/portage/licenses/.  For complex license combination see the developer
 # docs on gentoo.org for details.
-LICENSE="GPL3"
+LICENSE="GPL-3"
 
 # The SLOT variable is used to tell Portage if it's OK to keep multiple
 # versions of the same package installed at the same time.  For example,
