@@ -1,0 +1,105 @@
+--- a/drivers/gpu/drm/i915/i915_dma.c	2014-06-08 20:19:54.000000000 +0200
++++ b/drivers/gpu/drm/i915/i915_dma.c	2014-08-04 20:05:21.101417551 +0200
+@@ -1309,5 +1309,7 @@ static int i915_load_modeset_init(struct
+ 	 */
+-	ret = vga_client_register(dev->pdev, dev, NULL, i915_vga_set_decode);
+-	if (ret && ret != -ENODEV)
+-		goto out;
++	if (!i915.enable_hd_vgaarb || !HAS_PCH_SPLIT(dev)) {
++       		ret = vga_client_register(dev->pdev, dev, NULL,i915_vga_set_decode);
++       	if (ret && ret != -ENODEV)
++        	goto out;
++	}	
+ 
+@@ -1371,2 +1373,10 @@ static int i915_load_modeset_init(struct
+ 
++	/*
++	 * Must do this after fbcon init so that
++	 * vgacon_save_screen() works during the handover.
++	 */
++	
++	i915_disable_vga_mem(dev);
++
++
+ 	/* Only enable hotplug handling once the fbdev is fully set up. */
+--- a/drivers/gpu/drm/i915/i915_drv.h	2014-06-08 20:19:54.000000000 +0200
++++ b/drivers/gpu/drm/i915/i915_drv.h	2014-08-04 20:05:21.101417551 +0200
+@@ -2070,2 +2070,3 @@ struct i915_params {
+ 	bool disable_display;
++	bool enable_hd_vgaarb;
+ };
+--- a/drivers/gpu/drm/i915/i915_params.c	2014-06-08 20:19:54.000000000 +0200
++++ b/drivers/gpu/drm/i915/i915_params.c	2014-08-04 20:05:21.101417551 +0200
+@@ -49,2 +49,3 @@ struct i915_params i915 __read_mostly =
+ 	.enable_cmd_parser = 0,
++	.enable_hd_vgaarb = false,
+ };
+@@ -154 +155,5 @@ MODULE_PARM_DESC(enable_cmd_parser,
+ 		 "Enable command parsing (1=enabled, 0=disabled [default])");
++
++module_param_named(enable_hd_vgaarb, i915.enable_hd_vgaarb, bool, 0444);
++MODULE_PARM_DESC(enable_hd_vgaarb,
++		 "Enable support for VGA arbitration on Intel HD IGD. (default: false)");
+--- a/include/linux/vgaarb.h	2014-06-08 20:19:54.000000000 +0200
++++ b/include/linux/vgaarb.h	2014-08-04 20:03:02.196128998 +0200
+@@ -67,4 +67,13 @@ struct pci_dev;
+  */
++
++#if defined(CONFIG_VGA_ARB)
++
+ extern void vga_set_legacy_decoding(struct pci_dev *pdev,
+ 				    unsigned int decodes);
++#else
++static inline void vga_set_legacy_decoding(struct pci_dev *pdev,
++                      unsigned int decodes)
++{
++}
++#endif
+ 
+--- a/drivers/gpu/drm/i915/intel_display.c	2014-06-08 20:19:54.000000000 +0200
++++ b/drivers/gpu/drm/i915/intel_display.c	2014-08-04 20:05:31.255072906 +0200
+@@ -11281,2 +11281,29 @@ static void i915_disable_vga(struct drm_
+ 
++static void i915_enable_vga_mem(struct drm_device *dev)
++{
++   /* Enable VGA memory on Intel HD */
++   if (i915.enable_hd_vgaarb && HAS_PCH_SPLIT(dev)) {
++       vga_get_uninterruptible(dev->pdev, VGA_RSRC_LEGACY_IO);
++       outb(inb(VGA_MSR_READ) | VGA_MSR_MEM_EN, VGA_MSR_WRITE);
++       vga_set_legacy_decoding(dev->pdev, VGA_RSRC_LEGACY_IO |
++                          VGA_RSRC_LEGACY_MEM |
++                          VGA_RSRC_NORMAL_IO |
++                          VGA_RSRC_NORMAL_MEM);
++       vga_put(dev->pdev, VGA_RSRC_LEGACY_IO);
++   }
++}
++
++void i915_disable_vga_mem(struct drm_device *dev)
++{
++   /* Disable VGA memory on Intel HD */
++   if (i915.enable_hd_vgaarb && HAS_PCH_SPLIT(dev)) {
++       vga_get_uninterruptible(dev->pdev, VGA_RSRC_LEGACY_IO);
++       outb(inb(VGA_MSR_READ) & ~VGA_MSR_MEM_EN, VGA_MSR_WRITE);
++       vga_set_legacy_decoding(dev->pdev, VGA_RSRC_LEGACY_IO |
++                          VGA_RSRC_NORMAL_IO |
++                          VGA_RSRC_NORMAL_MEM);
++       vga_put(dev->pdev, VGA_RSRC_LEGACY_IO);
++   }
++}
++
+ void intel_modeset_init_hw(struct drm_device *dev)
+@@ -11593,2 +11620,3 @@ void i915_redisable_vga_power_on(struct
+ 		i915_disable_vga(dev);
++		i915_disable_vga_mem(dev);
+ 	}
+@@ -11847,2 +11875,4 @@ void intel_modeset_cleanup(struct drm_de
+ 
++	i915_enable_vga_mem(dev);
++
+ 	intel_disable_gt_powersave(dev);
+--- a/drivers/gpu/drm/i915/intel_drv.h	2014-06-08 20:19:54.000000000 +0200
++++ b/drivers/gpu/drm/i915/intel_drv.h	2014-08-04 20:05:31.255072906 +0200
+@@ -935,2 +935,3 @@ int intel_sprite_get_colorkey(struct drm
+ void intel_tv_init(struct drm_device *dev);
++extern void i915_disable_vga_mem(struct drm_device *dev);
+ 
