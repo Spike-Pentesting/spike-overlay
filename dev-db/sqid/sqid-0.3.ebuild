@@ -6,7 +6,7 @@ EAPI=2
 
 DESCRIPTION="A SQL injection digger"
 HOMEPAGE="http://sqid.rubyforge.org/"
-SRC_URI="http://rubyforge.org/frs/download.php/30716/sqid-0.3.tar.gz"
+SRC_URI="http://packetstormsecurity.com/files/download/62594/sqid-0.3.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
