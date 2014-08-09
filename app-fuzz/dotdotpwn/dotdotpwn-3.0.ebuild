@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="os-detection"
 
 RDEPEND="dev-lang/perl
-	perl-core/Switch
 	dev-libs/openssl dev-perl/Net-SSLeay
 	perl-core/Time-HiRes
 	app-portage/g-cpan
