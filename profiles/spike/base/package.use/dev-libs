@@ -10,3 +10,5 @@ dev-libs/libdnet python
 
 #required by bokken
 dev-libs/radare2-bindings python
+
+dev-libs/efl multisense
