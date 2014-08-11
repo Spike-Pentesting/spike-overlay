@@ -23,7 +23,7 @@ IUSE="gnutls openssl glib
 	+gstreamer xine v4l2
 	+fribidi +fontconfig harfbuzz
 	+curl +tslib
-	audio pulseaudio multisense
+	audio pulseaudio +multisense
 	+physics
 	systemd
 	X -xcb gles opengl
