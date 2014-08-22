@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -144,7 +144,6 @@ RDEPEND="
 
 	scim?	( app-i18n/scim )
 	ibus?	( app-i18n/ibus )
-
 
 	debug? ( dev-util/valgrind )
 "
