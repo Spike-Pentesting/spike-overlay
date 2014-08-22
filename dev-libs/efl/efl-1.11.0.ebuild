@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -170,7 +170,7 @@ CORE_EFL_CONFLICTS="
 DEPEND="
 	${CORE_EFL_CONFLICTS}
 
-        doc? ( app-doc/doxygen )
+	doc? ( app-doc/doxygen )
 
 	${RDEPEND}
 "

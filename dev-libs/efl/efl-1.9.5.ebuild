@@ -147,7 +147,6 @@ RDEPEND="
 	scim?	( app-i18n/scim )
 	ibus?	( app-i18n/ibus )
 
-	doc? ( app-doc/doxygen )
 
 	debug? ( dev-util/valgrind )
 "
@@ -171,6 +170,8 @@ CORE_EFL_CONFLICTS="
 
 DEPEND="
 	${CORE_EFL_CONFLICTS}
+
+	doc? ( app-doc/doxygen )
 
 	${RDEPEND}
 "
