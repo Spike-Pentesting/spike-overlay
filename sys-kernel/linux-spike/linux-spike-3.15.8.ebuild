@@ -3,7 +3,7 @@
 
 EAPI=5
 MY_PN="${PN/spike/sabayon}"
-PN=MY_PN
+PN=${MY_PN}
 inherit versionator
 
 K_SABKERNEL_SELF_TARBALL_NAME="sabayon"
