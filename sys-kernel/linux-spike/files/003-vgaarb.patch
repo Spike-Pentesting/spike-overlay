@@ -1,43 +1,43 @@
---- a/drivers/gpu/vga/vgaarb.c  2014-06-08 20:19:54.000000000 +0200
-+++ b/drivers/gpu/vga/vgaarb.c  2014-08-04 20:20:50.847790836 +0200
+--- a/drivers/gpu/vga/vgaarb.c	2014-06-08 20:19:54.000000000 +0200
++++ b/drivers/gpu/vga/vgaarb.c	2014-08-04 20:20:50.847790836 +0200
 @@ -244,3 +244,2 @@ static struct vga_device *__vga_tryget(s
-         */
--       WARN_ON(conflict->owns & ~conflict->decodes);
-        match = lwants & conflict->owns;
+ 		 */
+-		WARN_ON(conflict->owns & ~conflict->decodes);
+ 		match = lwants & conflict->owns;
 @@ -257,8 +256,10 @@ static struct vga_device *__vga_tryget(s
-        if (!conflict->bridge_has_one_vga) {
--           vga_irq_set_state(conflict, false);
--           flags |= PCI_VGA_STATE_CHANGE_DECODES;
--           if (match & (VGA_RSRC_LEGACY_MEM|VGA_RSRC_NORMAL_MEM))
-+           if ((match & conflict->decodes) & VGA_RSRC_LEGACY_MEM)
-                pci_bits |= PCI_COMMAND_MEMORY;
--           if (match & (VGA_RSRC_LEGACY_IO|VGA_RSRC_NORMAL_IO))
-+           if ((match & conflict->decodes) & VGA_RSRC_LEGACY_IO)
-                pci_bits |= PCI_COMMAND_IO;
-+           if (pci_bits) {
-+               vga_irq_set_state(conflict, false);
-+               flags |= PCI_VGA_STATE_CHANGE_DECODES;
-+           }
-        }
+ 		if (!conflict->bridge_has_one_vga) {
+-			vga_irq_set_state(conflict, false);
+-			flags |= PCI_VGA_STATE_CHANGE_DECODES;
+-			if (match & (VGA_RSRC_LEGACY_MEM|VGA_RSRC_NORMAL_MEM))
++			if ((match & conflict->decodes) & VGA_RSRC_LEGACY_MEM)
+ 				pci_bits |= PCI_COMMAND_MEMORY;
+-			if (match & (VGA_RSRC_LEGACY_IO|VGA_RSRC_NORMAL_IO))
++			if ((match & conflict->decodes) & VGA_RSRC_LEGACY_IO)
+ 				pci_bits |= PCI_COMMAND_IO;
++			if (pci_bits) {
++				vga_irq_set_state(conflict, false);
++				flags |= PCI_VGA_STATE_CHANGE_DECODES;
++			}
+ 		}
 @@ -271,5 +272,5 @@ static struct vga_device *__vga_tryget(s
-        /* If he also owned non-legacy, that is no longer the case */
--       if (match & VGA_RSRC_LEGACY_MEM)
-+       if (pci_bits & PCI_COMMAND_MEMORY)
-            conflict->owns &= ~VGA_RSRC_NORMAL_MEM;
--       if (match & VGA_RSRC_LEGACY_IO)
-+       if (pci_bits & PCI_COMMAND_IO)
-            conflict->owns &= ~VGA_RSRC_NORMAL_IO;
+ 		/* If he also owned non-legacy, that is no longer the case */
+-		if (match & VGA_RSRC_LEGACY_MEM)
++		if (pci_bits & PCI_COMMAND_MEMORY)
+ 			conflict->owns &= ~VGA_RSRC_NORMAL_MEM;
+-		if (match & VGA_RSRC_LEGACY_IO)
++		if (pci_bits & PCI_COMMAND_IO)
+ 			conflict->owns &= ~VGA_RSRC_NORMAL_IO;
 @@ -293,3 +294,3 @@ enable_them:
-    }
--   if (!!(wants & VGA_RSRC_LEGACY_MASK))
-+   if (wants & VGA_RSRC_LEGACY_MASK)
-        flags |= PCI_VGA_STATE_CHANGE_BRIDGE;
+ 	}
+-	if (!!(wants & VGA_RSRC_LEGACY_MASK))
++	if (wants & VGA_RSRC_LEGACY_MASK)
+ 		flags |= PCI_VGA_STATE_CHANGE_BRIDGE;
 @@ -301,3 +302,3 @@ enable_them:
-    }
--   vgadev->owns |= (wants & vgadev->decodes);
-+   vgadev->owns |= wants;
+ 	}
+-	vgadev->owns |= (wants & vgadev->decodes);
++	vgadev->owns |= wants;
  lock_them:
 @@ -651,3 +652,2 @@ static inline void vga_update_device_dec
-    decodes_unlocked = vgadev->locks & decodes_removed;
--   vgadev->owns &= ~decodes_removed;
-    vgadev->decodes = new_decodes;
+ 	decodes_unlocked = vgadev->locks & decodes_removed;
+-	vgadev->owns &= ~decodes_removed;
+ 	vgadev->decodes = new_decodes;
