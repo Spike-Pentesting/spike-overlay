@@ -102,3 +102,4 @@
 @@ -935,2 +935,3 @@ int intel_sprite_get_colorkey(struct drm
  void intel_tv_init(struct drm_device *dev);
 +extern void i915_disable_vga_mem(struct drm_device *dev);
+
