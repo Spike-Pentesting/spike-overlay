@@ -6,7 +6,7 @@ KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Spike meta-ebuild"
 HOMEPAGE="http://www.spike-pentesting.org"
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-3"
 IUSE=""
 
 S="${WORKDIR}"
@@ -66,7 +66,6 @@ DEPEND="
           app-misc/ddate
           app-misc/dradis
           app-misc/libmsr
-          app-text/pdfminer
           dev-db/minimysqlator
           dev-db/mssqlscan
           dev-db/oat
