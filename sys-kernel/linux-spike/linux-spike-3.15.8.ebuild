@@ -16,7 +16,7 @@ K_KERNEL_PATCH_HOTFIXES="${FILESDIR}/001-acs_override.patch ${FILESDIR}/002-i915
 inherit sabayon-kernel
 
 KEYWORDS="~amd64 ~x86"
-DESCRIPTION="Spike kernel linux: Sabayon + vga arbiter patches"
+DESCRIPTION="Spike kernel linux: Sabayon + vga arbiter patch + i915 patch + vga controller patch"
 RESTRICT="mirror"
 
 DEPEND="${DEPEND}
