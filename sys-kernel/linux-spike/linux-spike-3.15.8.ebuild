@@ -1,4 +1,4 @@
-# Copyright 2004-2013 Sabayon Linux
+# Copyright 2004-2014 Sabayon Linux
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -16,7 +16,7 @@ K_KERNEL_PATCH_HOTFIXES="${FILESDIR}/001-acs_override.patch ${FILESDIR}/002-i915
 inherit sabayon-kernel
 
 KEYWORDS="~amd64 ~x86"
-DESCRIPTION="Spike kernel linux: Sabayon + vga arbiter patch + i915 patch + vga controller patch"
+DESCRIPTION="Spike linux gaming kernel: Sabayon + vga arbiter patch + i915 patch + vga controller patch"
 RESTRICT="mirror"
 
 DEPEND="${DEPEND}
