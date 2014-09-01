@@ -11,7 +11,7 @@ K_REQUIRED_LINUX_FIRMWARE_VER="20131230"
 K_SABKERNEL_FORCE_SUBLEVEL="0"
 K_SABKERNEL_PATCH_UPSTREAM_TARBALL="1"
 K_KERNEL_NEW_VERSIONING="1"
-K_KERNEL_PATCH_HOTFIXES="${FILESDIR}/001-acs_override.patch ${FILESDIR}/002-i915_vga_arbiter_fix.patch ${FILESDIR}/003-vgaarb.patch ${FILESDIR}/99_config_vfio.patch ${FILESDIR}/004-vgaarb_controller.patch"
+K_KERNEL_PATCH_HOTFIXES="${FILESDIR}/001-acs_override.patch ${FILESDIR}/002-i915_vga_arbiter_fix.patch ${FILESDIR}/003-vgaarb.patch ${FILESDIR}/99_config_vfio.patch"
 
 inherit sabayon-kernel
 
