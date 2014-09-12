@@ -3,7 +3,7 @@
 # $Header: $
 EAPI="3"
 KEYWORDS="~amd64 ~x86"
-DESCRIPTION="Spike meta-ebuild for enlightenment flavour"
+DESCRIPTION="Spike meta-ebuild for enlightenment flavor"
 HOMEPAGE="http://www.spike-pentesting.org"
 SLOT="0"
 LICENSE="GPL"
