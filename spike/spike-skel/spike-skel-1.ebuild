@@ -1,15 +1,15 @@
-# Copyright 1999-2012 SabayonLinux
+# Copyright 1999-2014 Gentoo
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 EGIT_COMMIT="${PVR}"
-EGIT_REPO_URI="http://dev.dark-lab.net/spike/spike-skel.git"
+EGIT_REPO_URI="git://github.com/Spike-Pentesting/skel.git"
 
 inherit eutils git-2 fdo-mime
 
-DESCRIPTION="Sabayon Linux skel tree"
-HOMEPAGE="http://www.sabayon.org"
+DESCRIPTION="Spike Linux skel tree"
+HOMEPAGE="http://www.spike-pentesting.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
