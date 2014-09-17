@@ -30,6 +30,7 @@ DEPEND="
 	dev-perl/regexp-common
 	virtual/perl-Term-ANSIColor
 	dev-perl/TermReadKey
+	dev-perl/Import-Into
 "
 RDEPEND="${DEPEND}"
 
