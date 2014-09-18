@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Continuous integration tool for Entropy server"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
