@@ -20,6 +20,7 @@ S=${WORKDIR}/${MY_PN}-${PV}
 RDEPEND=">=dev-libs/openssl-0.9.6b
 	x11-libs/libX11
 	x11-libs/libXext
+	net-libs/libgssglue
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	ao? ( >=media-libs/libao-0.8.6 )"
