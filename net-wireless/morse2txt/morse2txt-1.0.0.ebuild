@@ -13,5 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sci-libs/gsl"
+DEPEND="dev-libs/atk
+	dev-libs/glib
+	gnome-base/libgnome
+	gnome-base/libgnomeui
+	sci-libs/gsl
+	x11-libs/gdk-pixbuf
+	x11-libs/gtk+"
 RDEPEND="${DEPEND}"
