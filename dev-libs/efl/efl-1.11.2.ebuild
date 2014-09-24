@@ -148,6 +148,9 @@ RDEPEND="
 	ibus?	( app-i18n/ibus )
 
 	debug? ( dev-util/valgrind )
+	media-libs/gst-plugins-base
+	media-libs/freetype
+	media-libs/openjpeg
 "
 
 CORE_EFL_CONFLICTS="
