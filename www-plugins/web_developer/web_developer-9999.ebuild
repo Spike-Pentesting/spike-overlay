@@ -8,7 +8,7 @@ inherit firefox-plugin
 
 FFP_XPI_FILE="${P}"
 PLUGIN_ID=60
-DESCRIPTION="Adds various web developer tools to firefox."
+DESCRIPTION="Adds various web developer tools to firefox"
 HOMEPAGE="http://chrispederick.com/work/web-developer"
 SRC_URI="http://addons.mozilla.org/firefox/downloads/latest/${PLUGIN_ID} -> ${FFP_XPI_FILE}.xpi"
 

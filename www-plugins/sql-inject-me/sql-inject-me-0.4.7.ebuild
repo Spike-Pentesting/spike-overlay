@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${PN//-/_}-${PV}-fx"
-DESCRIPTION="SQL Inject Me is the Exploit-Me tool used to test for SQL Injection vulnerabilities."
+DESCRIPTION="SQL Inject Me is the Exploit-Me tool used to test for SQL Injection vulnerabilities"
 HOMEPAGE="http://labs.securitycompass.com/exploit-me"
 SRC_URI=" mirror://mozilla/addons/7597/${FFP_XPI_FILE}.xpi"
 

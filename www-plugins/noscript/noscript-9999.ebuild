@@ -8,7 +8,7 @@ inherit firefox-plugin
 
 FFP_XPI_FILE="${P}"
 PLUGIN_ID=722
-DESCRIPTION="Allow active content in firefox to run only from trusted sites."
+DESCRIPTION="Allow active content in firefox to run only from trusted sites"
 HOMEPAGE="http://noscript.net"
 SRC_URI="http://addons.mozilla.org/firefox/downloads/latest/${PLUGIN_ID} -> ${FFP_XPI_FILE}.xpi"
 

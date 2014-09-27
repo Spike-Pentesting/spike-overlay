@@ -8,7 +8,7 @@ inherit firefox-plugin
 
 FFP_XPI_FILE="${P}"
 PLUGIN_ID=7598
-DESCRIPTION="Firefox extension to test for reflected cross-site-scripting vulnerabilities."
+DESCRIPTION="Firefox extension to test for reflected cross-site-scripting vulnerabilities"
 HOMEPAGE="http://labs.securitycompass.com/exploit-me/xss-me"
 SRC_URI="http://addons.mozilla.org/firefox/downloads/latest/${PLUGIN_ID} -> ${FFP_XPI_FILE}.xpi"
 

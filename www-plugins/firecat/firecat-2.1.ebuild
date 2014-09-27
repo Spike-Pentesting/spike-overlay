@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-DESCRIPTION="Collection of firefox extensions for application security auditing and assessment."
+DESCRIPTION="Collection of firefox extensions for application security auditing and assessment"
 # HOMEPAGE="http://www.security-database.com/toolswatch/FireCAT-Firefox-Catalog-of,302.html"
 HOMEPAGE="http://www.firecat.fr/"
 LICENSE="GPL-2"

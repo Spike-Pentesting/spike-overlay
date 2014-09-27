@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${P}-sm+fx+fn"
-DESCRIPTION="Allow active content in firefox to run only from trusted sites."
+DESCRIPTION="Allow active content in firefox to run only from trusted sites"
 HOMEPAGE="http://noscript.net"
 SRC_URI="mirror://mozilla/addons/722/${FFP_XPI_FILE}.xpi"
 

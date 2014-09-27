@@ -8,7 +8,7 @@ inherit firefox-plugin
 
 FFP_XPI_FILE="${P}"
 PLUGIN_ID=3905
-DESCRIPTION="Firefox extension to display the Exif and IPTC data in local and remote JPEG images."
+DESCRIPTION="Firefox extension to display the Exif and IPTC data in local and remote JPEG images"
 HOMEPAGE="http://araskin.webs.com/exif/exif.html"
 SRC_URI="http://addons.mozilla.org/firefox/downloads/latest/${PLUGIN_ID} -> ${FFP_XPI_FILE}.xpi"
 

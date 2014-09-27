@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${P}-tb+fx+sm"
-DESCRIPTION="Firefox extensions which shows the IP address(es) of the current page in the status bar."
+DESCRIPTION="Firefox extensions which shows the IP address(es) of the current page in the status bar"
 HOMEPAGE="http://code.google.com/p/firefox-showip"
 SRC_URI="mirror://mozilla/addons/590/${FFP_XPI_FILE}.xpi"
 

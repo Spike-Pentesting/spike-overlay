@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${P}-tb+fx+an+sm"
-DESCRIPTION="Firefox extension to block annoying ads automatically, no distractions."
+DESCRIPTION="Firefox extension to block annoying ads automatically, no distractions"
 HOMEPAGE="http://adblockplus.org/en/firefox"
 SRC_URI="mirror://mozilla/addons/1865/${FFP_XPI_FILE}.xpi"
 

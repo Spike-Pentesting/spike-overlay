@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${P}-fx"
-DESCRIPTION="Firefox extension to block annoying ads automatically, no distractions."
+DESCRIPTION="Firefox extension to block annoying ads automatically, no distractions"
 HOMEPAGE="http://adblockplus.org/en/firefox"
 SRC_URI="mirror://mozilla/addons/344927/${FFP_XPI_FILE}.xpi"
 
@@ -18,7 +18,7 @@ IUSE=""
 
 src_prepare(){
 	#quick hack for the bug https://bugs.gentoo.org/show_bug.cgi?id=515192
-	cd ${WORKDIR}/${FFP_XPI_FILE}
+	cd "${WORKDIR}"/"${FFP_XPI_FILE}"
 	sed -e "s|<id>CookiesIE@yahoo.com</id>| \
 		<id>CookiesIE@yahoo.com</id><em:id>CookiesIE@yahoo.com</em:id> |g" -i install.rdf || die "sed failed"
 }

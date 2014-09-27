@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${P}-sm+fx"
-DESCRIPTION="Adds various web developer tools to firefox."
+DESCRIPTION="Adds various web developer tools to firefox"
 HOMEPAGE="http://chrispederick.com/work/web-developer"
 SRC_URI="mirror://mozilla/addons/60//${FFP_XPI_FILE}.xpi"
 

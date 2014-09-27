@@ -7,7 +7,7 @@ EAPI=5
 inherit firefox-plugin
 
 FFP_XPI_FILE="${P}-fx"
-DESCRIPTION="Lets you switch local proxies in firefox. A fork of multiproxy switch."
+DESCRIPTION="Lets you switch local proxies in firefox. A fork of multiproxy switch"
 HOMEPAGE="http://addons.mozilla.org/en-US/firefox/addon/proxy-selector"
 SRC_URI="mirror://mozilla/addons/215989/${FFP_XPI_FILE}.xpi"
 
