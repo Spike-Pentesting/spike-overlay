@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=socat
+GenericName=
+Exec=terminator --command 'sudo socat;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/analyzer.png
+Categories=analyzer
+Type=Application

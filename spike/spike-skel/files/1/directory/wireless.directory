@@ -1,0 +1,12 @@
+[Desktop Entry]
+Comment=
+Name=Wireless
+Encoding=UTF-8
+X-GNOME-DocPath=
+Exec=
+Terminal=false
+GenericName=
+Version=1.0
+Type=Directory
+Icon=/usr/share/spike/pixmaps/wireless.png
+

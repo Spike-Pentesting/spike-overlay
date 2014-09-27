@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=msgsnarf
+GenericName=
+Exec=terminator --command 'sudo msgsnarf;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/mitm.png
+Categories=mitm
+Type=Application

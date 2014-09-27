@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=tcpkill
+GenericName=
+Exec=terminator --command 'sudo tcpkill;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/mitm.png
+Categories=mitm
+Type=Application

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=skipfish
+GenericName=
+Exec=terminator --command 'sudo skipfish;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/scanner.png
+Categories=scanner
+Type=Application

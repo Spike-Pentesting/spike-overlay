@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=MiniSIP
+Exec=P2TERM -e minisip
+Icon=/usr/share/spike/pixmaps/tray_icon.png
+Type=Application

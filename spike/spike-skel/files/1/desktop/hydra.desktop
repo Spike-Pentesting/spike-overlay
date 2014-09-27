@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hydra GUI
+GenericName=
+Exec=/usr/bin/xhydra
+Icon=/usr/share/spike/pixmaps/thc.png
+Type=Application
+

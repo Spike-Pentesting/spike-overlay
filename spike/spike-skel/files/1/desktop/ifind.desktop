@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ifind
+GenericName=
+Exec=terminator --command 'sudo ifind --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forensics.png
+Categories=forensics
+Type=Application

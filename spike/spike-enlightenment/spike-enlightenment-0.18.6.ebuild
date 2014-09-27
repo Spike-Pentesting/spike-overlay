@@ -12,7 +12,7 @@ IUSE=""
 S="${WORKDIR}"
 
 DEPEND="
-	=x11-wm/enlightenment-${PV}::spike
+	=x11-wm/enlightenment-${PV}
 	x11-terms/terminology
 	dev-libs/efl
 	media-libs/elementary

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=sipcrack
+GenericName=
+Exec=terminator --command 'sudo sipcrack;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/sip-voip.png
+Categories=sip-voip
+Type=Application

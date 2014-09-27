@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=srch_strings
+GenericName=
+Exec=terminator --command 'sudo srch_strings --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forensics.png
+Categories=forensics
+Type=Application

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Mass Rooter
+Exec=P2TERM -e /opt/pentoo/scripts/massrooter.sh
+Icon=/usr/share/spike/pixmaps/metasploit.png
+Type=Application

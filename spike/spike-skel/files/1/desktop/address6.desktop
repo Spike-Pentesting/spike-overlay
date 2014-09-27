@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=address6
+GenericName=
+Exec=terminator --command 'sudo address6;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/analyzer.png
+Categories=analyzer
+Type=Application

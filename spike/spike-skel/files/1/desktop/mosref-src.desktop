@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Mosref
+GenericName=Sources
+Exec=xterm -e launch cd /usr/src/mosref-2.0_beta3 && ls
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

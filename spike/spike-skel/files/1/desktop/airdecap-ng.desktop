@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=airdecap-ng
+GenericName=
+Exec=terminator --command 'sudo airdecap-ng --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/wireless.png
+Categories=wireless
+Type=Application

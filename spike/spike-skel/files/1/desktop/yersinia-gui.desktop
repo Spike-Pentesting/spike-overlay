@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Yersinia GUI
+GenericName=gui
+Exec=yersinia -G
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

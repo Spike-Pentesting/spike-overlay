@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Jd-gui
+Exec=jd-gui
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/mobile.png
+Type=Application

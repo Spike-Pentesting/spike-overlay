@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=modes_rx
+GenericName=
+Exec=terminator --command 'sudo modes_rx;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/radio.png
+Categories=radio
+Type=Application

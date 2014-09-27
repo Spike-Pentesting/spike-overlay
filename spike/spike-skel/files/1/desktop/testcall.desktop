@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=testcall
+GenericName=
+Exec=terminator --command 'sudo testcall;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/sip-voip.png
+Categories=sip-voip
+Type=Application

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=shellstorm.py
+GenericName=
+Exec=terminator --command 'sudo shellstorm.py;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/exploit.png
+Categories=exploit
+Type=Application

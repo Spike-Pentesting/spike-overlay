@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=dex2jar
+GenericName=
+Exec=terminator --command 'sudo dex2jar;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/mobile.png
+Categories=mobile
+Type=Application

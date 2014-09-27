@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=radare2
+GenericName=
+Exec=terminator --command 'sudo radare2;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/rce.png
+Categories=rce
+Type=Application

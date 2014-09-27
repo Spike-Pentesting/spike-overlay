@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=bss
+GenericName=
+Exec=terminator --command 'sudo bss;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/fuzzers.png
+Categories=fuzzers
+Type=Application

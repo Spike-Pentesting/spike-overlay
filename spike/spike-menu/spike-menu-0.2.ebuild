@@ -6,7 +6,6 @@ EAPI=4
 
 inherit git-2
 
-
 DESCRIPTION="a tool for generating freedesktop-compliant menus for Spike distribution"
 HOMEPAGE="https://code.google.com/p/pentoo/source/browse"
 EGIT_REPO_URI="http://dev.dark-lab.net/spike/genmenu.git"

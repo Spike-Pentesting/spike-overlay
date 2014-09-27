@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=hivexregedit
+GenericName=
+Exec=terminator --command 'sudo hivexregedit;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forensics.png
+Categories=forensics
+Type=Application

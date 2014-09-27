@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Kismet
+GenericName=GUI
+Exec=P2TERM -e /opt/pentoo/scripts/gkismet.sh
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/kismet.png
+Type=Application

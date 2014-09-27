@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=honeyd
+GenericName=
+Exec=terminator --command 'sudo honeyd;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/misc.png
+Categories=misc
+Type=Application

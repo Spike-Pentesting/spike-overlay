@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=sqlbf
+GenericName=
+Exec=terminator --command 'sudo sqlbf;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/database.png
+Categories=database
+Type=Application

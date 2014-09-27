@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=MSF Web
+Exec=P2TERM -e launch sh /usr/share/spike/scripts/msfweb
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

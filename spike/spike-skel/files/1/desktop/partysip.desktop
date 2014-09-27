@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=partysip
+GenericName=
+Exec=terminator --command 'sudo partysip;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/sip-voip.png
+Categories=sip-voip
+Type=Application

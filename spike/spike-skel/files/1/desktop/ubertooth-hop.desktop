@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ubertooth-hop
+GenericName=
+Exec=terminator --command 'sudo ubertooth-hop;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/bluetooth.png
+Categories=bluetooth
+Type=Application

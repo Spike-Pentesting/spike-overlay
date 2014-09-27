@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Switch to madwifi
+GenericName=
+Exec=P2TERM -e launch athload madwifi
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/wireless.png
+Type=Application

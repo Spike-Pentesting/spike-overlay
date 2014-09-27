@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ils
+GenericName=
+Exec=terminator --command 'sudo ils --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forensics.png
+Categories=forensics
+Type=Application

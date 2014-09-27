@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=dd_rescue
+GenericName=
+Exec=terminator --command 'sudo dd_rescue;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forensics.png
+Categories=forensics
+Type=Application

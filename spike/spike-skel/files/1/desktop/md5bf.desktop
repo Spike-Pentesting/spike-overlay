@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=md5bf
+GenericName=
+Exec=terminator --command 'sudo md5bf;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/cracker.png
+Categories=cracker
+Type=Application

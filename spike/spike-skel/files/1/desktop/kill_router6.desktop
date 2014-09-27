@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=kill_router6
+GenericName=
+Exec=terminator --command 'sudo kill_router6;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/analyzer.png
+Categories=analyzer
+Type=Application

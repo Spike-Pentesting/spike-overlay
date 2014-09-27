@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Metasm gui
+GenericName=
+Exec=disassemble-gui
+Icon=/usr/share/spike/pixmaps/rce.png
+Type=Application

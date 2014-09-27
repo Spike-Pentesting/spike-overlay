@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=flood_dhcpc6
+GenericName=
+Exec=terminator --command 'sudo flood_dhcpc6;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/analyzer.png
+Categories=analyzer
+Type=Application

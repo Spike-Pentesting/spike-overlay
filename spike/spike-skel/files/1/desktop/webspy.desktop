@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=webspy
+GenericName=
+Exec=terminator --command 'sudo webspy;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/mitm.png
+Categories=mitm
+Type=Application

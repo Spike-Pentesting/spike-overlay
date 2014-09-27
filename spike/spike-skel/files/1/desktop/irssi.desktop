@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=irssi
+GenericName=
+Exec=terminator --command 'sudo irssi --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/none.png
+Categories=none
+Type=Application

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=idevicepair
+GenericName=
+Exec=terminator --command 'sudo idevicepair;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/mobile.png
+Categories=mobile
+Type=Application

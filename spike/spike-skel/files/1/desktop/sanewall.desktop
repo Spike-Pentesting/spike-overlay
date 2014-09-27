@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=sanewall
+GenericName=
+Exec=terminator --command 'sudo sanewall;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/misc.png
+Categories=misc
+Type=Application

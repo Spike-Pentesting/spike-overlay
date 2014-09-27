@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ftest
+GenericName=
+Exec=terminator --command 'sudo ftest;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/analyzer.png
+Categories=analyzer
+Type=Application

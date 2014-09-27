@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=amap
+GenericName=
+Exec=terminator --command 'sudo amap;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/footprint.png
+Categories=footprint
+Type=Application

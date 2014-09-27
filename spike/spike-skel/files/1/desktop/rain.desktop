@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=rain
+GenericName=
+Exec=terminator --command 'sudo rain --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forging.png
+Categories=forging
+Type=Application

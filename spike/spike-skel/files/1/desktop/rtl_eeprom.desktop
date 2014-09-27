@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=rtl_eeprom
+GenericName=
+Exec=terminator --command 'sudo rtl_eeprom;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/radio.png
+Categories=radio
+Type=Application

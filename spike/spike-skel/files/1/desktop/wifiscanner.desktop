@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=wifiscanner
+GenericName=
+Exec=terminator --command 'sudo wifiscanner;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/wireless.png
+Categories=wireless
+Type=Application

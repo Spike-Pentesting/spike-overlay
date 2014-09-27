@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Ntop
+Exec=P2TERM -e launch sh /usr/share/spike/scripts/ntop
+Icon=/usr/share/spike/pixmaps/Ntop.png
+Type=Application

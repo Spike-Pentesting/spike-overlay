@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=jcat
+GenericName=
+Exec=terminator --command 'sudo jcat --help;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/forensics.png
+Categories=forensics
+Type=Application

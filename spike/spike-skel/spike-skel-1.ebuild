@@ -14,36 +14,32 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
-RDEPEND="!<=app-misc/sabayonlinux-skel-3.5-r6"
+RDEPEND=""
 
 src_install () {
 	dodir /etc/xdg/menus
 	cp "${S}"/* "${D}"/etc/ -Ra
 
-	# Sabayon Menu
+	# Spike Menu
 	dodir /usr/share/desktop-directories
-	cp "${FILESDIR}"/4.0.97/xdg/*.directory "${D}"/usr/share/desktop-directories/
-	dodir /usr/share/sabayon
-	cp -a "${FILESDIR}"/4.0.97/* "${D}"/usr/share/sabayon/
-	doicon "${FILESDIR}"/4.0.97/img/sabayon-weblink.png
-
+	cp "${FILESDIR}"/1/directory/*.directory "${D}"/usr/share/desktop-directories/
+	dodir /usr/share/spike
+	cp -a "${FILESDIR}"/1/* "${D}"/usr/share/spike/
+	#doicon "${FILESDIR}"/1/pixmaps/sabayon-weblink.png
 	chown root:root "${D}"/etc/skel -R
 }
 
 pkg_postinst () {
 	if [ -x "/usr/bin/xdg-desktop-menu" ]; then
-		# Manual install otherwise it wont be set up correctly
-		xdg-desktop-menu install \
-			/usr/share/sabayon/xdg/sabayon-sabayon.directory \
-			/usr/share/sabayon/xdg/*.desktop
+		# Manual install otherwise it wont be set up correctly, it's ugly, but i won't print all the menu installs in the ebuild
+		bash "${FILESDIR}"/menu.sh
 	fi
 
 	fdo-mime_desktop_database_update
 }
 
-
 pkg_prerm() {
 	if [ -x "/usr/bin/xdg-desktop-menu" ]; then
-		xdg-desktop-menu uninstall /usr/share/sabayon/xdg/sabayon-sabayon.directory /usr/share/sabayon/xdg/*.desktop
+		xdg-desktop-menu uninstall /usr/share/spike/directory/*.directory /usr/share/spike/desktop/*.desktop
 	fi
 }

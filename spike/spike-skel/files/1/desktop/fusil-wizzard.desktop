@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=fusil-wizzard
+GenericName=
+Exec=terminator --command 'sudo fusil-wizzard;when;/bin/bash'
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/fuzzers.png
+Categories=fuzzers
+Type=Application
