@@ -2,6 +2,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*App-witchcraft-0.13.0 (27 Sep 2014)
+
+  27 Sep 2014; mudler <mudler@dark-lab.net> -App-witchcraft-0.10.0.ebuild,
+  +App-witchcraft-0.13.0.ebuild:
+  version bump
+
 *App-witchcraft-0.10.0 (13 Sep 2014)
 
   13 Sep 2014; mudler <mudler@dark-lab.net> +App-witchcraft-0.10.0.ebuild:

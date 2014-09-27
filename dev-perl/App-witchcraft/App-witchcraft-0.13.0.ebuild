@@ -22,8 +22,8 @@ DEPEND="
 	dev-perl/Config-Simple
 	virtual/perl-Digest-MD5
 	virtual/perl-Encode
-	dev-perl/Expect
 	virtual/perl-File-Path
+	dev-perl/IPC-Run3
 	dev-perl/Git-Sub
 	dev-perl/HTTP-Message
 	dev-perl/libwww-perl
