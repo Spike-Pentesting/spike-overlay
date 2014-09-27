@@ -10,8 +10,5 @@ SRC_URI="https://github.com/vivien/i3blocks/archive/${PV}.tar.gz -> ${P}.tar.gz"
 SLOT="0"
 LICENSE="AGPL-3.0"
 KEYWORDS="~amd64 ~x86"
-
-
-RDEPEND="x11-wm/i3
-        "
+RDEPEND="x11-wm/i3"
 DEPEND="${RDEPEND}"
