@@ -6,8 +6,8 @@ EAPI=4
 
 inherit subversion
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION=" implementation of the protocol for the MSR 206 magnetic stripe reader/write"
+HOMEPAGE="https://code.google.com/p/libmsr/"
 SRC_URI=""
 ESVN_REPO_URI="http://libmsr.googlecode.com/svn/trunk/"
 

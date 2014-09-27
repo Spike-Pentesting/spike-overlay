@@ -1,5 +1,0 @@
-gentoo:hardened/linux/amd64
-gentoo:targets/desktop
-pentoo:pentoo/arch/amd64
-../base
-pentoo:pentoo/base

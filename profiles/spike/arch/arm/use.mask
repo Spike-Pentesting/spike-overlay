@@ -1,4 +1,0 @@
--mssql
-
-#masked by gentoo due to lack of testing, let the users test
--ios

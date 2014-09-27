@@ -15,9 +15,7 @@ IUSE=""
 RDEPEND="
 	sys-apps/findutils
 "
-
 S="${WORKDIR}/${PN}"
-
 src_install() {
 	# Fbsplash theme
 	cd "${S}"/fbsplash || die

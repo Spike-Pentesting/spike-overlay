@@ -1,2 +1,0 @@
-# remove forced gdm, that is no reason for this
-x11-misc/xscreensaver -gdm

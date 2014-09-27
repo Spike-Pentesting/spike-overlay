@@ -365,7 +365,7 @@ else
         arm? ( dev-embedded/u-boot-tools )
         amd64? ( sys-apps/v86d )
         x86? ( sys-apps/v86d )
-        splash? ( x11-themes/sabayon-artwork-core )
+        splash? ( spike/spike-artwork-core )
         lvm? ( sys-fs/lvm2 sys-block/thin-provisioning-tools )
         plymouth? (
             || ( >=sys-kernel/genkernel-next-5 >=sys-kernel/genkernel-5 )
