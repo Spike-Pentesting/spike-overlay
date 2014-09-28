@@ -4,7 +4,7 @@
 
 EAPI=4
 
-DESCRIPTION="Web Server vulnerability scanner."
+DESCRIPTION="Web Server vulnerability scanner"
 HOMEPAGE="http://www.cirt.net/code/nikto.shtml"
 SRC_URI="http://www.cirt.net/nikto/${P}.tar.bz2"
 

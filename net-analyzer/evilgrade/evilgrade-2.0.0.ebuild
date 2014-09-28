@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="A modular framework that takes advantage of poor upgrade implementations by injecting fake updates."
+DESCRIPTION="A modular framework that takes advantage of poor upgrade implementations by injecting fake updates"
 SRC_URI="http://www.infobytesec.com/down/isr-${P}.tar.gz"
 HOMEPAGE="http://www.infobytesec.com/developments.html"
 

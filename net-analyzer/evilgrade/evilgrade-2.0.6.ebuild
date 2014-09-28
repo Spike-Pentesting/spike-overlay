@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="A modular framework that takes advantage of poor upgrade implementations by injecting fake updates."
+DESCRIPTION="A modular framework that takes advantage of poor upgrade implementations by injecting fake updates"
 HOMEPAGE="http://www.infobytesec.com/developments.html"
 SRC_URI="https://github.com/infobyte/evilgrade/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

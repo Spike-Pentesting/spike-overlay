@@ -6,12 +6,12 @@ EAPI=2
 
 inherit gnome2 eutils
 
-DESCRIPTION="Utility for network exploration with Samba support."
+DESCRIPTION="Utility for network exploration with Samba support"
 HOMEPAGE="http://autoscan.fr"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="snmp samba nessus trayicon gtk gnome vnc +console sound"
 SRC_URI="http://autoscan.fr/download_files/${P}.tar.gz"
 
