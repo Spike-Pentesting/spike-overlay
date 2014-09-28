@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit python eutils
 
-DESCRIPTION="HoSProxy is a tool designed to let you access the web in a LAN without internet connection but with access to an E-mail system only"
+DESCRIPTION="Haccess the web in a LAN without internet connection but with access to an E-mail system only"
 HOMEPAGE="http://www.edge-security.com/hosproxy.php"
 SLOT="1.0"
 
