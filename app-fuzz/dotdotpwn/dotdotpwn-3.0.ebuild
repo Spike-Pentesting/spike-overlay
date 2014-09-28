@@ -4,7 +4,7 @@
 
 EAPI=4
 
-DESCRIPTION="The Directory Traversal Fuzzer."
+DESCRIPTION="The Directory Traversal Fuzzer"
 HOMEPAGE="http://dotdotpwn.blogspot.com"
 SRC_URI="http://www.brainoverflow.org/code/${PN}-v${PV}.tar.gz"
 
