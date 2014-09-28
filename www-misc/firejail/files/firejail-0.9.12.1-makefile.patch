@@ -1,0 +1,97 @@
+--- install.sh	2014-08-22 14:42:44.000000000 +0200
++++ install.sh	2014-09-28 18:21:25.777443923 +0200
+@@ -2,31 +2,31 @@
+ 
+ # firejail executable
+ strip src/firejail/firejail
+-mkdir -p $1/bin
+-install -c -m 0755 src/firejail/firejail $1/bin/.
+-chmod u+s $1/bin/firejail
++mkdir -p $1/$2/bin
++install -c -m 0755 src/firejail/firejail $1/$2/bin/.
++chmod u+s $1/$2/bin/firejail
+ 
+ # firemon executable
+ strip src/firemon/firemon
+-install -c -m 0755 src/firemon/firemon $1/bin/.
++install -c -m 0755 src/firemon/firemon $1/$2/bin/.
+ 
+ # documents
+-mkdir -p $1/share/doc/firejail
+-install -c -m 0644 COPYING $1/share/doc/firejail/.
+-install -c -m 0644 README $1/share/doc/firejail/.
+-install -c -m 0644 RELNOTES $1/share/doc/firejail/.
++mkdir -p $1/$2/share/doc/firejail
++install -c -m 0644 COPYING $1/$2/share/doc/firejail/.
++install -c -m 0644 README $1/$2/share/doc/firejail/.
++install -c -m 0644 RELNOTES $1/$2/share/doc/firejail/.
+ 
+ # etc files
+-mkdir -p /etc/firejail
+-install -c -m 0644 etc/firefox.profile /etc/firejail/.
+-install -c -m 0644 etc/firefox.profile /etc/firejail/iceweasel.profile
+-install -c -m 0644 etc/midori.profile /etc/firejail/.
+-install -c -m 0644 etc/evince.profile /etc/firejail/.
+-install -c -m 0644 etc/chromium-browser.profile /etc/firejail/.
+-install -c -m 0644 etc/chromium.profile /etc/firejail/.
+-if [ ! -f /etc/firejail/login.users ]
++mkdir -p $1/etc/firejail
++install -c -m 0644 etc/firefox.profile $1/etc/firejail/.
++install -c -m 0644 etc/firefox.profile $1/etc/firejail/iceweasel.profile
++install -c -m 0644 etc/midori.profile $1/etc/firejail/.
++install -c -m 0644 etc/evince.profile $1/etc/firejail/.
++install -c -m 0644 etc/chromium-browser.profile $1/etc/firejail/.
++install -c -m 0644 etc/chromium.profile $1/etc/firejail/.
++if [ ! -f $1/etc/firejail/login.users ]
+ then
+-	install -c -m 0644 etc/login.users /etc/firejail/.
++	install -c -m 0644 etc/login.users $1/etc/firejail/.
+ fi
+ 
+ # man pages
+@@ -34,12 +34,12 @@ rm -f firejail.1.gz
+ gzip -9 firejail.1
+ rm -f firemon.1.gz
+ gzip -9 firemon.1
+-mkdir -p $1/share/man/man1
+-install -c -m 0644 firejail.1.gz $1/share/man/man1/.	
+-install -c -m 0644 firemon.1.gz $1/share/man/man1/.	
++mkdir -p $1/$2/share/man/man1
++install -c -m 0644 firejail.1.gz $1/$2/share/man/man1/.	
++install -c -m 0644 firemon.1.gz $1/$2/share/man/man1/.	
+ rm -f firejail.1.gz firemon.1.gz
+ 
+ # bash completion
+-mkdir -p $1/share/bash-completion/completions
+-install -c -m 0644 etc/firejail.bash_completion $1/share/bash-completion/completions/firejail
+-install -c -m 0644 etc/firemon.bash_completion $1/share/bash-completion/completions/firemon
++mkdir -p $1/$2/share/bash-completion/completions
++install -c -m 0644 etc/firejail.bash_completion $1/$2/share/bash-completion/completions/firejail
++install -c -m 0644 etc/firemon.bash_completion $1/$2/share/bash-completion/completions/firemon
+--- Makefile.in	2014-07-11 20:09:38.000000000 +0200
++++ Makefile.in	2014-09-28 18:23:19.617458429 +0200
+@@ -40,16 +40,16 @@ distclean: clean
+ 	rm -fr Makefile autom4te.cache config.log config.status config.h
+ 
+ install: all
+-	./install.sh $(PREFIX)
++	./install.sh $(DESTDIR) $(PREFIX)
+ 
+ uninstall:;
+-	rm -f $(PREFIX)/bin/firejail
+-	rm -f $(PREFIX)/bin/firemon
+-	rm -fr $(PREFIX)/share/doc/firejail
+-	rm -f $(PREFIX)/share/man/man1/firejail.1*
+-	rm -f $(PREFIX)/share/man/man1/firemon.1*
+-	rm -f $(PREFIX)/share/bash-completion/completions/firejail
+-	rm -f $(PREFIX)/share/bash-completion/completions/firemon
++	rm -f $(DESTDIR)/$(PREFIX)/bin/firejail
++	rm -f $(DESTDIR)/$(PREFIX)/bin/firemon
++	rm -fr $(DESTDIR)/$(PREFIX)/share/doc/firejail
++	rm -f $(DESTDIR)/$(PREFIX)/share/man/man1/firejail.1*
++	rm -f $(DESTDIR)/$(PREFIX)/share/man/man1/firemon.1*
++	rm -f $(DESTDIR)/$(PREFIX)/share/bash-completion/completions/firejail
++	rm -f $(DESTDIR)/$(PREFIX)/share/bash-completion/completions/firemon
+ 	
+ dist:
+ 	make distclean
