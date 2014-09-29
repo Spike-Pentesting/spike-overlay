@@ -16,7 +16,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="dev-python/pygtk
-	dev-python/twisted"
+	dev-python/twisted-core"
 
 pkg_setup() {
 	python_set_active_version 2
