@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="<net-analyzer/scapy-2.0
+DEPEND="net-analyzer/scapy
 	dev-python/gnuplot-py
 	dev-python/pyx"
 

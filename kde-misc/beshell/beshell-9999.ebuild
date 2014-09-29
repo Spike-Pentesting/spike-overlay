@@ -17,12 +17,11 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
-	x11-libs/qt-gui
+	dev-qt/qtcore
 	kde-base/kdelibs
-	x11-libs/qt-core
 	media-libs/phonon
-	x11-libs/qt-gui
-	x11-libs/qt-dbus
+	dev-qt/qtgui
+	dev-qt/qtdbus
 	"
 
 DEPEND="${RDEPEND}"

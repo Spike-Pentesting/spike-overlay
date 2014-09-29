@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="-*"
 IUSE=""
 
-DEPEND="<net-wireless/gnuradio-3.7:=
+DEPEND="net-wireless/gnuradio
 	sci-libs/itpp
 	dev-libs/boost
 	net-libs/libpcap"

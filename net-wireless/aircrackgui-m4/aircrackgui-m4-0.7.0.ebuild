@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.7.3
-	>=x11-libs/qt-core-4.7.3"
+DEPEND="dev-qt/qtgui
+	dev-qt/qtcore"
 RDEPEND="${DEPEND}
 	net-analyzer/macchanger
 	net-wireless/aircrack-ng"

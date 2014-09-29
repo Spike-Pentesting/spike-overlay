@@ -19,7 +19,7 @@ KEYWORDS=""
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="rtl fgfs +gui uhd"
-DEPEND=">=net-wireless/gnuradio-3.7.0:=
+DEPEND="net-wireless/gnuradio
 	net-wireless/gr-osmosdr
 	dev-python/pyzmq
 	fgfs? ( sci-libs/scipy

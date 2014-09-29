@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND="net-wireless/bluez[test-programs]
+RDEPEND="net-wireless/bluez
 	 net-wireless/bt-audit
 	 dev-libs/libxml2
 	 dev-python/wxpython

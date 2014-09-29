@@ -12,7 +12,7 @@ EGIT_COMMIT="v${PV}"
 
 inherit efl
 
-DESCRIPTION="Basic widget set, based on EFL with focus mobile touch-screen devices."
+DESCRIPTION="Basic widget set, based on EFL with focus mobile touch-screen devices"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Elementary"
 
 KEYWORDS="~amd64 ~x86"

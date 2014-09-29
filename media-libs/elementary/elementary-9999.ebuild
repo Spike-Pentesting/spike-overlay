@@ -11,7 +11,7 @@ EFL_GIT_REPO_CATEGORY="core"
 
 inherit efl
 
-DESCRIPTION="Basic widget set, based on EFL with focus mobile touch-screen devices."
+DESCRIPTION="Basic widget set, based on EFL with focus mobile touch-screen devices"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Elementary"
 
 LICENSE="LGPL-2.1"
