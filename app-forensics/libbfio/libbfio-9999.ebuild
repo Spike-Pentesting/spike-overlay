@@ -6,7 +6,7 @@ EAPI=4
 
 inherit eutils git-2 versionator
 
-DESCRIPTION="Library for providing a basic file input/output abstraction layer."
+DESCRIPTION="Library for providing a basic file input/output abstraction layer"
 HOMEPAGE="https://code.google.com/p/libbfio/"
 EGIT_REPO_URI="https://code.google.com/p/libbfio/"
 

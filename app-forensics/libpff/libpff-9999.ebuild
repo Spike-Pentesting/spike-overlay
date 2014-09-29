@@ -8,7 +8,7 @@ inherit eutils git-2 versionator
 
 MY_DATE="$(get_version_component_range 3)"
 
-DESCRIPTION="Library for accessing Personal Folder Files."
+DESCRIPTION="Library for accessing Personal Folder Files"
 HOMEPAGE="http://code.google.com/p/libpff/"
 EGIT_REPO_URI="https://code.google.com/p/libpff/"
 

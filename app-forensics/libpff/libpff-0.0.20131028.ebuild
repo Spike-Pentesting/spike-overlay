@@ -8,7 +8,7 @@ inherit versionator
 
 MY_DATE="$(get_version_component_range 3)"
 
-DESCRIPTION="Library for accessing Personal Folder Files."
+DESCRIPTION="Library for accessing Personal Folder Files"
 HOMEPAGE="http://code.google.com/p/libpff/"
 SRC_URI="https://googledrive.com/host/0B3fBvzttpiiScU9qcG5ScEZKZE0/${PN}-experimental-${MY_DATE}.tar.gz"
 

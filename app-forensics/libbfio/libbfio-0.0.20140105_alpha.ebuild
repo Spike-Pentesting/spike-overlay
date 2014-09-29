@@ -8,7 +8,7 @@ inherit versionator
 
 MY_DATE="$(get_version_component_range 3)"
 
-DESCRIPTION="Library for providing a basic file input/output abstraction layer."
+DESCRIPTION="Library for providing a basic file input/output abstraction layer"
 HOMEPAGE="https://code.google.com/p/libbfio/"
 SRC_URI="https://googledrive.com/host/0B3fBvzttpiiSTERGV3V4bnZ3dlk/${PN}-alpha-${MY_DATE}.tar.gz"
 

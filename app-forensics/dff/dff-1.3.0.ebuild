@@ -7,8 +7,7 @@ PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils python
 
-DESCRIPTION="A digital forensics framework which aims to analyze and recover any
-kind of digital artifact."
+DESCRIPTION="A digital forensics framework which aims to analyze and recover any kind of digital artifact"
 HOMEPAGE="http://tracker.digital-forensic.org/"
 SRC_URI="http://dev.pentoo.ch/~zero/distfiles/${PN}-${PV}.tar.gz"
 

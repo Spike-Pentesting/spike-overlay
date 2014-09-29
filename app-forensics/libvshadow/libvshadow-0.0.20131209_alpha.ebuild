@@ -9,7 +9,7 @@ inherit versionator python-single-r1
 
 MY_DATE="$(get_version_component_range 3)"
 
-DESCRIPTION="Library and tools to support the Volume Shadow Snapshot (VSS) format."
+DESCRIPTION="Library and tools to support the Volume Shadow Snapshot (VSS) format"
 HOMEPAGE="http://code.google.com/p/libvshadow/"
 SRC_URI="http://dev.pentoo.ch/~blshkv/distfiles/${PN}-alpha-${MY_DATE}.tar.gz http://dev.pentoo.ch/~zero/distfiles/${PN}-alpha-${MY_DATE}.tar.gz"
 

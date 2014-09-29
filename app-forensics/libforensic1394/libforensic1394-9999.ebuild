@@ -7,7 +7,7 @@ SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils cmake-utils git-2
 
-DESCRIPTION="Library for carrying out memory forensics using firewire/ieee1394."
+DESCRIPTION="Library for carrying out memory forensics using firewire/ieee1394"
 HOMEPAGE="http://freddie.witherden.org/tools/libforensic1394/"
 SRC_URI=""
 EGIT_REPO_URI="git://git.freddie.witherden.org/forensic1394.git"

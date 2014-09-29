@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 
 inherit distutils
 
-DESCRIPTION="A python script to decode yahoo instant message archive files."
+DESCRIPTION="A python script to decode yahoo instant message archive files"
 HOMEPAGE="http://www.1vs0.com/tools.html"
 SRC_URI="http://www.1vs0.com/code/${P}.tar.bz2"
 
