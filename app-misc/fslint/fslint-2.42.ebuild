@@ -5,7 +5,7 @@
 # updated  ebuild by mobidyc@msn.com
 # updated  ebuild by davide.bettio@kdemail.net
 
-DESCRIPTION="A utility to find and clean various forms of lint on a filesystem."
+DESCRIPTION="A utility to find and clean various forms of lint on a filesystem"
 HOMEPAGE="http://www.pixelbeat.org/fslint/"
 SRC_URI="http://www.pixelbeat.org/fslint/${P}.tar.gz"
 
