@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="Wlan2eth is a tool that converts wlan pcap to ethernet-like frames."
+DESCRIPTION="Wlan2eth is a tool that converts wlan pcap to ethernet-like frames"
 HOMEPAGE="http://www.willhackforsushi.com/Offensive.html"
 SRC_URI="http://www.willhackforsushi.com/code/${PN}/${P}-src.tgz"
 

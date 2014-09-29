@@ -13,7 +13,7 @@ RUBY_FAKEGEM_GEMSPEC="rack-protection.gemspec"
 
 inherit ruby-fakegem eutils versionator
 
-DESCRIPTION="This gem protects against typical web attacks."
+DESCRIPTION="This gem protects against typical web attacks"
 HOMEPAGE="https://github.com/rkh/rack-protection"
 
 LICENSE="MIT"

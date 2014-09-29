@@ -7,7 +7,7 @@ USE_RUBY="ruby19"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Provides simple parsing of standard *nix style config files."
+DESCRIPTION="Provides simple parsing of standard *nix style config files"
 HOMEPAGE="https://github.com/derks/ruby-parseconfig"
 
 LICENSE="GPL-2"

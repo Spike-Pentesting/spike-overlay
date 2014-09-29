@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.rdoc AUTHORS CHANGES"
 
 inherit ruby-fakegem versionator
 
-DESCRIPTION="Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort."
+DESCRIPTION="Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort"
 HOMEPAGE="http://www.sinatrarb.com/"
 
 LICENSE="MIT"

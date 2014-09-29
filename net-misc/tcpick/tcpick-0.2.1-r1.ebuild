@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit eutils
 
-DESCRIPTION="A tcp stream sniffer, tracker and capturer."
+DESCRIPTION="A tcp stream sniffer, tracker and capturer"
 HOMEPAGE="http://tcpick.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -8,7 +8,7 @@ inherit eutils
 
 MY_PV=${PV/_beta/-beta}
 
-DESCRIPTION="SipBomber is a tool to stress SIP server/proxy implementations."
+DESCRIPTION="SipBomber is a tool to stress SIP server/proxy implementations"
 HOMEPAGE="http://sipp.sourceforge.net/"
 #SRC_URI="mirror://sourceforge/$PN/${PN}.${PV}.src.tar.gz"
 SRC_URI="https://github.com/SIPp/sipp/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"

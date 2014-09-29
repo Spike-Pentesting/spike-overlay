@@ -5,8 +5,8 @@
 EAPI=4
 inherit qt4-r2
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION="GUI frontend for aircrack-ng suite"
+HOMEPAGE="https://code.google.com/p/aircrackgui-m4/"
 SRC_URI="http://aircrackgui-m4.googlecode.com/files/aircrack-GUI-M4%200.7.0%20Final-Source.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE=""
