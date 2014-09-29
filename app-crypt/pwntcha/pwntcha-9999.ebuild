@@ -8,7 +8,7 @@ EGIT_REPO_URI="https://github.com/iveney/pwntcha.git"
 EGIT_BRANCH="master"
 [[ "${PV}" == "9999" ]] && inherit git-2
 
-DESCRIPTION="An efficient Captcha Decoder."
+DESCRIPTION="An efficient Captcha Decoder"
 HOMEPAGE="http://caca.zoy.org/wiki/PWNtcha"
 [[ "${PV}" == "9999" ]]
 

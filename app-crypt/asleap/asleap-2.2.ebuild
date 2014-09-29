@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="exploiting cisco leap; As in asleap behind the wheel."
+DESCRIPTION="exploiting cisco leap; As in asleap behind the wheel"
 HOMEPAGE="http://www.willhackforsushi.com/Asleap.html"
 SRC_URI="http://www.willhackforsushi.com/code/asleap/2.2/${P}.tgz"
 

@@ -6,7 +6,7 @@ EAPI=2
 
 inherit eutils
 
-DESCRIPTION="Encrypt and decrypt files using Colin Percival's scrypt algorithm."
+DESCRIPTION="Encrypt and decrypt files using Colin Percival's scrypt algorithm"
 HOMEPAGE="http://www.tarsnap.com/scrypt.html"
 SRC_URI="http://www.tarsnap.com/scrypt/${P}.tgz"
 LICENSE="BSD-2"
