@@ -14,6 +14,6 @@ LICENSE="BSD"
 SLOT=0
 KEYWORDS="~amd64 ~arm ~x86"
 
-ruby_add_rdepend "=dev-ruby/arachni-rpc-0.1.3
+ruby_add_rdepend "dev-ruby/arachni-rpc
 		>=dev-ruby/em-synchrony-1.0.0
 		=dev-ruby/eventmachine-1.0* >=dev-ruby/eventmachine-1.0.0"

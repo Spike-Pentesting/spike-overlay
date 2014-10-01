@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils subversion
 
-DESCRIPTION="pyscard is a python module adding smart cards support to python."
+DESCRIPTION="pyscard is a python module adding smart cards support to python"
 HOMEPAGE="http://pyscard.sourceforge.net/ http://pypi.python.org/pypi/pyscard"
 #SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 ESVN_REPO_URI="https://pyscard.svn.sourceforge.net/svnroot/pyscard/trunk/pyscard/src/"
