@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=""
 DEPEND="dev-util/capstone
-	dev-util/radare2:="
+	dev-util/radare2"
 
 S=${WORKDIR}/${PN}-cs-${PV}
 

@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit eutils
 
-DESCRIPTION="A tool for reengineering 3rd party, closed, binary Android apps."
+DESCRIPTION="A tool for reengineering 3rd party, closed, binary Android apps"
 HOMEPAGE="http://code.google.com/p/android-apktool/"
 SRC_URI="http://android-${PN}.googlecode.com/files/${PN}${PV}.tar.bz2
 	http://android-${PN}.googlecode.com/files/${PN}-install-linux-r05-ibot.tar.bz2"

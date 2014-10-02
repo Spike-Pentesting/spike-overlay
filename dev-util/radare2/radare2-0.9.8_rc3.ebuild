@@ -20,7 +20,7 @@ IUSE="+capstone debug ewf ssl"
 #capstone is not really optional
 
 RDEPEND=">dev-util/capstone-2.1.2
-	!dev-util/radare2-capstone
+	dev-util/radare2-capstone
 	ssl? ( dev-libs/openssl:= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

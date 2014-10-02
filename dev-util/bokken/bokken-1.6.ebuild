@@ -18,7 +18,7 @@ IUSE="+radare"
 
 DEPEND=""
 RDEPEND="radare? ( dev-libs/radare2-bindings[python]
-	>=dev-util/radare2-0.9.6 )"
+	dev-util/radare2 )"
 # TODO:
 # pyew? ( dev-util/pyew )
 # app-text/htmltidy

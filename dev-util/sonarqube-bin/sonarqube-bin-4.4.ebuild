@@ -6,7 +6,7 @@ EAPI=5
 
 inherit java-pkg-2 user
 
-DESCRIPTION="SonarQube is an open platform to manage code quality."
+DESCRIPTION="SonarQube is an open platform to manage code quality"
 HOMEPAGE="http://www.sonarqube.org/"
 LICENSE="LGPL-3"
 MY_PV="${PV/_alpha/M}"

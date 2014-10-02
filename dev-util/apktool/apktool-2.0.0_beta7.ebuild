@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-DESCRIPTION="A tool for reengineering 3rd party, closed, binary Android apps."
+DESCRIPTION="A tool for reengineering 3rd party, closed, binary Android apps"
 HOMEPAGE="http://code.google.com/p/android-apktool/"
 SRC_URI="http://miui.connortumbleson.com/other/apktool/test_versions/apktool_2.0.0b7.jar"
 
