@@ -8,7 +8,7 @@ inherit linux-mod linux-info subversion
 
 MY_P="PF_RING-${PV}"
 
-DESCRIPTION="A new type of network socket that improves packet capture speed."
+DESCRIPTION="A new type of network socket that improves packet capture speed"
 HOMEPAGE="http://www.ntop.org/PF_RING.html"
 ESVN_REPO_URI="https://svn.ntop.org/svn/ntop/trunk/PF_RING/"
 ESVN_REVISION="7161"

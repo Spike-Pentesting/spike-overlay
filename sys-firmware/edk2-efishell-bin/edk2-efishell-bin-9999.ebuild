@@ -6,7 +6,7 @@ EAPI=4
 
 inherit subversion
 
-DESCRIPTION="EFI-Shell - provides native UDK implemenations of a UEFI Shell 2.0."
+DESCRIPTION="EFI-Shell - provides native UDK implemenations of a UEFI Shell 2.0"
 HOMEPAGE="http://sourceforge.net/apps/mediawiki/tianocore/index.php?title=UEFI_Shell"
 SRC_URI=""
 # ESVN_REPO_URI="http://edk2.svn.sourceforge.net/svnroot/edk2/trunk/edk2/ShellBinPkg"

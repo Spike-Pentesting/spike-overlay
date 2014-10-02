@@ -8,7 +8,7 @@ inherit linux-mod linux-info eutils
 
 MY_P="PF_RING-${PV}"
 
-DESCRIPTION="A new type of network socket that improves packet capture speed."
+DESCRIPTION="A new type of network socket that improves packet capture speed"
 HOMEPAGE="http://www.ntop.org/PF_RING.html"
 SRC_URI="mirror://sourceforge/ntop/PF_RING/${MY_P}.tar.gz"
 
