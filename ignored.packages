@@ -59,3 +59,5 @@ portage
 sqid
 hostapd
 www-plugins
+net-wireless/broadcom
+net-analyzer/scapy
