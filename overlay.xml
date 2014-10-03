@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>spike</name>
+		<description>This repository contains the ebuild used to build spike, a pentesting distro based on Sabayon</description>
+		<homepage>https://github.com/Spike-Pentesting/spike-overlay</homepage>
+		<owner>
+			<email>mudler@dark-lab.net</email>
+			<email>skullbocks@dark-lab.net</email>
+		</owner>
+		<source type="git">https://github.com/Spike-Pentesting/spike-overlay.git</source>
+	</repo>
+</repositories>
