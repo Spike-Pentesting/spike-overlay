@@ -59,3 +59,4 @@ portage
 sqid
 hostapd
 www-plugins
+net-analyzer/scapy
