@@ -61,3 +61,4 @@ hostapd
 www-plugins
 net-wireless/broadcom
 net-analyzer/scapy
+grub-static
