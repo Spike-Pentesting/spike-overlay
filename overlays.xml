@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>spike-community-overlay</name>
+    <description>spike-community-overlay</description>
+    <homepage>http://spike-pentesting.org//homepage>
+    <owner type="person">
+      <email>mudler@dark-lab.net,skullbocks@dark-lab.net,mike@michaellawrenceit.com</email>
+      <name>Mudler,Skullbocks</name>
+    </owner>
+    <source type="git">git@github.com:Sabayon-Labs/spike-community-overlay.git</source>
+    <source type="git">https://github.com/Sabayon-Labs/spike-community-overlay</source>
+    <feed>https://github.com/Sabayon-Labs/spike-community-overlay</feed>
+    <feed>https://github.com/Sabayon-Labs/spike-community-overlay//rss</feed>
+  </repo>
+</repositories>
