@@ -5,6 +5,6 @@ git remote add origin https://github.com/Sabayon-Labs/App-witchcraft.git
 git remote add upstream https://github.com/Spike-Pentesting/App-witchcraft.git
 git checkout master
 git fetch upstream
-git rebase upstream/master
 git merge upstream/master
+git rebase upstream/master
 git push origin
