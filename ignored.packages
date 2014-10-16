@@ -62,3 +62,4 @@ www-plugins
 net-wireless/broadcom
 net-analyzer/scapy
 grub-static
+app-misc/socnetv
