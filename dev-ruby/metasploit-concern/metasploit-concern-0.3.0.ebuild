@@ -7,8 +7,8 @@ USE_RUBY="ruby19 ruby20"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Code for modeling and managing credentials in Metasploit"
-HOMEPAGE="https://github.com/rapid7/metasploit-credential"
+DESCRIPTION="Metasploit concern allows you to define concerns in app/concerns. "
+HOMEPAGE="https://github.com/rapid7/metasploit-concern"
 SRC_URI="mirror://rubygems/${P}.gem"
 
 LICENSE="BSD"
@@ -16,10 +16,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/metasploit-concern
-	dev-ruby/metasploit_data_models
-	dev-ruby/metasploit-model
-	=dev-ruby/rubyzip-1*
-	dev-ruby/rubyntlm
-	<dev-ruby/railties-4.0.0
-	dev-ruby/pg"
+ruby_add_rdepend "<dev-ruby/railties-4.0.0
+				>=dev-ruby/activesupport-3.0.0"

@@ -22,7 +22,6 @@ DEPEND=">=virtual/jre-1.5
 	wep? ( net-analyzer/macchanger )
 	extra? ( app-misc/crunch
 		net-analyzer/wireshark
-		net-analyzer/hydra
 		app-crypt/pyrit )"
 RDEPEND="${DEPEND}"
 

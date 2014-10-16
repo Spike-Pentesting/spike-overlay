@@ -7,8 +7,8 @@ USE_RUBY="ruby19 ruby20"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Code for modeling and managing credentials in Metasploit"
-HOMEPAGE="https://github.com/rapid7/metasploit-credential"
+DESCRIPTION="Rubinius profiler."
+HOMEPAGE="https://github.com/rubinius/rubinius-profiler"
 SRC_URI="mirror://rubygems/${P}.gem"
 
 LICENSE="BSD"
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/metasploit-concern
-	dev-ruby/metasploit_data_models
-	dev-ruby/metasploit-model
-	=dev-ruby/rubyzip-1*
-	dev-ruby/rubyntlm
-	<dev-ruby/railties-4.0.0
-	dev-ruby/pg"
+each_ruby_prepare() {
+	if [ -f Gemfile ]
+	then
+		BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle install --local || die
+		BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle check || die
+	fi
+}

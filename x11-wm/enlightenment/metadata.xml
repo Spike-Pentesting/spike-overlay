@@ -5,4 +5,67 @@
 		<email>mudler@dark-lab.net</email>
 		<name>mudler</name>
 	</maintainer>
+<use>
+<flag name="eeze"/>
+<flag name="egl"/>
+<flag name="enlightenment_modules_access"/>
+<flag name="enlightenment_modules_appmenu"/>
+<flag name="enlightenment_modules_backlight"/>
+<flag name="enlightenment_modules_battery"/>
+<flag name="enlightenment_modules_bluez4"/>
+<flag name="enlightenment_modules_clock"/>
+<flag name="enlightenment_modules_conf-applications"/>
+<flag name="enlightenment_modules_conf-bindings"/>
+<flag name="enlightenment_modules_conf-comp"/>
+<flag name="enlightenment_modules_conf-dialogs"/>
+<flag name="enlightenment_modules_conf-display"/>
+<flag name="enlightenment_modules_conf-interaction"/>
+<flag name="enlightenment_modules_conf-intl"/>
+<flag name="enlightenment_modules_conf-menus"/>
+<flag name="enlightenment_modules_conf-paths"/>
+<flag name="enlightenment_modules_conf-performance"/>
+<flag name="enlightenment_modules_conf-randr"/>
+<flag name="enlightenment_modules_conf-shelves"/>
+<flag name="enlightenment_modules_conf-theme"/>
+<flag name="enlightenment_modules_conf-wallpaper2"/>
+<flag name="enlightenment_modules_conf-window-manipulation"/>
+<flag name="enlightenment_modules_conf-window-remembers"/>
+<flag name="enlightenment_modules_connman"/>
+<flag name="enlightenment_modules_contact"/>
+<flag name="enlightenment_modules_cpufreq"/>
+<flag name="enlightenment_modules_everything"/>
+<flag name="enlightenment_modules_fileman"/>
+<flag name="enlightenment_modules_fileman-opinfo"/>
+<flag name="enlightenment_modules_gadman"/>
+<flag name="enlightenment_modules_ibar"/>
+<flag name="enlightenment_modules_ibox"/>
+<flag name="enlightenment_modules_illume2"/>
+<flag name="enlightenment_modules_lokker"/>
+<flag name="enlightenment_modules_mixer"/>
+<flag name="enlightenment_modules_msgbus"/>
+<flag name="enlightenment_modules_music-control"/>
+<flag name="enlightenment_modules_notification"/>
+<flag name="enlightenment_modules_packagkit"/>
+<flag name="enlightenment_modules_pager"/>
+<flag name="enlightenment_modules_pager16"/>
+<flag name="enlightenment_modules_quickaccess"/>
+<flag name="enlightenment_modules_shot"/>
+<flag name="enlightenment_modules_start"/>
+<flag name="enlightenment_modules_syscon"/>
+<flag name="enlightenment_modules_systray"/>
+<flag name="enlightenment_modules_tasks"/>
+<flag name="enlightenment_modules_teamwork"/>
+<flag name="enlightenment_modules_temperature"/>
+<flag name="enlightenment_modules_tiling"/>
+<flag name="enlightenment_modules_winlist"/>
+<flag name="enlightenment_modules_wizard"/>
+<flag name="enlightenment_modules_wl-desktop-shell"/>
+<flag name="enlightenment_modules_wl-drm"/>
+<flag name="enlightenment_modules_wl-fb"/>
+<flag name="enlightenment_modules_wl-screenshot"/>
+<flag name="enlightenment_modules_wl-x11"/>
+<flag name="enlightenment_modules_xkbswitch"/>
+<flag name="pm-utils"/>
+<flag name="ukit"/>
+</use>
 </pkgmetadata>
