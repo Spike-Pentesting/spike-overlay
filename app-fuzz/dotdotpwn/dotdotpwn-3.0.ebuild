@@ -15,7 +15,7 @@ IUSE="os-detection"
 
 RDEPEND="dev-lang/perl
 	dev-libs/openssl dev-perl/Net-SSLeay
-	perl-core/Time-HiRes
+	virtual/perl-Time-HiRes
 	app-portage/g-cpan
 	os-detection? ( net-analyzer/nmap )"
 
