@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Introspected tunnels to localhost"
 SRC_URI="https://github.com/inconshreveable/ngrok/archive/${PV}.tar.gz"
-HOMEPAGE="https://ngrok.com/"
+HOMEPAGE="https://ngrok.com"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/go-1.2
 	dev-vcs/git"
 
 src_compile(){
-	emake release-all
+	make release-all #XXX: going to regret this for a patch
 }
 
 src_install(){
