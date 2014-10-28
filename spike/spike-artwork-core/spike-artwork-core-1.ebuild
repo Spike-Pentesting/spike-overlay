@@ -19,8 +19,8 @@ S="${WORKDIR}/${PN}"
 src_install() {
 	# Fbsplash theme
 	cd "${S}"/fbsplash || die
-	dodir /etc/splash/sabayon
-	cp -r "${S}"/fbsplash/sabayon/* "${D}"/etc/splash/sabayon
+	dodir /etc/splash/spike
+	cp -r "${S}"/fbsplash/spike/* "${D}"/etc/splash/spike
 
 	# Cursors
 	cd "${S}"/mouse/entis/cursors || die
@@ -32,14 +32,14 @@ src_install() {
 	cd "${S}"/background || die
 	insinto /usr/share/backgrounds
 	doins *.png *.jpg
-	newins sabayonlinux.png sabayonlinux-nvidia.png
+	#newins sabayonlinux.png sabayonlinux-nvidia.png
 
 	# Plymouth
 	cd "${S}/plymouth" || die
 	insinto /usr/share/plymouth
 	doins bizcom.png
 	insinto /usr/share/plymouth/themes
-	doins -r sabayon
+	doins -r spike
 }
 
 pkg_postinst() {
