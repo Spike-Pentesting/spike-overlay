@@ -1,7 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/Tie-Array-Sorted-1.4.1.ebuild,v 1.4 2007/03/05 12:35:24 ticho Exp $
-
+EAPI=5
 inherit perl-module versionator
 
 DESCRIPTION="Manipulate perl strings through tied array"

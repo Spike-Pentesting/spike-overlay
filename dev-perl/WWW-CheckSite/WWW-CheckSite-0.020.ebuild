@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize-FormFiller/WWW-Mechanize-FormFiller-0.08.ebuild,v 1.4 2007/12/27 19:39:34 ticho Exp $
 
+EAPI=5
 inherit perl-module
 
 DESCRIPTION="Interface to an iterator that checks a website"
