@@ -39,7 +39,7 @@ DEPEND="${CDEPEND}
 # Block due bug #383067
 RDEPEND="${CDEPEND}
 	virtual/udev
-	x11-themes/spike-artwork-core
+	spike/spike-artwork-core
 	!<sys-kernel/dracut-0.37-r3
 "
 
