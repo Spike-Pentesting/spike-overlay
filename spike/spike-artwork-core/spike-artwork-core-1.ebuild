@@ -3,7 +3,7 @@
 #
 
 EAPI=5
-inherit eutils mount-boot sabayon-artwork
+inherit eutils mount-boot spike-artwork
 
 DESCRIPTION="Official Spike Linux Core Artwork"
 HOMEPAGE="http://www.spike-pentesting.org/"
