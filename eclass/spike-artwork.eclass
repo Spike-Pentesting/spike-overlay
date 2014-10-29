@@ -1,4 +1,4 @@
-# Copyright 2004-2009 Sabayon Project
+# Copyright 2004-2009 Spike Project
 # Distributed under the terms of the GNU General Public License v2
 # $
 
@@ -39,12 +39,12 @@ update_kernel_initramfs_splash() {
 
 }
 
-# @FUNCTION: update_sabayon_kernel_initramfs_splash
-# @USAGE: update_sabayon_kernel_initramfs_splash
+# @FUNCTION: update_spike_kernel_initramfs_splash
+# @USAGE: update_spike_kernel_initramfs_splash
 #
 # @MAINTAINER:
 # Fabio Erculiani
-update_sabayon_kernel_initramfs_splash() {
+update_spike_kernel_initramfs_splash() {
     local splash_name="${GFX_SPLASH_NAME}"
     local override_splash_file="${ROOT}etc/oem/splash_name"
     if [ -f "${override_splash_file}" ]; then
