@@ -13,12 +13,12 @@ KERN_INITRAMFS_SEARCH_NAME="${KERN_INITRAMFS_SEARCH_NAME:-initramfs-genkernel*}"
 # @ECLASS-VARIABLE: GFX_SPLASH_NAME
 # @DESCRIPTION:
 # Default splash theme name to use
-GFX_SPLASH_NAME="${GFX_SPLASH_NAME:-sabayon}"
+GFX_SPLASH_NAME="${GFX_SPLASH_NAME:-spike}"
 
 # @ECLASS-VARIABLE: PLYMOUTH_THEME
 # @DESCRIPTION:
 # Default plymouth theme name to use
-PLYMOUTH_THEME="${PLYMOUTH_THEME:-sabayon}"
+PLYMOUTH_THEME="${PLYMOUTH_THEME:-spike}"
 
 # @FUNCTION: update_kernel_initramfs_splash
 # @USAGE: update_kernel_initramfs_splash [splash_theme] [splash_file]
