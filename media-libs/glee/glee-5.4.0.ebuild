@@ -29,4 +29,6 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc readme.txt extensionList.txt || die
+	insinto /usr/lib/pkgconfig
+	newins "${FILESDIR}/${P}.pc" glee.pc
 }
