@@ -150,9 +150,11 @@ DEPEND="
 	net-misc/faifa
 	net-misc/fwknop
 	net-misc/karma
+	net-misc/ngrok
 	net-misc/rdesktop-brute
 	net-misc/sipp
 	net-misc/httpfs
+	net-misc/sslh
 	net-misc/t50
 	net-misc/tcpick
 	net-misc/voipong
