@@ -22,7 +22,7 @@ RDEPEND=">=dev-lang/ruby-1.9.2
 	dev-ruby/rubygems
 	dev-ruby/diff-lcs
 	dev-ruby/json
-	dev-ruby/yard
+	<dev-ruby/yard-0.8.7.4
 	dev-ruby/redcarpet
 	dev-libs/libxslt
 	dev-libs/openssl
