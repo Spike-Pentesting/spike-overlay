@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE=""
 DEPEND=""
-GCC_VER="4.7"
+GCC_VER="4.8"
 PYTHON_VER="2.7"
 # Listing default packages for the current release
 RDEPEND="!app-admin/eselect-init
@@ -32,6 +32,7 @@ RDEPEND="!app-admin/eselect-init
 
 src_unpack () {
 	echo "Spike Linux ${ARCH} ${PV}" > "${T}/sabayon-release"
+	echo "Spike Linux ${ARCH} ${PV}" > "${T}/spike-release"
 
 	# Anaconda expects a "release" somewhere in the string
 	# and no trailing \n
@@ -42,6 +43,7 @@ src_unpack () {
 src_install () {
 	insinto /etc
 	doins "${T}"/sabayon-release
+	doins "${T}"/spike-release
 	doins "${T}"/system-release
 
 	# Bug 3459 - reduce the risk of fork bombs
