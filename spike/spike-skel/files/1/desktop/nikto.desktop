@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=nikto
 GenericName=
-Exec=terminator --command 'sudo nikto;when;/bin/bash'
+Exec=terminator --command 'sudo nikto;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=gr-baz
 GenericName=
-Exec=terminator --command 'sudo gr-baz;when;/bin/bash'
+Exec=terminator --command 'sudo gr-baz;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/radio.png

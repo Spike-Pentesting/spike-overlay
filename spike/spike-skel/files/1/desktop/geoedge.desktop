@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=geoedge
 GenericName=
-Exec=terminator --command 'sudo geoedge;when;/bin/bash'
+Exec=terminator --command 'sudo geoedge;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/footprint.png

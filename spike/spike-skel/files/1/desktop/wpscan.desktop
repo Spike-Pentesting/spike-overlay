@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=wpscan
 GenericName=
-Exec=terminator --command 'sudo wpscan;when;/bin/bash'
+Exec=terminator --command 'sudo wpscan;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

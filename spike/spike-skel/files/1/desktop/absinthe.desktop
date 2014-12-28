@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=absinthe
 GenericName=
-Exec=terminator --command 'sudo absinthe;when;/bin/bash'
+Exec=terminator --command 'sudo absinthe;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/database.png

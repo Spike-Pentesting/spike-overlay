@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=hashkill
 GenericName=
-Exec=terminator --command 'sudo hashkill;when;/bin/bash'
+Exec=terminator --command 'sudo hashkill;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/cracker.png

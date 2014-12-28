@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=socat
 GenericName=
-Exec=terminator --command 'sudo socat;when;/bin/bash'
+Exec=terminator --command 'sudo socat;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

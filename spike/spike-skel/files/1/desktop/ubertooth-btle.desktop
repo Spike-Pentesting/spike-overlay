@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ubertooth-btle
 GenericName=
-Exec=terminator --command 'sudo ubertooth-btle;when;/bin/bash'
+Exec=terminator --command 'sudo ubertooth-btle;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/bluetooth.png

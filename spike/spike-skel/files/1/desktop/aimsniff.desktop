@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=aimsniff
 GenericName=
-Exec=terminator --command 'sudo aimsniff;when;/bin/bash'
+Exec=terminator --command 'sudo aimsniff;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=onesixtyone
 GenericName=
-Exec=terminator --command 'sudo onesixtyone;when;/bin/bash'
+Exec=terminator --command 'sudo onesixtyone;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

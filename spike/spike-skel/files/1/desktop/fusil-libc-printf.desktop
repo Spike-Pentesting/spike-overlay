@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fusil-libc-printf
 GenericName=
-Exec=terminator --command 'sudo fusil-libc-printf;when;/bin/bash'
+Exec=terminator --command 'sudo fusil-libc-printf;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

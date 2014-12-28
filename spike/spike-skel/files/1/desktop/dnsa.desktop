@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=dnsa
 GenericName=
-Exec=terminator --command 'sudo dnsa;when;/bin/bash'
+Exec=terminator --command 'sudo dnsa;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

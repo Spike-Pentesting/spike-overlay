@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ideviceimagemounter
 GenericName=
-Exec=terminator --command 'sudo ideviceimagemounter;when;/bin/bash'
+Exec=terminator --command 'sudo ideviceimagemounter;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mobile.png

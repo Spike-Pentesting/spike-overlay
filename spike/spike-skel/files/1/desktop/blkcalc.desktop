@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=blkcalc
 GenericName=
-Exec=terminator --command 'sudo blkcalc --help;when;/bin/bash'
+Exec=terminator --command 'sudo blkcalc --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

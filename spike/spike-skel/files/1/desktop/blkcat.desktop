@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=blkcat
 GenericName=
-Exec=terminator --command 'sudo blkcat --help;when;/bin/bash'
+Exec=terminator --command 'sudo blkcat --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ifind
 GenericName=
-Exec=terminator --command 'sudo ifind --help;when;/bin/bash'
+Exec=terminator --command 'sudo ifind --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

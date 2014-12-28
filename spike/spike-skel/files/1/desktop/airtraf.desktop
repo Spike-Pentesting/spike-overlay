@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=airtraf
 GenericName=
-Exec=terminator --command 'sudo airtraf;when;/bin/bash'
+Exec=terminator --command 'sudo airtraf;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

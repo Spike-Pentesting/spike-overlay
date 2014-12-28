@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=tsk_comparedir
 GenericName=
-Exec=terminator --command 'sudo tsk_comparedir --help;when;/bin/bash'
+Exec=terminator --command 'sudo tsk_comparedir --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

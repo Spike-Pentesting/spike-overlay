@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=dd_rescue
 GenericName=
-Exec=terminator --command 'sudo dd_rescue;when;/bin/bash'
+Exec=terminator --command 'sudo dd_rescue;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

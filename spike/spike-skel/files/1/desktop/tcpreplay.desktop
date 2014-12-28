@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=tcpreplay
 GenericName=
-Exec=terminator --command 'sudo tcpreplay;when;/bin/bash'
+Exec=terminator --command 'sudo tcpreplay;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

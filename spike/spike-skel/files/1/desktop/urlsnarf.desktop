@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=urlsnarf
 GenericName=
-Exec=terminator --command 'sudo urlsnarf;when;/bin/bash'
+Exec=terminator --command 'sudo urlsnarf;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mitm.png

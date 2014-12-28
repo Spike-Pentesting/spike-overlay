@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=smudge
 GenericName=
-Exec=terminator --command 'sudo smudge;when;/bin/bash'
+Exec=terminator --command 'sudo smudge;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=tcptraceroute
 GenericName=
-Exec=terminator --command 'sudo tcptraceroute;when;/bin/bash'
+Exec=terminator --command 'sudo tcptraceroute;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=make-pdf-javascript
 GenericName=
-Exec=terminator --command 'sudo make-pdf-javascript;when;/bin/bash'
+Exec=terminator --command 'sudo make-pdf-javascript;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/exploit.png

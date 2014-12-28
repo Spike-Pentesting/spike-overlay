@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fldigi
 GenericName=
-Exec=terminator --command 'sudo fldigi;when;/bin/bash'
+Exec=terminator --command 'sudo fldigi;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/radio.png

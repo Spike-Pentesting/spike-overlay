@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=nasm
 GenericName=
-Exec=terminator --command 'sudo nasm;when;/bin/bash'
+Exec=terminator --command 'sudo nasm;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/rce.png

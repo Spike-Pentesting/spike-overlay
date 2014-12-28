@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=dex2jar
 GenericName=
-Exec=terminator --command 'sudo dex2jar;when;/bin/bash'
+Exec=terminator --command 'sudo dex2jar;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mobile.png

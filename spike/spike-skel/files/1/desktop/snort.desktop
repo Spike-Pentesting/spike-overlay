@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=snort
 GenericName=
-Exec=terminator --command 'sudo snort;when;/bin/bash'
+Exec=terminator --command 'sudo snort;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/misc.png

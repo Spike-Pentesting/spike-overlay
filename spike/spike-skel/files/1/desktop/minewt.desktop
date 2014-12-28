@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=minewt
 GenericName=
-Exec=terminator --command 'sudo minewt;when;/bin/bash'
+Exec=terminator --command 'sudo minewt;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

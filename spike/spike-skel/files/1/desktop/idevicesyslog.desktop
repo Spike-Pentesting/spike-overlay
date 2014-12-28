@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=idevicesyslog
 GenericName=
-Exec=terminator --command 'sudo idevicesyslog;when;/bin/bash'
+Exec=terminator --command 'sudo idevicesyslog;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mobile.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=kismet
 GenericName=
-Exec=terminator --command 'sudo kismet;when;/bin/bash'
+Exec=terminator --command 'sudo kismet;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

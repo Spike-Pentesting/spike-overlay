@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=curl
 GenericName=
-Exec=terminator --command 'sudo curl;when;/bin/bash'
+Exec=terminator --command 'sudo curl;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/misc.png

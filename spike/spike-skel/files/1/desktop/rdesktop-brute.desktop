@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=rdesktop-brute
 GenericName=
-Exec=terminator --command 'sudo rdesktop-brute;when;/bin/bash'
+Exec=terminator --command 'sudo rdesktop-brute;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/cracker.png

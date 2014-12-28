@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=protos
 GenericName=
-Exec=terminator --command 'sudo protos;when;/bin/bash'
+Exec=terminator --command 'sudo protos;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

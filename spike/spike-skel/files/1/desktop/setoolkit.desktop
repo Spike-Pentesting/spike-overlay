@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=setoolkit
 GenericName=
-Exec=terminator --command 'sudo setoolkit;when;/bin/bash'
+Exec=terminator --command 'sudo setoolkit;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/exploit.png

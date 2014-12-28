@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=parasite6
 GenericName=
-Exec=terminator --command 'sudo parasite6;when;/bin/bash'
+Exec=terminator --command 'sudo parasite6;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

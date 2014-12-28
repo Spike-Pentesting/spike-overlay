@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ideviceenterrecovery
 GenericName=
-Exec=terminator --command 'sudo ideviceenterrecovery;when;/bin/bash'
+Exec=terminator --command 'sudo ideviceenterrecovery;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mobile.png

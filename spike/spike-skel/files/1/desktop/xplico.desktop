@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=xplico
 GenericName=
-Exec=terminator --command 'sudo xplico;when;/bin/bash'
+Exec=terminator --command 'sudo xplico;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

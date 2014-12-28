@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=xprobe2
 GenericName=
-Exec=terminator --command 'sudo xprobe2;when;/bin/bash'
+Exec=terminator --command 'sudo xprobe2;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/footprint.png

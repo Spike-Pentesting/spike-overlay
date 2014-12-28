@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=taof
 GenericName=
-Exec=terminator --command 'sudo taof;when;/bin/bash'
+Exec=terminator --command 'sudo taof;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

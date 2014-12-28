@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=enum4linux
 GenericName=
-Exec=terminator --command 'sudo enum4linux;when;/bin/bash'
+Exec=terminator --command 'sudo enum4linux;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

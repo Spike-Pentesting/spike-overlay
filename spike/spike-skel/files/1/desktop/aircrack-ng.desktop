@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=aircrack-ng
 GenericName=
-Exec=terminator --command 'sudo aircrack-ng --help;when;/bin/bash'
+Exec=terminator --command 'sudo aircrack-ng --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

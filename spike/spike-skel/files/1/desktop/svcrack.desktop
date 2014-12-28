@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=svcrack
 GenericName=
-Exec=terminator --command 'sudo svcrack;when;/bin/bash'
+Exec=terminator --command 'sudo svcrack;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/sip-voip.png

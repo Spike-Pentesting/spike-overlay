@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sqlmap
 GenericName=
-Exec=terminator --command 'sudo sqlmap;when;/bin/bash'
+Exec=terminator --command 'sudo sqlmap;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/database.png

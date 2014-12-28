@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=svwar
 GenericName=
-Exec=terminator --command 'sudo svwar;when;/bin/bash'
+Exec=terminator --command 'sudo svwar;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/sip-voip.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=macof
 GenericName=
-Exec=terminator --command 'sudo macof;when;/bin/bash'
+Exec=terminator --command 'sudo macof;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mitm.png

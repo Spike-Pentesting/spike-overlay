@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=reaver
 GenericName=
-Exec=terminator --command 'sudo reaver;when;/bin/bash'
+Exec=terminator --command 'sudo reaver;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

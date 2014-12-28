@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=rtl_sdr
 GenericName=
-Exec=terminator --command 'sudo rtl_sdr;when;/bin/bash'
+Exec=terminator --command 'sudo rtl_sdr;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/radio.png

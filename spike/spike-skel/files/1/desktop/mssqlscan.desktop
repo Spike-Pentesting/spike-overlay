@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=mssqlscan
 GenericName=
-Exec=terminator --command 'sudo mssqlscan;when;/bin/bash'
+Exec=terminator --command 'sudo mssqlscan;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/database.png

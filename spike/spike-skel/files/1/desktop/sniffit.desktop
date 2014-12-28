@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sniffit
 GenericName=
-Exec=terminator --command 'sudo sniffit;when;/bin/bash'
+Exec=terminator --command 'sudo sniffit;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

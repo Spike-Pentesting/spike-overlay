@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=extract_hosts6.sh
 GenericName=
-Exec=terminator --command 'sudo extract_hosts6.sh;when;/bin/bash'
+Exec=terminator --command 'sudo extract_hosts6.sh;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

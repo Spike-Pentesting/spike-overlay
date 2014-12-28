@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=siproxd
 GenericName=
-Exec=terminator --command 'sudo siproxd;when;/bin/bash'
+Exec=terminator --command 'sudo siproxd;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/sip-voip.png

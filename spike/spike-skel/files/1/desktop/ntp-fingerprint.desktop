@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ntp-fingerprint
 GenericName=
-Exec=terminator --command 'sudo ntp-fingerprint;when;/bin/bash'
+Exec=terminator --command 'sudo ntp-fingerprint;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/footprint.png

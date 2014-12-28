@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=pasco
 GenericName=
-Exec=terminator --command 'sudo pasco;when;/bin/bash'
+Exec=terminator --command 'sudo pasco;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=icat
 GenericName=
-Exec=terminator --command 'sudo icat --help;when;/bin/bash'
+Exec=terminator --command 'sudo icat --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

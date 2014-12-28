@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=insight
 GenericName=
-Exec=terminator --command 'sudo insight;when;/bin/bash'
+Exec=terminator --command 'sudo insight;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/rce.png

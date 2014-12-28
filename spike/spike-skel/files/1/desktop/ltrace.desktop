@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ltrace
 GenericName=
-Exec=terminator --command 'sudo ltrace;when;/bin/bash'
+Exec=terminator --command 'sudo ltrace;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/rce.png

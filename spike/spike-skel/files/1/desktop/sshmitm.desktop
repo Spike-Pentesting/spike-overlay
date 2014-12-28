@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sshmitm
 GenericName=
-Exec=terminator --command 'sudo sshmitm;when;/bin/bash'
+Exec=terminator --command 'sudo sshmitm;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mitm.png

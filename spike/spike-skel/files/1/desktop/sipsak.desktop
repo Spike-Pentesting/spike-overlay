@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sipsak
 GenericName=
-Exec=terminator --command 'sudo sipsak;when;/bin/bash'
+Exec=terminator --command 'sudo sipsak;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/sip-voip.png

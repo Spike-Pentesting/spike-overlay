@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=webmitm
 GenericName=
-Exec=terminator --command 'sudo webmitm;when;/bin/bash'
+Exec=terminator --command 'sudo webmitm;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mitm.png

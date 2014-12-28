@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=btscanner
 GenericName=
-Exec=terminator --command 'sudo btscanner;when;/bin/bash'
+Exec=terminator --command 'sudo btscanner;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/bluetooth.png
