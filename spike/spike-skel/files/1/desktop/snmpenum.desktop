@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=snmpenum
 GenericName=
-Exec=terminator --command 'sudo snmpenum;when;/bin/bash'
+Exec=terminator --command 'sudo snmpenum;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

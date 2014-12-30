@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=packit
 GenericName=
-Exec=terminator --command 'sudo packit;when;/bin/bash'
+Exec=terminator --command 'sudo packit;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forging.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=inguma
 GenericName=
-Exec=terminator --command 'sudo inguma;when;/bin/bash'
+Exec=terminator --command 'sudo inguma;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/exploit.png

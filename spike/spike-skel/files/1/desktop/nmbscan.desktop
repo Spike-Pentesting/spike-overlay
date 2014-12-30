@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=nmbscan
 GenericName=
-Exec=terminator --command 'sudo nmbscan;when;/bin/bash'
+Exec=terminator --command 'sudo nmbscan;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

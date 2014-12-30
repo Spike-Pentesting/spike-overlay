@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fusil-mplayer
 GenericName=
-Exec=terminator --command 'sudo fusil-mplayer;when;/bin/bash'
+Exec=terminator --command 'sudo fusil-mplayer;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

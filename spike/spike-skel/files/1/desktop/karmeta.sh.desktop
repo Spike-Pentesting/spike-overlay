@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=karmeta.sh
 GenericName=
-Exec=terminator --command 'sudo karmeta.sh;when;/bin/bash'
+Exec=terminator --command 'sudo karmeta.sh;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=xor-analyze
 GenericName=
-Exec=terminator --command 'sudo xor-analyze;when;/bin/bash'
+Exec=terminator --command 'sudo xor-analyze;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

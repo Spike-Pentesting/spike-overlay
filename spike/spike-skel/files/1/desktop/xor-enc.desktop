@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=xor-enc
 GenericName=
-Exec=terminator --command 'sudo xor-enc;when;/bin/bash'
+Exec=terminator --command 'sudo xor-enc;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ssltest
 GenericName=
-Exec=terminator --command 'sudo ssltest;when;/bin/bash'
+Exec=terminator --command 'sudo ssltest;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

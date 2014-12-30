@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=hivexsh
 GenericName=
-Exec=terminator --command 'sudo hivexsh;when;/bin/bash'
+Exec=terminator --command 'sudo hivexsh;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

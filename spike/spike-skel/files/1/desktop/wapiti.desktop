@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=wapiti
 GenericName=
-Exec=terminator --command 'sudo wapiti;when;/bin/bash'
+Exec=terminator --command 'sudo wapiti;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

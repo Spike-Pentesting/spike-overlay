@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ubertooth-lap
 GenericName=
-Exec=terminator --command 'sudo ubertooth-lap;when;/bin/bash'
+Exec=terminator --command 'sudo ubertooth-lap;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/bluetooth.png

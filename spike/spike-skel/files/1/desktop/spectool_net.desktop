@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=spectool_net
 GenericName=
-Exec=terminator --command 'sudo spectool_net;when;/bin/bash'
+Exec=terminator --command 'sudo spectool_net;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

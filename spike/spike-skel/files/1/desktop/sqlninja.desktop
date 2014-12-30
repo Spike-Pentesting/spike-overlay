@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sqlninja
 GenericName=
-Exec=terminator --command 'sudo sqlninja;when;/bin/bash'
+Exec=terminator --command 'sudo sqlninja;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/database.png

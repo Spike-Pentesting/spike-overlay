@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=srch_strings
 GenericName=
-Exec=terminator --command 'sudo srch_strings --help;when;/bin/bash'
+Exec=terminator --command 'sudo srch_strings --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

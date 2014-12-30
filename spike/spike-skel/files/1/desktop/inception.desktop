@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=inception
 GenericName=
-Exec=terminator --command 'sudo inception;when;/bin/bash'
+Exec=terminator --command 'sudo inception;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

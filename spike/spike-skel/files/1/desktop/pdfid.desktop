@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=pdfid
 GenericName=
-Exec=terminator --command 'sudo pdfid;when;/bin/bash'
+Exec=terminator --command 'sudo pdfid;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

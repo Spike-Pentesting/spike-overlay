@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=spectool_curses
 GenericName=
-Exec=terminator --command 'sudo spectool_curses;when;/bin/bash'
+Exec=terminator --command 'sudo spectool_curses;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

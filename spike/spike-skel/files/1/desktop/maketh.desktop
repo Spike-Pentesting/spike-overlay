@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=maketh
 GenericName=
-Exec=terminator --command 'sudo maketh;when;/bin/bash'
+Exec=terminator --command 'sudo maketh;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forging.png

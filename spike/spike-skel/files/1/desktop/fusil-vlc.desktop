@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fusil-vlc
 GenericName=
-Exec=terminator --command 'sudo fusil-vlc;when;/bin/bash'
+Exec=terminator --command 'sudo fusil-vlc;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

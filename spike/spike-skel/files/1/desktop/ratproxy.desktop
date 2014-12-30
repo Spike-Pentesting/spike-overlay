@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ratproxy
 GenericName=
-Exec=terminator --command 'sudo ratproxy;when;/bin/bash'
+Exec=terminator --command 'sudo ratproxy;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/proxy.png

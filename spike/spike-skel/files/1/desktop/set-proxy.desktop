@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=set-proxy
 GenericName=
-Exec=terminator --command 'sudo set-proxy;when;/bin/bash'
+Exec=terminator --command 'sudo set-proxy;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/exploit.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ncrack
 GenericName=
-Exec=terminator --command 'sudo ncrack;when;/bin/bash'
+Exec=terminator --command 'sudo ncrack;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/cracker.png

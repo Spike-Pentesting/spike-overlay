@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=img_cat
 GenericName=
-Exec=terminator --command 'sudo img_cat --help;when;/bin/bash'
+Exec=terminator --command 'sudo img_cat --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

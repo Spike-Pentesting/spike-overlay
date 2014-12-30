@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=gspoof
 GenericName=
-Exec=terminator --command 'sudo gspoof -g;when;/bin/bash'
+Exec=terminator --command 'sudo gspoof -g;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forging.png

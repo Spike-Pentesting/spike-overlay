@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=rtl_test
 GenericName=
-Exec=terminator --command 'sudo rtl_test;when;/bin/bash'
+Exec=terminator --command 'sudo rtl_test;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/radio.png

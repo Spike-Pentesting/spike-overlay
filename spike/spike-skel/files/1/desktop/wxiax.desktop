@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=wxiax
 GenericName=
-Exec=terminator --command 'sudo wxiax;when;/bin/bash'
+Exec=terminator --command 'sudo wxiax;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/sip-voip.png

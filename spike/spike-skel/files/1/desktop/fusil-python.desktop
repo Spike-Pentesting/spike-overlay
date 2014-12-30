@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fusil-python
 GenericName=
-Exec=terminator --command 'sudo fusil-python;when;/bin/bash'
+Exec=terminator --command 'sudo fusil-python;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

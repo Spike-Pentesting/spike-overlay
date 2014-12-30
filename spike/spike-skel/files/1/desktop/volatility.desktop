@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=volatility
 GenericName=
-Exec=terminator --command 'sudo volatility;when;/bin/bash'
+Exec=terminator --command 'sudo volatility;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

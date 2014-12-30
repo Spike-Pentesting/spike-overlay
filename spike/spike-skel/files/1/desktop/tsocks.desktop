@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=tsocks
 GenericName=
-Exec=terminator --command 'sudo tsocks;when;/bin/bash'
+Exec=terminator --command 'sudo tsocks;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/proxy.png

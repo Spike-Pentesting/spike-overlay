@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=etherape
 GenericName=
-Exec=terminator --command 'sudo etherape;when;/bin/bash'
+Exec=terminator --command 'sudo etherape;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fuzzer-server
 GenericName=
-Exec=terminator --command 'sudo fuzzer-server;when;/bin/bash'
+Exec=terminator --command 'sudo fuzzer-server;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

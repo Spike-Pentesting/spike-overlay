@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=macchanger
 GenericName=
-Exec=terminator --command 'sudo macchanger;when;/bin/bash'
+Exec=terminator --command 'sudo macchanger;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forging.png

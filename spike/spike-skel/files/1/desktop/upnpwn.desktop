@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=upnpwn
 GenericName=
-Exec=terminator --command 'sudo upnpwn;when;/bin/bash'
+Exec=terminator --command 'sudo upnpwn;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/exploit.png

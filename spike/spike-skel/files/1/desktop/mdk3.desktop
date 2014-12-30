@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=mdk3
 GenericName=
-Exec=terminator --command 'sudo mdk3 --help;when;/bin/bash'
+Exec=terminator --command 'sudo mdk3 --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

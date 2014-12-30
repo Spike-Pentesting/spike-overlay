@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=zmap
 GenericName=
-Exec=terminator --command 'sudo zmap;when;/bin/bash'
+Exec=terminator --command 'sudo zmap;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/scanner.png

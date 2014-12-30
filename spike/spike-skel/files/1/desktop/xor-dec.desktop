@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=xor-dec
 GenericName=
-Exec=terminator --command 'sudo xor-dec;when;/bin/bash'
+Exec=terminator --command 'sudo xor-dec;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

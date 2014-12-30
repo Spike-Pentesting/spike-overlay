@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=implementation6d
 GenericName=
-Exec=terminator --command 'sudo implementation6d;when;/bin/bash'
+Exec=terminator --command 'sudo implementation6d;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

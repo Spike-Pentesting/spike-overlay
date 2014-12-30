@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=http-fuzz
 GenericName=
-Exec=terminator --command 'sudo http-fuzz;when;/bin/bash'
+Exec=terminator --command 'sudo http-fuzz;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

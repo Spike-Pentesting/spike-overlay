@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=authforce
 GenericName=
-Exec=terminator --command 'sudo authforce;when;/bin/bash'
+Exec=terminator --command 'sudo authforce;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/cracker.png

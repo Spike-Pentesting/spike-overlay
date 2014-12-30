@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=wafw00f.py
 GenericName=
-Exec=terminator --command 'sudo wafw00f.py;when;/bin/bash'
+Exec=terminator --command 'sudo wafw00f.py;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/footprint.png

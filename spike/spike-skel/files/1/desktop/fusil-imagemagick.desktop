@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=fusil-imagemagick
 GenericName=
-Exec=terminator --command 'sudo fusil-imagemagick;when;/bin/bash'
+Exec=terminator --command 'sudo fusil-imagemagick;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/fuzzers.png

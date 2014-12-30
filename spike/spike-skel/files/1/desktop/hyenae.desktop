@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=hyenae
 GenericName=
-Exec=terminator --command 'sudo hyenae;when;/bin/bash'
+Exec=terminator --command 'sudo hyenae;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forging.png

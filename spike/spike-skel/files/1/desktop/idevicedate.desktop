@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=idevicedate
 GenericName=
-Exec=terminator --command 'sudo idevicedate;when;/bin/bash'
+Exec=terminator --command 'sudo idevicedate;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/mobile.png

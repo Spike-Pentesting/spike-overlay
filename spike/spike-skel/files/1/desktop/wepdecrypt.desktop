@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=wepdecrypt
 GenericName=
-Exec=terminator --command 'sudo wepdecrypt;when;/bin/bash'
+Exec=terminator --command 'sudo wepdecrypt;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

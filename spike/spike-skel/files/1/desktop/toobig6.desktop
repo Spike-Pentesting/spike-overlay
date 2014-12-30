@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=toobig6
 GenericName=
-Exec=terminator --command 'sudo toobig6;when;/bin/bash'
+Exec=terminator --command 'sudo toobig6;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/analyzer.png

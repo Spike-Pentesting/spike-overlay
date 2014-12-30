@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=makeivs-ng
 GenericName=
-Exec=terminator --command 'sudo makeivs-ng --help;when;/bin/bash'
+Exec=terminator --command 'sudo makeivs-ng --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

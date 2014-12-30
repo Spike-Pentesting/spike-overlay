@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=cowpatty
 GenericName=
-Exec=terminator --command 'sudo cowpatty;when;/bin/bash'
+Exec=terminator --command 'sudo cowpatty;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/wireless.png

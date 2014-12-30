@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=stunnel
 GenericName=
-Exec=terminator --command 'sudo stunnel;when;/bin/bash'
+Exec=terminator --command 'sudo stunnel;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/misc.png

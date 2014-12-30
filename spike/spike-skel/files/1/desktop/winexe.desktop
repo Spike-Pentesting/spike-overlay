@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=winexe
 GenericName=
-Exec=terminator --command 'sudo winexe;when;/bin/bash'
+Exec=terminator --command 'sudo winexe;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/exploit.png

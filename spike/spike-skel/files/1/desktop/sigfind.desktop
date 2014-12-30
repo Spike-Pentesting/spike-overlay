@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sigfind
 GenericName=
-Exec=terminator --command 'sudo sigfind --help;when;/bin/bash'
+Exec=terminator --command 'sudo sigfind --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

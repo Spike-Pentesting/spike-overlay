@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=hivexml
 GenericName=
-Exec=terminator --command 'sudo hivexml;when;/bin/bash'
+Exec=terminator --command 'sudo hivexml;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

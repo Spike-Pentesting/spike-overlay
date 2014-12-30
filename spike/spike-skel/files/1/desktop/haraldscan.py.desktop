@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=haraldscan.py
 GenericName=
-Exec=terminator --command 'sudo haraldscan.py;when;/bin/bash'
+Exec=terminator --command 'sudo haraldscan.py;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/bluetooth.png

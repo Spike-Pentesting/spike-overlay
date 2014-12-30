@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=isic
 GenericName=
-Exec=terminator --command 'sudo isic;when;/bin/bash'
+Exec=terminator --command 'sudo isic;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forging.png

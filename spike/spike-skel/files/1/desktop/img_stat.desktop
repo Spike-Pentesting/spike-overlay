@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=img_stat
 GenericName=
-Exec=terminator --command 'sudo img_stat --help;when;/bin/bash'
+Exec=terminator --command 'sudo img_stat --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

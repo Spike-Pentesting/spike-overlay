@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=vshadowmount
 GenericName=
-Exec=terminator --command 'sudo vshadowmount;when;/bin/bash'
+Exec=terminator --command 'sudo vshadowmount;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

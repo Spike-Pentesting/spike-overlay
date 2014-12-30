@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=foremost
 GenericName=
-Exec=terminator --command 'sudo foremost;when;/bin/bash'
+Exec=terminator --command 'sudo foremost;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

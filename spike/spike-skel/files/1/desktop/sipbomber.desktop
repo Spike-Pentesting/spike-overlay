@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sipbomber
 GenericName=
-Exec=terminator --command 'sudo sipbomber;when;/bin/bash'
+Exec=terminator --command 'sudo sipbomber;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/sip-voip.png

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=rtl_power
 GenericName=
-Exec=terminator --command 'sudo rtl_power;when;/bin/bash'
+Exec=terminator --command 'sudo rtl_power;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/radio.png

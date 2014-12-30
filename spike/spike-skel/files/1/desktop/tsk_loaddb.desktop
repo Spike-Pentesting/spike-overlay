@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=tsk_loaddb
 GenericName=
-Exec=terminator --command 'sudo tsk_loaddb --help;when;/bin/bash'
+Exec=terminator --command 'sudo tsk_loaddb --help;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/forensics.png

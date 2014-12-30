@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ubertooth-dfu
 GenericName=
-Exec=terminator --command 'sudo ubertooth-dfu;when;/bin/bash'
+Exec=terminator --command 'sudo ubertooth-dfu;/bin/zsh'
 StartupNotify=false
 X-Enlightenment-WaitExit=false
 Icon=/usr/share/spike/pixmaps/bluetooth.png
