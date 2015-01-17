@@ -1,0 +1,28 @@
+diff -uNr -r afterglow.orig/src/perl/graph/afterglow.pl afterglow/src/perl/graph/afterglow.pl
+--- afterglow.orig/src/perl/graph/afterglow.pl	2007-09-10 03:22:18.000000000 +0200
++++ afterglow/src/perl/graph/afterglow.pl	2008-04-09 17:58:04.787375487 +0200
+@@ -142,8 +142,8 @@
+ # Program version
+ my $version = "1.5.9";
+ 
+-use Text::CSV;
+-my $csvline = Text::CSV->new();
++use Text::CSV_XS;
++my $csvline = Text::CSV_XS->new();
+ 
+ # Whether or not verbose mode is enabled.
+ # A value of '1' indicates that verbose mode is enabled.
+diff -uNr -r afterglow.orig/src/perl/loganalysis/anonymize.pl afterglow/src/perl/loganalysis/anonymize.pl
+--- afterglow.orig/src/perl/loganalysis/anonymize.pl	2007-07-26 20:55:43.000000000 +0200
++++ afterglow/src/perl/loganalysis/anonymize.pl	2008-04-09 17:59:50.945987507 +0200
+@@ -46,8 +46,8 @@
+ # Program version
+ my $version = "1.1";
+ 
+-use Text::CSV;
+-my $csvline = Text::CSV->new();
++use Text::CSV_XS;
++my $csvline = Text::CSV_XS->new();
+ 
+ my $prefix = "";
+ my $column = 0;
