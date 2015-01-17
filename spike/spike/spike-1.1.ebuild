@@ -190,6 +190,7 @@ DEPEND="
 	sys-apps/become
 	www-apps/arachni
 	www-apps/beef
+	www-misc/xsser
 "
 #net-wireless/ska e net-wireless/afrag net-fs/winexe net-wireless/mfoc removed
 RDEPEND="${DEPEND}"
