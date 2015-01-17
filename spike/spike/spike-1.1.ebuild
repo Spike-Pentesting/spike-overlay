@@ -87,6 +87,7 @@ DEPEND="
 	net-analyzer/davtest
 	net-analyzer/dnsa
 	net-analyzer/dnsrecon
+	net-analyzer/dnsenum
 	net-analyzer/enum4linux
 	net-analyzer/evilgrade
 	net-analyzer/fierce
