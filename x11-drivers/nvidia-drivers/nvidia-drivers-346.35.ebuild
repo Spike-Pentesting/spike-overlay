@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ SRC_URI="
 	x86? ( ${NV_URI}Linux-x86/${PV}/${X86_NV_PACKAGE}.run )
 "
 
-LICENSE="NVIDIA-r1"
+LICENSE="NVIDIA-r2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="acpi custom-cflags multilib x-multilib kernel_FreeBSD kernel_linux pax_kernel tools X uvm"
@@ -39,6 +39,12 @@ PDEPEND=""
 S=${WORKDIR}/
 
 pkg_pretend() {
+	if use amd64 && has_multilib_profile && \
+		[ "${DEFAULT_ABI}" != "amd64" ]; then
+		eerror "This ebuild doesn't currently support changing your default ABI"
+		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
+	fi
+
 	# Since Nvidia ships 3 different series of drivers, we need to give the user
 	# some kind of guidance as to what version they should install. This tries
 	# to point the user in the right direction but can't be perfect. check
@@ -98,6 +104,10 @@ src_prepare() {
 			eerror "You must build this against 2.6.9 or higher kernels."
 		fi
 
+		if kernel_is gt 3 17 0 ; then
+			epatch "${FILESDIR}"/${PN}-3.18.patch
+		fi
+
 		# If greater than 2.6.5 use M= instead of SUBDIR=
 #		convert_to_m "${NV_SRC}"/Makefile.kbuild
 	fi
@@ -105,7 +115,8 @@ src_prepare() {
 		ewarn "Using PAX patches is not supported. You will be asked to"
 		ewarn "use a standard kernel should you have issues. Should you"
 		ewarn "need support with these patches, contact the PaX team."
-		epatch "${FILESDIR}"/${PN}-331.13-pax-usercopy.patch
+		epatch "${FILESDIR}"/${PN}-346.16-pax-usercopy.patch
+		epatch "${FILESDIR}"/${PN}-346.16-pax-constify.patch
 	fi
 
 	# Allow user patches so they can support RC kernels and whatever else
@@ -122,7 +133,7 @@ src_compile() {
 		MAKE="$(get_bmake)" CFLAGS="-Wno-sign-compare" emake CC="$(tc-getCC)" \
 			LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
 	elif use kernel_linux; then
-		use uvm && MAKEOPTS=-j1
+		MAKEOPTS=-j1
 		linux-mod_src_compile
 	fi
 }
