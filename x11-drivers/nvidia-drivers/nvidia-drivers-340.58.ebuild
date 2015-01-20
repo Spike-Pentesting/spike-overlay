@@ -102,11 +102,11 @@ src_prepare() {
 #		convert_to_m "${NV_SRC}"/Makefile.kbuild
 	fi
 	
-	if use kernel_linux; then
-		if kernel_is gt 3 17 ; then
-			epatch "${FILESDIR}"/3.18-kernel.patch
-		fi
-	fi
+	#if use kernel_linux; then
+	#	if kernel_is gt 3 17 ; then
+			#epatch "${FILESDIR}"/3.18-kernel.patch
+	#	fi
+	#fi
 
 	if use pax_kernel; then
 		ewarn "Using PAX patches is not supported. You will be asked to"
