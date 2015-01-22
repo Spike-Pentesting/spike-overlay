@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/jdk
-	 dev-db/postgresql-server
+	 dev-db/postgresql[server]
 	 dev-java/jdbc-postgresql"
 
 DEPEND="${RDEPEND}"
