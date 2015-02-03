@@ -23,7 +23,6 @@ IUSE="alsa ao bluetooth doc encode +lzo openal opengl openmp portaudio pulseaudi
 
 RDEPEND=">=media-libs/glew-1.5
 	>=media-libs/libsdl-1.2[joystick]
-	<media-libs/libsfml-2.0
         media-libs/libsoundtouch
         net-libs/polarssl[havege]
         net-libs/miniupnpc
@@ -41,6 +40,7 @@ RDEPEND=">=media-libs/glew-1.5
 	pulseaudio? ( media-sound/pulseaudio )
 	wxwidgets? ( x11-libs/wxGTK:2.9 )"
 DEPEND="${RDEPEND}
+	<media-libs/libsfml-2.0
 	sys-devel/gettext
 	virtual/pkgconfig
 	media-gfx/nvidia-cg-toolkit"
