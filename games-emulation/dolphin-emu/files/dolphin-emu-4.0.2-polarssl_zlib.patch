@@ -1,0 +1,39 @@
+diff -ru dolphin/CMakeTests/FindPolarSSL.cmake ../dolphin/CMakeTests/FindPolarSSL.cmake
+--- dolphin/CMakeTests/FindPolarSSL.cmake	2015-01-28 12:12:22.528057778 +0100
++++ dolphin/CMakeTests/FindPolarSSL.cmake	2015-01-23 00:14:59.878135005 +0100
+@@ -31,7 +31,7 @@
+ 	endif (NOT POLARSSL_FIND_QUIETLY)
+ 
+ 	set(CMAKE_REQUIRED_INCLUDES ${POLARSSL_INCLUDE_DIR})
+-	set(CMAKE_REQUIRED_LIBRARIES ${POLARSSL_LIBRARY})
++	set(CMAKE_REQUIRED_LIBRARIES ${POLARSSL_LIBRARY} -lz)
+ 	unset(POLARSSL_WORKS CACHE)
+ 	check_cxx_source_compiles("
+ 	#include <polarssl/ctr_drbg.h>
+diff -ru dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.cpp ../dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.cpp
+--- dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.cpp	2015-01-28 12:12:22.913044655 +0100
++++ dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.cpp	2015-01-23 00:27:41.412885000 +0100
+@@ -288,7 +288,12 @@
+ 			}
+ 			else
+ 			{
++				#if 0
+ 				ssl_set_own_cert(&ssl->ctx, &ssl->clicert, &ssl->pk);
++				#else
++				ssl_set_own_cert(&ssl->ctx, &ssl->clicert, NULL);
++	                        fprintf(stderr, "Skipping ssl_set_own_cert\n");
++				#endif
+ 				Memory::Write_U32(SSL_OK, _BufferIn);
+ 			}
+ 
+diff -ru dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.h ../dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.h
+--- dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.h	2015-01-28 12:12:22.913044655 +0100
++++ dolphin/Source/Core/Core/IPC_HLE/WII_IPC_HLE_Device_net_ssl.h	2015-01-23 00:17:49.037013000 +0100
+@@ -8,6 +8,7 @@
+ #include <polarssl/entropy.h>
+ #include <polarssl/net.h>
+ #include <polarssl/ssl.h>
++#include <polarssl/compat-1.2.h>
+ 
+ #include "Core/IPC_HLE/WII_IPC_HLE_Device.h"
+ 
