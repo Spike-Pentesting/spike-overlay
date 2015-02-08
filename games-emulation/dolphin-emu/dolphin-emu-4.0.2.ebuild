@@ -4,14 +4,14 @@
 
 EAPI="5"
 
-WX_GTK_VER="2.9"
+WX_GTK_VER="3.0"
 
 inherit cmake-utils eutils flag-o-matic git-2 pax-utils toolchain-funcs wxwidgets games git-r3
 
 DESCRIPTION="Free, open source emulator for Nintendo GameCube and Wii"
 HOMEPAGE="http://www.dolphin-emu.com/"
 EGIT_REPO_URI="https://github.com/dolphin-emu/dolphin.git"
-EGIT_COMMIT="${PV}"
+EGIT_COMMIT="b79015186e548805e1d1f2a1713dd6b9f9e7f737"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ KEYWORDS="amd64"
 
 # NOTES:
 # - wxWidgets support relies on 2.9 branch, which is currently masked in main tree
-IUSE="alsa ao bluetooth doc encode +lzo openal opengl openmp portaudio pulseaudio wxwidgets"
+IUSE="alsa ao bluetooth doc encode +lzo openal opengl openmp portaudio pulseaudio +wxwidgets"
 
 RDEPEND=">=media-libs/glew-1.5
 	>=media-libs/libsdl-1.2[joystick]
@@ -38,9 +38,8 @@ RDEPEND=">=media-libs/glew-1.5
 	opengl? ( virtual/opengl )
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( media-sound/pulseaudio )
-	wxwidgets? ( x11-libs/wxGTK:2.9 )"
+	wxwidgets? ( x11-libs/wxGTK:3.0 )"
 DEPEND="${RDEPEND}
-	<media-libs/libsfml-2.0
 	sys-devel/gettext
 	virtual/pkgconfig
 	media-gfx/nvidia-cg-toolkit"
@@ -68,21 +67,6 @@ src_prepare() {
 	if use !pulseaudio; then
 		sed -i -e '/^check_lib(PULSEAUDIO/d' CMakeLists.txt || die
 	fi
-
-	# remove bundled libs, except 
-	# - SOIL, which has not public sources now
-	# - Bochs_disasm (do not know what is it)
-	# - CLRun ( some part of OpenCL )
-	mv Externals/SOIL . || die
-	mv Externals/Bochs_disasm . || die
-	mv Externals/CLRun . || die
-	rm -r Externals/* || die 'failed to remove bundled libs'
-	mv Bochs_disasm Externals || die
-	mv CLRun Externals || die
-	mv SOIL Externals || die
-
-        # This allows us to use the internal polarssl
-        epatch "${FILESDIR}"/${P}-polarssl_zlib.patch
 }
 
 src_configure() {
@@ -124,14 +108,13 @@ src_install() {
 	use wxwidgets || binary+="-nogui"
 
 	# install documentation as appropriate
-	dodoc Readme.txt
+	dodoc Readme.md
 	if use doc; then
 		doins -r docs
 	fi
 
 	# create menu entry for GUI builds
 	if use wxwidgets; then
-		doicon Source/Core/DolphinWX/resources/Dolphin.xpm
 		make_desktop_entry "${PN}" "Dolphin" "Dolphin" "Game;Emulator"
 	fi
 
