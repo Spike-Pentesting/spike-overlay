@@ -163,6 +163,7 @@ DEPEND="
 	net-proxy/3proxy
 	net-proxy/burpsuite
 	net-proxy/hosproxy
+	net-proxy/mitmproxy
 	net-proxy/pbounce
 	net-proxy/proxystrike
 	net-proxy/pwnat
