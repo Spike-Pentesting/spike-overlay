@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Icon=/usr/share/pixmaps/sabayon-weblink.png
-Type=Link
-URL=http://www.spike-pentesting.org/chat
+Type=Application
+Exec=/usr/bin/google-chrome-stable "http://www.spike-pentesting.org/chat"
 Name=Get Live Help
