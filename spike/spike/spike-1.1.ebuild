@@ -133,6 +133,7 @@ DEPEND="
 	net-analyzer/theHarvester
 	net-analyzer/upnpwn
 	net-analyzer/voiphopper
+	net-analyzer/vomit
 	net-analyzer/waffit
 	net-analyzer/wafp
 	net-analyzer/wapiti
