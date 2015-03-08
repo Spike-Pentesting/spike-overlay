@@ -12,4 +12,6 @@ SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 RDEPEND="x11-wm/i3"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-text/ronn
+	"
