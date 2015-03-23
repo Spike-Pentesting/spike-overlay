@@ -29,5 +29,7 @@ src_prepare() {
 
 src_install() {
 	DESTDIR="${D}" emake install
+	doicon "${WORKDIR}"/${P}/assets/icons/${PN}.png
+	make_desktop_entry ${PN} ${PN} ${PN} "Science"
 }
 
