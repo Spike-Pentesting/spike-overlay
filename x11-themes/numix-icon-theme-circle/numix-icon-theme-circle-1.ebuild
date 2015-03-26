@@ -26,5 +26,5 @@ RDEPEND="${DEPEND}"
 src_install() {
 	insinto /usr/share/icons
 	doins -r Numix-Circle
-	dodoc readme.md
+	dodoc README.md
 }
