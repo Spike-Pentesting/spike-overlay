@@ -353,7 +353,7 @@ if [ -n "${K_ONLY_SOURCES}" ] || [ -n "${K_FIRMWARE_PACKAGE}" ]; then
     DEPEND="sys-apps/sed"
     RDEPEND="${RDEPEND}"
 else
-    IUSE="dmraid dracut iscsi luks lvm mdadm plymouth splash"
+    IUSE="btrfs dmraid dracut iscsi luks lvm mdadm plymouth splash"
     if [ -n "${K_SPIKEKERNEL_ZFS}" ]; then
         IUSE="${IUSE} zfs"
     fi
@@ -517,8 +517,9 @@ _kernel_src_compile() {
 
     cd "${S}" || die
     local GKARGS=()
-    GKARGS+=( "--no-save-config" "--e2fsprogs" "--udev" )
+    GKARGS+=("--no-menuconfig" "--no-save-config" "--e2fsprogs" "--udev" )
     use splash && GKARGS+=( "--splash=spike" )
+    use btrfs && GKARGS+=( "--btrfs" )
     use plymouth && GKARGS+=( "--plymouth" "--plymouth-theme=${PLYMOUTH_THEME}" )
     use dmraid && GKARGS+=( "--dmraid" )
     use iscsi && GKARGS+=( "--iscsi" )
