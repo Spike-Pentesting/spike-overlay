@@ -6,7 +6,7 @@ EAPI="5"
 
 #we want to support ruby19 and ruby21 until January, but meh, what's a week?
 #waiting on a few fixes in gentoo before switching to ruby21 only...
-USE_RUBY="ruby19 ruby21"
+USE_RUBY="ruby20"
 inherit eutils ruby-ng
 
 if [[ ${PV} == "9999" ]] ; then
