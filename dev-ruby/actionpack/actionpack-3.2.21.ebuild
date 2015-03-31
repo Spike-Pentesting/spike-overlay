@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby20"
 
 # The default test task tries to test activerecord with SQLite as well.
 RUBY_FAKEGEM_TASK_TEST="test_action_pack"

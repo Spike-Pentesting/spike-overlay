@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19"
+EAPI=5
+USE_RUBY="ruby20"
 
 inherit multilib ruby-fakegem
 

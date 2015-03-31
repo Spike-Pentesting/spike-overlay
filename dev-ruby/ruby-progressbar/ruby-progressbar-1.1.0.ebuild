@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-1.0.2.ebuild,v 1.6 2013/02/16 20:04:43 ago Exp $
 
-EAPI=4
+EAPI=5
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC=""

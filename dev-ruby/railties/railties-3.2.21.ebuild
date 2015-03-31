@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.2.21.ebuild,v 1.1 2014/11/17 20:20:24 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby20"
 
 RUBY_FAKEGEM_TASK_TEST="test:regular"
 RUBY_FAKEGEM_TASK_DOC="generate_guides"

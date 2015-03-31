@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby20"
 
 RUBY_FAKEGEM_TASK_DOC="yard"
 RUBY_FAKEGEM_DOCDIR="doc"
