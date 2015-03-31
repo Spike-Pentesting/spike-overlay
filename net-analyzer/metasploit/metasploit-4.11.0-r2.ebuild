@@ -54,7 +54,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	=dev-ruby/rkelly-remix-0.0.6
 	dev-ruby/sqlite3
 	>=dev-ruby/pg-0.11
-	dev-ruby/packetfu
+	=dev-ruby/packetfu-1.1.9
 	dev-ruby/rubyzip
 	dev-ruby/rb-readline
 	dev-ruby/robots
