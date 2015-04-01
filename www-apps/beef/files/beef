@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd /usr/lib/beef
-ruby19 beef $@
+ruby20 beef $@

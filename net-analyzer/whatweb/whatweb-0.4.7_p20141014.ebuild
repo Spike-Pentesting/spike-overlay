@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby20"
 inherit ruby-ng git-2
 
 DESCRIPTION="Next generation web scanner, identifies what software websites are running"
