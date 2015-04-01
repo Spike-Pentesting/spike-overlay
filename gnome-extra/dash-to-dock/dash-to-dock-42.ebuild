@@ -5,7 +5,7 @@
 EAPI=5
 EXTENSIONS_PREFIX="extensions.gnome.org"
 
-inherit eutils
+inherit eutils gnome2-utils
 DESCRIPTION="an extension that transform Gnome shell dash in a dock"
 HOMEPAGE="https://github.com/micheleg/dash-to-dock"
 
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	       >=gnome-base/libgtop-2.28.3[introspection]
 	       >=app-admin/eselect-gnome-shell-extensions-20111211"
 RDEPEND="${COMMON_DEPEND}
-	 >=gnome-base/gnome-shell-3.14
+	 >=gnome-base/gnome-shell-3.12
 	 >=dev-libs/gjs-1.29
 	 dev-libs/gobject-introspection
 	 gnome-base/gnome-menus:3[introspection]
@@ -36,7 +36,6 @@ RDEPEND="${COMMON_DEPEND}
 	 x11-libs/pango[introspection]
 	 dev-lang/vala
 	 dev-libs/vala-common
-	 dev-libs/gobject-introspection
 	 dev-libs/gom
 	 >=gnome-base/gnome-desktop-3.12
 	 media-libs/gstreamer
@@ -51,6 +50,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 S="${WORKDIR}/${PN}-${EXTENSIONS_PREFIX}-v${PV}"
+
 src_install() {
 	emake INSTALLBASE="${D}usr/share/gnome-shell/extensions" VERSION=${PV} install
 	insinto "/usr/share/glib-2.0/schemas/"
@@ -59,11 +59,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	inherit gnome2
-	gnome2_pkg_postinst
+	gnome2_schemas_update
 	ebegin "Updating list of installed extensions"
 	eselect gnome-shell-extensions update
 	eend $?
 }
 
-
+pkg_postrm() {
+	gnome2_schemas_update --uninstall
+        ebegin "Updating list of installed extensions"
+        eselect gnome-shell-extensions update
+        eend $?
+}
