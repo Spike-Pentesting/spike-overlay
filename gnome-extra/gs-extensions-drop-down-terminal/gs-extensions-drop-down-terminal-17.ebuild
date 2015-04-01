@@ -44,7 +44,8 @@ RDEPEND="${COMMON_DEPEND}
 	 media-libs/libcanberra
 	 x11-libs/libnotify
 	 dev-db/sqlite:3
-	 sys-power/upower"
+	 sys-power/upower
+	 >=x11-libs/vte-0.30"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.50
 	sys-devel/gettext
