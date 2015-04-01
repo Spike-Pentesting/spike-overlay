@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils
+inherit eutils gnome2-utils
 DESCRIPTION="a gnome shell extension for an integrated dropdown terminal"
 HOMEPAGE="https://github.com/zzrough/gs-extensions-drop-down-terminal"
 
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	       >=gnome-base/libgtop-2.28.3[introspection]
 	       >=app-admin/eselect-gnome-shell-extensions-20111211"
 RDEPEND="${COMMON_DEPEND}
-	 >=gnome-base/gnome-shell-3.14
+	 >=gnome-base/gnome-shell-3.12
 	 >=dev-libs/gjs-1.29
 	 dev-libs/gobject-introspection
 	 gnome-base/gnome-menus:3[introspection]
@@ -35,7 +35,6 @@ RDEPEND="${COMMON_DEPEND}
 	 x11-libs/pango[introspection]
 	 dev-lang/vala
 	 dev-libs/vala-common
-	 dev-libs/gobject-introspection
 	 dev-libs/gom
 	 >=gnome-base/gnome-desktop-3.12
 	 media-libs/gstreamer
@@ -58,9 +57,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	inherit gnome2
-	gnome2_pkg_postinst
+	gnome2_schemas_update
 	ebegin "Updating list of installed extensions"
 	eselect gnome-shell-extensions update
 	eend $?
+}
+
+pkg_postrm() {
+	gnome2_schemas_update --uninstall
+	ebegin "Updating list of installed extensions"
+        eselect gnome-shell-extensions update
+        eend $?
 }
