@@ -13,7 +13,8 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/kororaproject/kp-gnome-shell-theme-korora.git"
 	KEYWORDS=""
 else
-	SRC_URI=""
+	EGIT_REPO_URI="https://github.com/kororaproject/kp-gnome-shell-theme-korora.git"
+	EGIT_COMMIT="4e36ff76fc657d7622cff60ff416d9251149f4cd"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
