@@ -12,7 +12,7 @@ S="${WORKDIR}"
 GCC_VER="4.8"
 PYTHON_VER="2.7"
 DEPEND="
-	app-admin/eselect-metasploit
+	app-eselect/eselect-metasploit
 	app-antivirus/malheur
 	app-cdr/dumpet
 	app-crypt/SIPcrack
@@ -199,11 +199,11 @@ DEPEND="
 "
 #net-wireless/ska e net-wireless/afrag net-fs/winexe net-wireless/mfoc removed
 RDEPEND="${DEPEND}
-	!app-admin/eselect-init
+	!app-eselect/eselect-init
 	!<sys-apps/sysvinit-1000
 	!sys-apps/hal
 	!sys-auth/consolekit
-	app-admin/eselect-python
+	app-eselect/eselect-python
 	dev-lang/python:${PYTHON_VER}
 	sys-apps/systemd
 	sys-apps/systemd-sysv-utils

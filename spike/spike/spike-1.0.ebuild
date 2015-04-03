@@ -16,7 +16,7 @@ S="${WORKDIR}"
 #Depends of gtk+,avahi and cups needed to be specified in spec file of molecule
 #app-forensics/dff removed
 DEPEND="
-          app-admin/eselect-metasploit
+          app-eselect/eselect-metasploit
           app-antivirus/malheur
           app-cdr/dumpet
           app-crypt/SIPcrack

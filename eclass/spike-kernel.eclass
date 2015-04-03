@@ -787,8 +787,8 @@ spike-kernel_uimage_config() {
     # 1. /boot/uImage symlink is broken (pkg_postrm)
     # 2. /boot/uImage symlink doesn't exist (pkg_postinst)
 
-    if ! has_version app-admin/eselect-uimage; then
-        ewarn "app-admin/eselect-uimage not installed"
+    if ! has_version app-eselect/eselect-uimage; then
+        ewarn "app-eselect/eselect-uimage not installed"
         ewarn "If you are using this tool, please install it"
         return 0
     fi
@@ -822,8 +822,8 @@ spike-kernel_bzimage_config() {
     use x86 && kern_arch="x86"
     use amd64 && kern_arch="x86_64"
 
-    if ! has_version app-admin/eselect-bzimage; then
-        ewarn "app-admin/eselect-bzimage not installed"
+    if ! has_version app-eselect/eselect-bzimage; then
+        ewarn "app-eselect/eselect-bzimage not installed"
         ewarn "If you are using this tool, please install it"
         return 0
     fi

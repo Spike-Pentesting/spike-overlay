@@ -12,7 +12,7 @@ LICENSE=""
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RDEPEND="app-admin/eselect-opencl
+RDEPEND="app-eselect/eselect-opencl
 	dev-util/intel-ocl-sdk
 	dev-util/ati-app-sdk-bin
 	>=dev-util/nvidia-cuda-sdk-3.0[opencl]

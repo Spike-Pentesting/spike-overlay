@@ -23,7 +23,7 @@ IUSE=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	       >=gnome-base/libgtop-2.28.3[introspection]
-	       >=app-admin/eselect-gnome-shell-extensions-20120911"
+	       >=app-eselect/eselect-gnome-shell-extensions-20120911"
 RDEPEND="${COMMON_DEPEND}
 	 >=gnome-base/gnome-shell-3.10
 	 >=dev-libs/gjs-1.29

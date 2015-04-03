@@ -84,7 +84,7 @@ DEPEND+=" ${COMMON_DEPEND}
 	!dev-ruby/metasploit_data_models:0
 	!dev-ruby/meterpreter_bins:0"
 RDEPEND+=" ${COMMON_DEPEND}
-	>=app-admin/eselect-metasploit-0.14"
+	>=app-eselect/eselect-metasploit-0.14"
 
 RESTRICT="strip"
 
