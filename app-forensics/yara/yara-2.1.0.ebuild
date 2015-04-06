@@ -5,7 +5,7 @@
 EAPI=5
 
 DESCRIPTION="A malware identification and classification tool"
-HOMEPAGE="http://yara-project.googlecode.com/"
+HOMEPAGE="http://plusvic.github.io/yara/"
 SRC_URI="https://github.com/plusvic/yara/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
