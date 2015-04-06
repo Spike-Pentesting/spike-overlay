@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
 MY_PV="${PV/_/-}"
 E_PKG_IUSE="doc nls"
