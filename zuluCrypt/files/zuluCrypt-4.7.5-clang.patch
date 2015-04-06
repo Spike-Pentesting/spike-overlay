@@ -1,0 +1,31 @@
+--- zuluCrypt-gui/walletconfig.cpp
++++ zuluCrypt-gui/walletconfig.cpp
+@@ -186,7 +186,7 @@
+ 							return it.getValue() ;
+ 						}
+ 					}
+-					static QByteArray ShouldNotGetHere ;
++					static const QByteArray ShouldNotGetHere ;
+ 					return ShouldNotGetHere ;
+ 				} ;
+ 
+--- zuluMount-gui/zulumounttask.cpp
++++ zuluMount-gui/zulumounttask.cpp
+@@ -315,7 +315,7 @@
+ 					dev_1 = QString( "/dev/md/" ) + it ;
+ 					f.setPath( dev_1 ) ;
+ 					if( f.canonicalPath() == dev ){
+-						return dev_1 ;
++						return (const QString) dev_1 ;
+ 					}
+ 				}
+ 			}
+@@ -366,7 +366,7 @@
+ 						z = z.replace( "--","-" ) ;
+ 					}
+ 
+-					return z ;
++					return (const QString) z ;
+ 				}
+ 			}
+ 
