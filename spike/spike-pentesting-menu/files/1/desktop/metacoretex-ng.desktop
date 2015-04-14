@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=MetaCoretex-NG
+Exec=mctx
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/scan.gif
+Type=Application

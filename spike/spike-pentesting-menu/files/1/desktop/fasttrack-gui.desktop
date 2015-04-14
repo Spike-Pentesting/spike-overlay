@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Fasttrack Gui
+Exec=P2TERM -e launch ftgui
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

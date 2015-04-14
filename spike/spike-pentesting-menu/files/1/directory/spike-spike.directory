@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Spike
+GenericName=Spike Tools
+Version=1.0
+Type=Directory
+Icon=/usr/share/spike/pixmaps/spike.png
+X-Enlightenment-Menu=main/0

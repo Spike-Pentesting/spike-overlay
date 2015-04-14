@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wireshark
+GenericName=
+Exec=wireshark
+Icon=/usr/share/spike/pixmaps/analyzer.png
+Type=Application
+Categories=Spike;X-Analyzer;

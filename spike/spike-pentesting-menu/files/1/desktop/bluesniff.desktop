@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=BlueSniff
+Exec=P2TERM -e /opt/pentoo/bin/bluesniff/bluesniff.pl
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/stock_bluetooth.png
+Type=Application

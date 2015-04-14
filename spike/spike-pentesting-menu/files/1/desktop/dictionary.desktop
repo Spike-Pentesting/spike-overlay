@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Packetstormexploits
+Type=Application
+Exec=/bin/sh -c "/usr/bin/launch 'ls' '-al /usr/share/dict/' 'bash -l'"
+Icon=/usr/share/spike/pixmaps/gnome-terminal.png
+Terminal=true

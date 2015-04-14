@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Fasttrack
+Exec=P2TERM -e launch fast-track.py
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

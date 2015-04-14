@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=BluePrint
+Exec=P2TERM -e /opt/pentoo/scripts/blueprint.sh
+Icon=/usr/share/spike/pixmaps/stock_bluetooth.png
+Type=Application

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Hidden=false
+NoDisplay=false
+Exec=xterm
+Type=Application
+Version=1.0
+StartupNotify=false
+StartupWMClass=xterm
+GenericName=xterm
+Name=xterm
+Terminal=false
+Icon=/usr/share/spike/pixmaps/term.png
+Categories=GTK;Utility;Terminal;

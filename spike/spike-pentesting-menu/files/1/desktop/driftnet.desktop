@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=DriftNet
+Exec=driftnet
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/image-viewer.png
+Type=Application

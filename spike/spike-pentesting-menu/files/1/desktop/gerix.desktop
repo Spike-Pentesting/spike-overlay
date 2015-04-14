@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gerix
+GenericName=
+Exec=gerix
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/wireless.png
+Type=Application

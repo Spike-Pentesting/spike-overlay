@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Burpsuite
+GenericName=
+Exec=burpsuite
+Icon=/usr/share/spike/pixmaps/proxy.png
+Type=Application

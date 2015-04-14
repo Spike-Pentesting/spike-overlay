@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Radare
+GenericName=
+Exec=gradare
+Icon=/usr/share/spike/pixmaps/rce.png
+Type=Application

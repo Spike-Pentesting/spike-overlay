@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ettercap
+GenericName=
+Exec=sudo -E /usr/bin/ettercap -G
+Type=Application
+Terminal=false
+Icon=/usr/share/spike/pixmaps/ettercap.png
+Categories=Spike;X-Mitm;

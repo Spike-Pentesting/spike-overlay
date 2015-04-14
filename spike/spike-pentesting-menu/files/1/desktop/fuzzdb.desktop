@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=fuzzdb
+Type=Application
+Exec=/bin/sh -c "/usr/bin/launch 'ls' '-al /usr/share/fuzzdb/' 'bash -l'"
+Icon=/usr/share/spike/pixmaps/fuzzers.png
+Terminal=true

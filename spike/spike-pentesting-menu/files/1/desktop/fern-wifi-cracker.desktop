@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=fern-wifi-cracker
+GenericName=
+Exec=sudo -E /usr/sbin/fern-wifi-cracker
+Type=Application
+Icon=/usr/share/fern-wifi-cracker/resources/icon.png
+Categories=Spike;X-Mitm;

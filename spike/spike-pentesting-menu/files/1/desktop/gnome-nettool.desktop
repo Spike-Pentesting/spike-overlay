@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Network Tools
+Comment=View information about your network
+Exec=gnome-nettool
+Icon=gnome-nettool
+Terminal=false
+Type=Application
+Categories=System;Utility;GNOME;GTK;
+StartupNotify=true
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-nettool
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=2.32.0

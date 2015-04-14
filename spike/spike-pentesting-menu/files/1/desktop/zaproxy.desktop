@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Zaproxy
+GenericName=
+Exec=zaproxy
+Icon=/usr/share/spike/pixmaps/proxy.png
+Type=Application

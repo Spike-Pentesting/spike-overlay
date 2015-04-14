@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Minimysqlator
+GenericName=
+Exec=minimysqlator
+Icon=/usr/share/spike/pixmaps/database.png
+Type=Application

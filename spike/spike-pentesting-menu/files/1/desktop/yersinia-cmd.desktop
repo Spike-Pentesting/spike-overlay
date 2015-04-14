@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Yersinia
+GenericName=cli
+Exec=P2TERM -e launch yersinia -h
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

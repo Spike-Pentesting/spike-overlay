@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=NetDude
+Exec=netdude
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/netdude-icon.png
+Type=Application

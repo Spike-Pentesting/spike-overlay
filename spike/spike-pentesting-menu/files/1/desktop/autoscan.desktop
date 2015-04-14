@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=AutoScan
+Exec=/etc/init.d/autoscan-network start && autoscan-network
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/Logo.png
+Type=Application
