@@ -104,8 +104,11 @@ src_prepare() {
 			eerror "You must build this against 2.6.9 or higher kernels."
 		fi
 
-		if kernel_is gt 3 17 0 ; then
+		if kernel_is ge 3 18 0 ; then
 			epatch "${FILESDIR}"/${PN}-3.18.patch
+		fi
+		if kernel_is ge 4 0; then
+                        epatch "${FILESDIR}"/${PN}-4.0.patch
 		fi
 
 		# If greater than 2.6.5 use M= instead of SUBDIR=
