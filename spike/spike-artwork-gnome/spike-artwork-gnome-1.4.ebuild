@@ -49,7 +49,7 @@ src_install() {
 	cd "${S}/gdm"
 	dodir /usr/share/spike/gdm
 	insinto /usr/share/spike/gdm
-	doins logo.svg
+	doins logo.png
 	insinto /usr/share/glib-2.0/schemas
 	doins org.gnome.login-screen.gschema.override
 }
