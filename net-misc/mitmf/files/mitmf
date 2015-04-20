@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir -p logs/responder/
+mkdir logs/dnschef
+/usr/share/mitmf/mitmf.py $@

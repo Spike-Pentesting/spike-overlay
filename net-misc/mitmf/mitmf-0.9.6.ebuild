@@ -56,5 +56,6 @@ src_install() {
 	python_fix_shebang "${ED}"/usr/share/${PN}
 
 	fperms +x /usr/share/${PN}/${PN}.py
-	dosym /usr/share/${PN}/${PN}.py /usr/bin/${PN}
+#	dosym /usr/share/${PN}/${PN}.py /usr/bin/${PN}
+	newsbin "${FILESDIR}"/${PN} ${PN}
 }
