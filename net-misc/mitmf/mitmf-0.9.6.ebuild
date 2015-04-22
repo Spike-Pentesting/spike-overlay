@@ -45,8 +45,6 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/MITMf-${PV}"
-
 src_install() {
 	rm README.md LICENSE
 
