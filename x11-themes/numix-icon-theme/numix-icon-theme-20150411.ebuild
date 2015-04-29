@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/numixproject/${PN}.git"
-	EGIT_COMMIT="afaab3b85a17f62a1a00d21ad82d0c8421a71214"
+	EGIT_COMMIT="7441e1e17b9ef46adfbb5d554f72669bec814aac"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
