@@ -9,12 +9,12 @@ MY_P=${MY_PN}-${PV}
 
 PYTHON_COMPAT=( python2_{6,7} )
 DISTUTILS_SRC_TEST=setup.py
-inherit distutils-r1 subversion
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
-HOMEPAGE="http://code.google.com/p/impacket"
-ESVN_REPO_URI="http://impacket.googlecode.com/svn/trunk/"
-
+HOMEPAGE="https://github.com/CoreSecurity/impacket"
+SRC_URI=""
+EGIT_REPO_URI="https://github.com/CoreSecurity/impacket.git"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
