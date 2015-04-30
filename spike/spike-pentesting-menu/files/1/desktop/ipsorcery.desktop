@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=IPSorcery
+Exec=/bin/sh -c "/usr/bin/launch '/usr/sbin/ipmagic' '-h' 'bash -l'"
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/gnome-squeak.png
+Type=Application
+Terminal=true

@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Vidalia
+GenericName=
+Exec=vidalia
+Icon=/usr/share/spike/pixmaps/proxy.png
+Type=Application
+Terminal=false
+Categories=Spike;X-Proxy;

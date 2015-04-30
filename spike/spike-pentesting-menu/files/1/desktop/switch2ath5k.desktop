@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Switch to ath5k
+GenericName=
+Exec=P2TERM -e launch athload ath5k
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/wireless.png
+Type=Application

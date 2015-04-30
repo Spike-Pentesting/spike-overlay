@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Airsnort
+Exec=airsnort
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+StartupWMClass=Airsnort
+Icon=/usr/share/spike/pixmaps/airsnort.png
+Type=Application

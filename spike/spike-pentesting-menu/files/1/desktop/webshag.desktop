@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Webshag
+GenericName=
+Exec=webshag_gui.py
+Icon=/usr/share/spike/pixmaps/scanner.png
+Type=Application

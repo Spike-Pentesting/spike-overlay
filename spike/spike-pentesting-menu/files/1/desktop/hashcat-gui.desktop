@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Hashcat GUI
+GenericName=
+Exec=/usr/bin/hashcat-gui
+Icon=/usr/share/spike/pixmaps/cracker.png
+Type=Application

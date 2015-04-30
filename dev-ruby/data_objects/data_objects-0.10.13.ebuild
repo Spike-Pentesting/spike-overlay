@@ -4,7 +4,7 @@
 
 EAPI=3
 
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby20"
 
 RUBY_FAKEGEM_TASK_DOC="yard"
 RUBY_FAKEGEM_DOCDIR="doc"

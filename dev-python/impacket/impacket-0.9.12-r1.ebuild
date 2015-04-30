@@ -11,8 +11,8 @@ PYTHON_COMPAT=( python2_{6,7} )
 inherit distutils-r1
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
-HOMEPAGE="http://code.google.com/p/impacket"
-SRC_URI="https://pypi.python.org/packages/source/i/impacket/${P}.tar.gz"
+HOMEPAGE="https://github.com/CoreSecurity/impacket"
+SRC_URI="https://github.com/CoreSecurity/impacket//archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

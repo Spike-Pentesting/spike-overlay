@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=dff
+Exec=dff -g
+Icon=/usr/share/spike/pixmaps/forensics.png
+Type=Application

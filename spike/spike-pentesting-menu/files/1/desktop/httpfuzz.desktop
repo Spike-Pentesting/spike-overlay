@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=HTTP Fuzzer Server
+Exec=P2TERM -e launch fuzzer-server port 80
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/gnome-terminal.png
+Type=Application

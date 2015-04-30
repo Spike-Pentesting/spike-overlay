@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Plaintoo
+GenericName=Grab hashes
+Exec=P2TERM -e plaintoo
+StartupNotify=false
+X-Enlightenment-WaitExit=false
+Icon=/usr/share/spike/pixmaps/pt.png
+Type=Application

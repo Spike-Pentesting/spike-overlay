@@ -13,11 +13,12 @@ LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
-RDEPEND="=spike/spike-artwork-core-${PV}
+RDEPEND="spike/spike-artwork-core
 	 x11-themes/equinox-themes
 	 x11-themes/elementary-icon-theme[monochrome,branding]
 	 x11-themes/korora-shell-theme
 	 x11-themes/numix-icon-theme-circle
+	 x11-themes/numix-icon-theme
 	 gnome-extra/dash-to-dock
 	 gnome-extra/gnome-shell-extension-caffeine
 	 gnome-extra/gnome-shell-extension-weather

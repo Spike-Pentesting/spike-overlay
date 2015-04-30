@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=MSF Console
+Exec=P2TERM -e msfconsole
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=armitage
+GenericName=
+Exec=armitage 
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application

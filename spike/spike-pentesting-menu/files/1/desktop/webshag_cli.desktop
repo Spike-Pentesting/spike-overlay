@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Webshag_cli
+GenericName=
+Exec=/bin/sh -c "/usr/bin/launch '/usr/sbin/webshag_cli.py' '-h' 'sudo -s'"
+Icon=/usr/share/spike/pixmaps/scanner.png
+Type=Application
+Terminal=true
+Categories=Spike;X-Scanner;

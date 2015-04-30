@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-readline/rb-readline-0.5.2.ebuild,v 1.1 2015/01/01 07:53:09 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 ruby22"
+USE_RUBY="ruby20"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 inherit ruby-fakegem

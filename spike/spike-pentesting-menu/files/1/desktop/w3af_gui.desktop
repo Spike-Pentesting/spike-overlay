@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=W3af_gui
+GenericName=
+Exec=w3af_gui 
+Icon=/usr/share/spike/pixmaps/exploit.png
+Type=Application
