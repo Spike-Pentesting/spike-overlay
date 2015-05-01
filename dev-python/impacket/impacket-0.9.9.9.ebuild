@@ -10,11 +10,11 @@ DISTUTILS_SRC_TEST=setup.py
 MY_PN=Impacket
 MY_P=${MY_PN}-${PV}
 
-inherit distutils
+inherit distutils-r1 versionator
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
-HOMEPAGE="http://code.google.com/p/impacket"
-SRC_URI="http://impacket.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://github.com/CoreSecurity/impacket"
+SRC_URI="https://github.com/CoreSecurity/impacket/archive/impacket_${PV//./_}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

@@ -9,11 +9,11 @@ MY_P=${MY_PN}-${PV}
 
 PYTHON_COMPAT=( python2_{6,7} )
 DISTUTILS_SRC_TEST=setup.py
-inherit distutils-r1
+inherit distutils-r1 versionator
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
-HOMEPAGE="http://code.google.com/p/impacket"
-SRC_URI="https://pypi.python.org/packages/source/i/impacket/${P}.tar.gz"
+HOMEPAGE="https://github.com/CoreSecurity/impacket"
+SRC_URI="https://github.com/CoreSecurity/impacket/archive/impacket_${PV//./_}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

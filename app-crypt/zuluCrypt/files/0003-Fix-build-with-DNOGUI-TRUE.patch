@@ -1,0 +1,29 @@
+From ec3fab86e5aa20bbebe6f6410d445d22f5fab32f Mon Sep 17 00:00:00 2001
+From: hasufell <hasufell@hasufell.de>
+Date: Sat, 3 Jan 2015 18:59:09 +0100
+Subject: [PATCH 3/3] Fix build with -DNOGUI=TRUE
+
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index fc51819..bd30a80 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -173,10 +173,10 @@ if( NOT NOGUI )
+ 	ADD_SUBDIRECTORY( plugins )
+ 	ADD_SUBDIRECTORY( zuluMount-gui )
+ 
+-	file( WRITE ${PROJECT_BINARY_DIR}/locale_path.h "\n#define TRANSLATION_PATH \"${CMAKE_INSTALL_PREFIX}/share/zuluCrypt/translations/\"\n")
+-
+ endif( NOT NOGUI )
+ 
++file( WRITE ${PROJECT_BINARY_DIR}/locale_path.h "\n#define TRANSLATION_PATH \"${CMAKE_INSTALL_PREFIX}/share/zuluCrypt/translations/\"\n")
++
+ message ( STATUS "---------------------------------------------------------------------------" )
+ message ( STATUS "optional functionality that will be build" )
+ 
+-- 
+2.2.1
+
