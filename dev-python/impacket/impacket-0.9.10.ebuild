@@ -12,7 +12,7 @@ DISTUTILS_SRC_TEST=setup.py
 inherit distutils-r1
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
-HOMEPAGE="http://code.google.com/p/impacket"
+HOMEPAGE="https://github.com/CoreSecurity/impacket"
 SRC_URI="http://impacket.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
