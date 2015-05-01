@@ -12,7 +12,7 @@ inherit distutils-r1
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
 HOMEPAGE="https://github.com/CoreSecurity/impacket"
-SRC_URI="https://github.com/CoreSecurity/impacket//archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/CoreSecurity/impacket/archive/impacket_${PV//./_}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
