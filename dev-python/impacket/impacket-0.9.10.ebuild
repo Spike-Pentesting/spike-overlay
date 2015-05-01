@@ -9,7 +9,7 @@ MY_P=${MY_PN}-${PV}
 
 PYTHON_COMPAT=( python2_{6,7} )
 DISTUTILS_SRC_TEST=setup.py
-inherit distutils-r1
+inherit distutils-r1 versionator
 
 DESCRIPTION="A collection of Python classes focused on providing access to network packets"
 HOMEPAGE="https://github.com/CoreSecurity/impacket"
