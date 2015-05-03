@@ -1,0 +1,11 @@
+--- lib/Makefile.in.orig	2009-08-10 11:26:44.230578006 -0600
++++ lib/Makefile.in	2009-08-10 11:26:49.647244444 -0600
+@@ -640,7 +640,7 @@
+ 	$(MAKE) remove $(SILCLIB) $(SILCSERVERLIB) $(SILCCLIENTLIB)
+ 
+ install-exec-hook:
+-@SILC_ENABLE_SHARED_TRUE@	-mkdir -p $(libdir)
++@SILC_ENABLE_SHARED_TRUE@	-mkdir -p $(DESTDIR)$(libdir)
+ @SILC_ENABLE_SHARED_TRUE@	-$(LIBTOOL) --mode=install $(INSTALL) libsilc.la $(DESTDIR)$(libdir)/
+ @SILC_ENABLE_SHARED_TRUE@	-$(LIBTOOL) --mode=install $(INSTALL) libsilcclient.la $(DESTDIR)$(libdir)/
+ @SILC_ENABLE_SHARED_TRUE@	-rm -rf $(DESTDIR)$(libdir)/libsilc.a
