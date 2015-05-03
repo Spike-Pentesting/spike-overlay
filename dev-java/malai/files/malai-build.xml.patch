@@ -1,0 +1,30 @@
+Author: Manuel Rueger (mrueg@rueg.eu)
+Date: 2012/04/27
+Adds a compile target
+
+--- build.xml.old	2012-04-27 20:12:58.319909297 +0200
++++ build.xml	2012-04-27 20:14:59.976899630 +0200
+@@ -11,6 +11,14 @@
+ 		<mkdir dir="${dir.out}/${release.name}"/>
+ 	</target>
+ 		
++	<target name="compile" description="Compiles java files">
++	  <mkdir dir="bin" />
++	  <javac srcdir="src/" destdir="bin/">
++	    <classpath />
++	    <include name="**/*.java" />
++	  </javac>
++	</target>
++
+ 	<target name="doc" depends="jar" description="Generation of the documentation.">
+ 	    <javadoc destdir="${dir.doc}" author="true" version="true" use="true"
+ 	    	notree="false" nonavbar="false" noindex="false" access="private">
+@@ -22,7 +30,7 @@
+ 		
+ 		
+ 	<!-- Creates the jar -->
+-	<target name="jar" description="Generates malai.jar">
++	<target name="jar" depends="compile" description="Generates malai.jar">
+ 		<copy todir="${dir.out}/" overwrite="true" failonerror="true">
+ 			<fileset dir="" includes="license.txt ; history.txt ; release_note.txt"/>
+ 		</copy>
