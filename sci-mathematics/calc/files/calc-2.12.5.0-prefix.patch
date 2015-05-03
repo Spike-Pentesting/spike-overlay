@@ -1,0 +1,74 @@
+--- Makefile.old	2015-01-22 16:17:35.092457078 +0100
++++ Makefile	2015-01-22 16:17:22.785456768 +0100
+@@ -1136,9 +1136,7 @@
+ BLD_TYPE= calc-dynamic-only
+ #
+ CC_SHARE= -fPIC
+-DEFAULT_LIB_INSTALL_PATH= ${PWD}:/lib:/usr/lib:${LIBDIR}:/usr/local/lib
+-LD_SHARE= "-Wl,-rpath,${DEFAULT_LIB_INSTALL_PATH}" \
+-    "-Wl,-rpath-link,${DEFAULT_LIB_INSTALL_PATH}"
++LD_SHARE=
+ LIBCALC_SHLIB= -shared "-Wl,-soname,libcalc${LIB_EXT_VERSION}"
+ ifdef ALLOW_CUSTOM
+ LIBCUSTCALC_SHLIB= -shared "-Wl,-soname,libcustcalc${LIB_EXT_VERSION}"
+@@ -1173,7 +1171,6 @@
+ BLD_TYPE= calc-dynamic-only
+ #
+ CC_SHARE= -fPIC
+-DEFAULT_LIB_INSTALL_PATH= ${PWD}:${LIBDIR}:/usr/local/lib
+ LD_SHARE= ${DARWIN_ARCH}
+ #SET_INSTALL_NAME= no
+ SET_INSTALL_NAME= yes
+@@ -1209,7 +1206,7 @@
+ CCOPT= ${DEBUG}
+ CCMISC= ${DARWIN_ARCH}
+ #
+-LCC= clang
++LCC= gcc
+ CC= ${PURIFY} ${LCC} ${CCWERR}
+ #
+ # Darwin dynamic shared lib filenames
+@@ -1244,9 +1241,7 @@
+ BLD_TYPE= calc-dynamic-only
+ #
+ CC_SHARE= -fPIC
+-DEFAULT_LIB_INSTALL_PATH= ${PWD}:/lib:/usr/lib:${LIBDIR}:/usr/local/lib
+-LD_SHARE= "-Wl,-rpath,${DEFAULT_LIB_INSTALL_PATH}" \
+-    "-Wl,-rpath-link,${DEFAULT_LIB_INSTALL_PATH}"
++LD_SHARE=
+ LIBCALC_SHLIB= -shared "-Wl,-soname,libcalc${LIB_EXT_VERSION}"
+ ifdef ALLOW_CUSTOM
+ LIBCUSTCALC_SHLIB= -shared "-Wl,-soname,libcustcalc${LIB_EXT_VERSION}"
+@@ -1289,9 +1284,7 @@
+ BLD_TYPE= calc-dynamic-only
+ #
+ CC_SHARE= -fPIC
+-DEFAULT_LIB_INSTALL_PATH= ${PWD}:/lib:/usr/lib:${LIBDIR}:/usr/local/lib
+-LD_SHARE= "-Wl,-rpath,${DEFAULT_LIB_INSTALL_PATH}" \
+-    "-Wl,-rpath-link,${DEFAULT_LIB_INSTALL_PATH}"
++LD_SHARE=
+ LIBCALC_SHLIB= -shared "-Wl,-soname,libcalc${LIB_EXT_VERSION}"
+ ifdef ALLOW_CUSTOM
+ LIBCUSTCALC_SHLIB= -shared "-Wl,-soname,libcustcalc${LIB_EXT_VERSION}"
+@@ -1406,9 +1399,7 @@
+ BLD_TYPE= calc-static-only
+ #
+ CC_SHARE= -fPIC
+-DEFAULT_LIB_INSTALL_PATH= ${PWD}:/lib:/usr/lib:${LIBDIR}:/usr/local/lib
+-LD_SHARE= "-Wl,-rpath,${DEFAULT_LIB_INSTALL_PATH}" \
+-    "-Wl,-rpath-link,${DEFAULT_LIB_INSTALL_PATH}"
++LD_SHARE=
+ LIBCALC_SHLIB= -shared "-Wl,-soname,libcalc${LIB_EXT_VERSION}"
+ LIBCUSTCALC_SHLIB= -shared "-Wl,-soname,libcustcalc${LIB_EXT_VERSION}"
+ #
+@@ -1505,9 +1496,7 @@
+ BLD_TYPE= calc-static-only
+ #
+ CC_SHARE= -fPIC
+-DEFAULT_LIB_INSTALL_PATH= ${PWD}:/lib:/usr/lib:${LIBDIR}:/usr/local/lib
+-LD_SHARE= "-Wl,-rpath,${DEFAULT_LIB_INSTALL_PATH}" \
+-    "-Wl,-rpath-link,${DEFAULT_LIB_INSTALL_PATH}"
++LD_SHARE=
+ LIBCALC_SHLIB= -shared "-Wl,-soname,libcalc${LIB_EXT_VERSION}"
+ ifdef ALLOW_CUSTOM
+ LIBCUSTCALC_SHLIB= -shared "-Wl,-soname,libcustcalc${LIB_EXT_VERSION}"
