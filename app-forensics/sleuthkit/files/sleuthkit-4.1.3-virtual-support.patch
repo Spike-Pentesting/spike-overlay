@@ -1,0 +1,1046 @@
+diff -Naurp sleuthkit-4.1.3/configure.ac sleuthkit-4.1.3-libqemu/configure.ac
+--- sleuthkit-4.1.3/configure.ac	2014-01-27 03:27:03.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/configure.ac	2014-08-26 22:08:57.562074019 +0000
+@@ -242,6 +242,60 @@ dnl status message and set X_JNI for use
+ AS_IF([test "x$JNI_CPPFLAGS" != x && test "x$ANT_FOUND" != x && test "x$JAVA" != x], [ax_java_support=yes], [ax_java_support=no])
+ AM_CONDITIONAL([X_JNI],[test "x$ax_java_support" == "xyes"])
+ 
++
++# Check if we should link libqcow.  
++AC_ARG_WITH([libqcow],
++    [AS_HELP_STRING([--without-libqcow],[Do not use libqcow even if it is installed])]
++    [AS_HELP_STRING([--with-libqcow=dir],[Specify that libqcow is installed in directory 'dir'])],
++    # If --with-libqcow or --without-libqcow is given
++    [],
++    # if nothing was specified, default to a test
++    [with_libqcow=yes])
++
++# check for the lib if they did not specify no
++AS_IF([test "x$with_libqcow" != "xno"],
++    # Test the dir if they specified something beyond yes/no
++    [AS_IF([test "x$with_libqcow" != "xyes"],
++        [AS_IF([test -d ${with_libqcow}/include],
++            [CFLAGS="$CFLAGS -I${with_libqcow}/include"
++                LDFLAGS="$LDFLAGS -L${with_libqcow}/lib"],
++            # Dir given was not correct
++            [AC_MSG_FAILURE([libqcow directory not found at ${with_libqcow}])])
++        ]
++    )]
++    # Check for the header file first to make sure they have the dev install
++    [AC_CHECK_HEADERS([libqcow.h], 
++      [AC_CHECK_LIB([qcow], [libqcow_file_open])]
++    )]
++)
++
++
++# Check if we should link libvhdi.  
++AC_ARG_WITH([libvhdi],
++    [AS_HELP_STRING([--without-libvhdi],[Do not use libvhdi even if it is installed])]
++    [AS_HELP_STRING([--with-libvhdi=dir],[Specify that libvhdi is installed in directory 'dir'])],
++    # If --with-libvhdi or --without-libvhdi is given
++    [],
++    # if nothing was specified, default to a test
++    [with_libvhdi=yes])
++
++# check for the lib if they did not specify no
++AS_IF([test "x$with_libvhdi" != "xno"],
++    # Test the dir if they specified something beyond yes/no
++    [AS_IF([test "x$with_libvhdi" != "xyes"],
++        [AS_IF([test -d ${with_libvhdi}/include],
++            [CFLAGS="$CFLAGS -I${with_libvhdi}/include"
++                LDFLAGS="$LDFLAGS -L${with_libvhdi}/lib"],
++            # Dir given was not correct
++            [AC_MSG_FAILURE([libvhdi directory not found at ${with_libvhdi}])])
++        ]
++    )]
++    # Check for the header file first to make sure they have the dev install
++    [AC_CHECK_HEADERS([libvhdi.h], 
++      [AC_CHECK_LIB([vhdi], [libvhdi_file_open])]
++    )]
++)
++
+ AC_CONFIG_COMMANDS([tsk/tsk_incs.h],
+     [echo "#ifndef _TSK_INCS_H" > tsk/tsk_incs.h
+     echo "#define _TSK_INCS_H" >> tsk/tsk_incs.h
+diff -Naurp sleuthkit-4.1.3/configure.ac.orig sleuthkit-4.1.3-libqemu/configure.ac.orig
+--- sleuthkit-4.1.3/configure.ac.orig	1970-01-01 00:00:00.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/configure.ac.orig	2014-01-27 03:27:03.000000000 +0000
+@@ -0,0 +1,318 @@
++dnl -*- Autoconf -*-
++dnl Process this file with autoconf to produce a configure script.
++
++
++AC_PREREQ(2.59)
++
++AC_INIT(sleuthkit, 4.1.3)
++m4_include([m4/ax_pthread.m4])
++dnl include the version from 1.12.1. This will work for 
++m4_include([m4/cppunit.m4])
++m4_include([m4/ax_jni_include_dir.m4])
++m4_include([m4/ac_prog_javac_works.m4])
++m4_include([m4/ac_prog_javac.m4])
++m4_include([m4/ac_prog_java_works.m4])
++m4_include([m4/ac_prog_java.m4])
++
++AC_CONFIG_SRCDIR([tsk/base/tsk_base.h])
++AC_CONFIG_HEADERS([tsk/tsk_config.h])
++AC_CONFIG_AUX_DIR(config)
++AM_INIT_AUTOMAKE([foreign])
++AM_PATH_CPPUNIT(1.12.1)
++AM_CONDITIONAL([CPPUNIT],[test "x$no_cppunit" = x])
++AM_PROG_LIBTOOL
++AM_MAINTAINER_MODE
++AC_CONFIG_MACRO_DIR([m4])
++
++dnl Checks for programs.
++AC_PROG_CXX
++AC_PROG_CC
++AC_PROG_CPP
++AC_PROG_INSTALL
++AC_PROG_LN_S
++AC_PROG_MAKE_SET
++AC_PATH_PROG(PERL, perl)
++
++
++dnl Checks for header files.
++AC_HEADER_STDC
++dnl AC_HEADER_MAJOR
++dnl AC_HEADER_SYS_WAIT
++dnl AC_CHECK_HEADERS([fcntl.h inttypes.h limits.h locale.h memory.h netinet/in.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h utime.h wchar.h wctype.h])
++AC_CHECK_HEADERS([err.h inttypes.h unistd.h stdint.h sys/param.h sys/resource.h])
++
++dnl Checks for typedefs, structures, and compiler characteristics.
++AC_HEADER_STDBOOL
++AC_C_CONST
++AC_TYPE_UID_T
++AC_TYPE_MODE_T
++AC_TYPE_OFF_T
++AC_TYPE_SIZE_T
++dnl AC_CHECK_MEMBERS([struct stat.st_rdev])
++dnl AC_HEADER_TIME
++dnl AC_STRUCT_TM
++
++dnl check for large file support
++AC_SYS_LARGEFILE
++
++dnl Checks for library functions.
++AC_FUNC_ALLOCA
++AC_FUNC_ERROR_AT_LINE
++dnl AC_FUNC_FORK
++AC_FUNC_FSEEKO
++AC_PROG_GCC_TRADITIONAL
++AC_FUNC_LSTAT
++AC_FUNC_LSTAT_FOLLOWS_SLASHED_SYMLINK
++dnl AC_FUNC_MALLOC
++dnl AC_FUNC_MBRTOWC
++dnl AC_FUNC_MEMCMP
++dnl AC_FUNC_MKTIME
++dnl AC_FUNC_MMAP
++dnl AC_FUNC_REALLOC
++AC_FUNC_SELECT_ARGTYPES
++dnl AC_FUNC_STAT
++AC_FUNC_UTIME_NULL
++AC_FUNC_VPRINTF
++dnl AC_CHECK_FUNCS([dup2 gethostname isascii iswprint memset munmap regcomp select setlocale strcasecmp strchr strdup strerror strndup strrchr strtol strtoul strtoull utime wcwidth])
++AC_CHECK_FUNCS([ishexnumber err errx warn warnx vasprintf getrusage])
++AC_CHECK_FUNCS([strlcpy strlcat])
++
++AX_PTHREAD([
++    AC_DEFINE(HAVE_PTHREAD,1,[Define if you have POSIX threads libraries and header files.])
++    CLIBS="$PTHREAD_LIBS $LIBS"
++    CPPFLAGS="$CPPFLAGS $PTHREAD_CFLAGS"
++    LDFLAGS="$LDFLAGS $PTHREAD_CFLAGS"
++    CC="$PTHREAD_CC"],[])
++
++dnl Not all compilers include /usr/local in the include and link path
++if test -d /usr/local/include; then
++    CPPFLAGS="$CPPFLAGS -I/usr/local/include"
++    LDFLAGS="$LDFLAGS -L/usr/local/lib"
++fi
++
++dnl Add enable/disable option
++AC_ARG_ENABLE([java],
++    [AS_HELP_STRING([--disable-java], [Do not build the java bindings or jar file])])
++ 
++dnl Checks for libraries.
++
++
++dnl Some platforms will complain about missing included functions if libstdc++ is not included.
++AC_CHECK_LIB(stdc++, main, , AC_MSG_ERROR([missing libstdc++])) 
++AC_CHECK_HEADERS(list, , , AC_MSG_ERROR([missing STL list class header])) 
++AC_CHECK_HEADERS(map, , , AC_MSG_ERROR([missing STL map class header])) 
++AC_CHECK_HEADERS(queue, , , AC_MSG_ERROR([missing STL queue class header])) 
++AC_CHECK_HEADERS(set, , , AC_MSG_ERROR([missing STL set class header])) 
++AC_CHECK_HEADERS(stack, , , AC_MSG_ERROR([missing STL stack class header])) 
++AC_CHECK_HEADERS(streambuf, , , AC_MSG_ERROR([missing STL streambuf class header])) 
++AC_CHECK_HEADERS(string, , , AC_MSG_ERROR([missing STL string class header])) 
++AC_CHECK_HEADERS(vector, , , AC_MSG_ERROR([missing STL vector class header])) 
++
++
++dnl needed for sqllite
++AC_CHECK_LIB(dl, dlopen) 
++dnl sqlite requires pthread libraries - this was copied from its configure.ac
++dnl AC_SEARCH_LIBS(pthread_create, pthread)
++dnl AC_SEARCH_LIBS(dlopen, dl)
++
++# Check if we should link afflib.
++AC_ARG_WITH([afflib],
++    [AS_HELP_STRING([--without-afflib],[Do not use AFFLIB even if it is installed])]
++    [AS_HELP_STRING([--with-afflib=dir],[Specify that AFFLIB is installed in directory 'dir'])],
++    dnl If --with-afflib or --without-afflib is given
++    [],
++    dnl If --with-afflib or --without-afflib is given
++    [with_afflib=yes])
++
++dnl check for the lib if they did not specify no
++AS_IF([test "x$with_afflib" != "xno"],
++    dnl Test the dir if they specified something beyond yes/no
++    [AS_IF([test "x$with_afflib" != "xyes"],
++        [AS_IF([test -d ${with_afflib}/include],
++            [CPPFLAGS="$CPPFLAGS -I${with_afflib}/include"
++                LDFLAGS="$LDFLAGS -L${with_afflib}/lib"],
++            dnl Dir given was not correct
++            [AC_MSG_FAILURE([AFFLIB directory not found at ${with_afflib}])])
++        ]
++    )]
++    dnl Check for the header file first to make sure they have the dev install
++    [AC_CHECK_HEADERS([afflib/afflib.h],
++      [AC_CHECK_LIB([afflib], [af_open])]
++    )]
++)
++AS_IF([test "x$ac_cv_lib_afflib_af_open" = "xyes"], [ax_afflib=yes], [ax_afflib=no])
++
++
++dnl Check if we should link zlib
++AC_ARG_WITH([zlib],
++    [AS_HELP_STRING([--without-zlib],[Do not use ZLIB even if it is installed])]
++    [AS_HELP_STRING([--with-zlib=dir],[Specify that ZLIB is installed in directory 'dir'])],
++    dnl If --with-zlib or --without-zlib is given
++    [],
++    dnl if nothing was specified, default to a test
++    [with_zlib=yes])
++
++dnl check for the lib if they did not specify no
++AS_IF(
++   [test "x$with_zlib" != "xno"],
++   [AC_MSG_NOTICE([checking for zlib])]
++   dnl Test the dir if they specified something beyond yes/no
++   [AS_IF([test "x$with_zlib" != "xyes"],
++       [AC_MSG_NOTICE([LOOKING for zlib in ${with_zlib}])]
++       [AS_IF([test -d ${with_zlib}],
++           [CPPFLAGS="$CPPFLAGS -I${with_zlib}/include"
++                LDFLAGS="$LDFLAGS -L${with_zlib}/lib"],
++           dnl Dir given was not correct
++           [AC_MSG_FAILURE([ZLIB directory not found at ${with_zlib}])]
++       )]
++    )]
++    dnl Check for the header file first to make sure they have the dev install
++    [AC_CHECK_HEADERS([zlib.h],
++      [AC_CHECK_LIB([z], [inflate],
++         [],
++         [AC_MSG_WARN([Found zlib headers, but could not link to zlib library.  Will build without zlib.])]
++         [with_zlib=no]
++      )],
++      [AC_MSG_WARN([Could not find usable zlib headers.  Will build without zlib.])]
++      [with_zlib=no]
++    )],
++    [AC_MSG_NOTICE([NOT checking for zlib because with_zlib is no])]
++)
++AS_IF([test "x$ac_cv_lib_z_inflate" = "xyes"], [ax_zlib=yes], [ax_zlib=no])
++
++dnl needed for sqllite
++AC_CHECK_LIB(dl, dlopen)
++
++dnl Check if we should link libewf.
++AC_ARG_WITH([libewf],
++    [AS_HELP_STRING([--without-libewf],[Do not use libewf even if it is installed])]
++    [AS_HELP_STRING([--with-libewf=dir],[Specify that libewf is installed in directory 'dir'])],
++    dnl If --with-libewf or --without-libewf is given
++    [],
++    dnl if nothing was specified, default to a test
++    [with_libewf=yes])
++
++dnl check for the lib if they did not specify no
++AS_IF([test "x$with_libewf" != "xno"],
++    dnl Test the dir if they specified something beyond yes/no
++    [AS_IF([test "x$with_libewf" != "xyes"],
++        [AS_IF([test -d ${with_libewf}/include],
++            [CPPFLAGS="$CPPFLAGS -I${with_libewf}/include"  
++                LDFLAGS="$LDFLAGS -L${with_libewf}/lib"],
++            dnl Dir given was not correct
++            [AC_MSG_FAILURE([libewf directory not found at ${with_libewf}])])
++        ]
++    )]
++    dnl Check for the header file first to make sure they have the dev install
++    [AC_CHECK_HEADERS([libewf.h],
++      [AC_CHECK_LIB([ewf], [libewf_get_version], [], [NO_LIBEWF=true])]
++    )]
++)
++AS_IF([test "x$ac_cv_lib_ewf_libewf_get_version" = "xyes"], [ax_libewf=yes], [ax_libewf=no])
++
++dnl sqlite requires pthread libraries - this was copied from its configure.ac
++dnl AC_SEARCH_LIBS(pthread_create, pthread)
++AC_SEARCH_LIBS(dlopen, dl)
++
++dnl Test for the various java things that we need for bindings
++AS_IF([test "x$enable_java" != "xno"], [
++    dnl javac is needed to compile the JAR file
++    AC_PROG_JAVAC
++    if test "x$JAVAC" != x; then
++        AX_JNI_INCLUDE_DIR
++        for JNI_INCLUDE_DIR in $JNI_INCLUDE_DIRS
++        do
++            JNI_CPPFLAGS="$JNI_CPPFLAGS -I$JNI_INCLUDE_DIR"
++        done
++        dnl Export the paths so that the makefile gets them
++        AC_SUBST(JNI_CPPFLAGS, $JNI_CPPFLAGS)
++    fi
++
++    dnl java is needed by ant
++    dnl we had one report of a system with javac and not java
++    AC_PROG_JAVA
++
++    dnl Test is ant is available
++    AC_PATH_PROG([ANT_FOUND], [ant], [])
++
++]) dnl test enable_java
++
++dnl if we found everything we need, set ax_java_support for the
++dnl status message and set X_JNI for use in Makefile
++AS_IF([test "x$JNI_CPPFLAGS" != x && test "x$ANT_FOUND" != x && test "x$JAVA" != x], [ax_java_support=yes], [ax_java_support=no])
++AM_CONDITIONAL([X_JNI],[test "x$ax_java_support" == "xyes"])
++
++AC_CONFIG_COMMANDS([tsk/tsk_incs.h],
++    [echo "#ifndef _TSK_INCS_H" > tsk/tsk_incs.h
++    echo "#define _TSK_INCS_H" >> tsk/tsk_incs.h
++    echo "// automatically by ./configure" >> tsk/tsk_incs.h
++    echo "// Contains the config.h data needed by programs that use libtsk" >> tsk/tsk_incs.h
++    echo "" >> tsk/tsk_incs.h
++    if test x$ac_cv_header_unistd_h = xyes; then
++        echo "#include <unistd.h>" >> tsk/tsk_incs.h
++    fi
++    if test x$ac_cv_header_inttypes_h = xyes; then
++        echo "#ifndef __STDC_FORMAT_MACROS" >> tsk/tsk_incs.h
++        echo "#define  __STDC_FORMAT_MACROS" >> tsk/tsk_incs.h
++        echo "#endif" >> tsk/tsk_incs.h
++        echo "#include <inttypes.h>" >> tsk/tsk_incs.h
++    fi
++    if test x$ac_cv_header_sys_param_h = xyes; then
++        echo "#include <sys/param.h>" >> tsk/tsk_incs.h
++    fi
++
++    if test x$ax_pthread_ok = xyes; then
++        echo "#define TSK_MULTITHREAD_LIB // set because we have pthreads" >> tsk/tsk_incs.h
++    fi
++
++    echo "" >> tsk/tsk_incs.h
++    echo "#endif" >> tsk/tsk_incs.h],
++
++    [ac_cv_header_unistd_h=$ac_cv_header_unistd_h
++    ac_cv_header_inttypes_h=$ac_cv_header_inttypes_h
++    ac_cv_header_sys_param_h=$ac_cv_header_sys_param_h
++    ax_pthread_ok=$ax_pthread_ok])
++
++
++AC_CONFIG_FILES([
++    Makefile
++    tsk/Makefile
++    tsk/base/Makefile
++    tsk/img/Makefile
++    tsk/vs/Makefile
++    tsk/fs/Makefile
++    tsk/hashdb/Makefile
++    tsk/auto/Makefile
++    tools/Makefile
++    tools/imgtools/Makefile
++    tools/vstools/Makefile
++    tools/fstools/Makefile
++    tools/hashtools/Makefile
++    tools/srchtools/Makefile
++    tools/autotools/Makefile
++    tools/sorter/Makefile
++    tools/timeline/Makefile
++    tools/fiwalk/Makefile
++    tools/fiwalk/src/Makefile
++    tools/fiwalk/plugins/Makefile
++    tests/Makefile
++    samples/Makefile
++    man/Makefile
++    bindings/java/Makefile 
++    bindings/java/jni/Makefile
++    unit_tests/Makefile
++    unit_tests/base/Makefile])
++
++AC_OUTPUT
++
++dnl Print a summary
++AC_MSG_NOTICE([
++Building:
++   afflib support:                        $ax_afflib
++   libewf support:                        $ax_libewf
++   zlib support:                          $ax_zlib
++
++Features:
++   Java/JNI support:                      $ax_java_support
++]);
++
+diff -Naurp sleuthkit-4.1.3/tsk/img/img_open.c sleuthkit-4.1.3-libqemu/tsk/img/img_open.c
+--- sleuthkit-4.1.3/tsk/img/img_open.c	2014-01-27 03:27:03.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/img_open.c	2014-08-26 22:08:57.562074019 +0000
+@@ -27,6 +27,14 @@ typedef int bool;
+ #include "ewf.h"
+ #endif
+ 
++#if HAVE_LIBQCOW
++#include "qcow.h"
++#endif
++
++#if HAVE_LIBVHDI
++#include "vhdi.h"
++#endif
++
+ 
+ 
+ /**
+@@ -114,7 +122,7 @@ tsk_img_open(int num_img,
+      */
+     if (type == TSK_IMG_TYPE_DETECT) {
+         TSK_IMG_INFO *img_set = NULL;
+-#if HAVE_LIBAFFLIB || HAVE_LIBEWF
++#if HAVE_LIBAFFLIB || HAVE_LIBEWF || HAVE_LIBQCOW || HAVE_LIBVHDI
+         char *set = NULL;
+ #endif
+ 
+@@ -158,6 +166,44 @@ tsk_img_open(int num_img,
+                 return NULL;
+             }
+         }
++        else {
++            tsk_error_reset();
++        }
++#endif
++#if HAVE_LIBVHDI
++        if ((img_info = vhdi_open(num_img, images, a_ssize)) != NULL) {
++            if (set == NULL) {
++                set = "VHDI";
++                img_set = img_info;
++            }
++            else {
++                img_set->close(img_set);
++                img_info->close(img_info);
++                tsk_error_reset();
++                tsk_error_set_errno(TSK_ERR_IMG_UNKTYPE);
++                tsk_error_set_errstr("VHDI or %s", set);
++                return NULL;
++            }
++        }
++        else {
++            tsk_error_reset();
++        }
++#endif
++#if HAVE_LIBQCOW
++        if ((img_info = qcow_open(num_img, images, a_ssize)) != NULL) {
++            if (set == NULL) {
++                set = "QCOW";
++                img_set = img_info;
++            }
++            else {
++                img_set->close(img_set);
++                img_info->close(img_info);
++                tsk_error_reset();
++                tsk_error_set_errno(TSK_ERR_IMG_UNKTYPE);
++                tsk_error_set_errstr("QCOW or %s", set);
++                return NULL;
++            }
++        }
+         else {
+             tsk_error_reset();
+         }
+diff -Naurp sleuthkit-4.1.3/tsk/img/img_types.c sleuthkit-4.1.3-libqemu/tsk/img/img_types.c
+--- sleuthkit-4.1.3/tsk/img/img_types.c	2014-01-27 03:27:03.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/img_types.c	2014-08-26 22:08:57.562074019 +0000
+@@ -40,6 +40,12 @@ static IMG_TYPES img_open_table[] = {
+ #if HAVE_LIBEWF
+     {"ewf", TSK_IMG_TYPE_EWF_EWF, "Expert Witness format (encase)"},
+ #endif
++#if HAVE_LIBQCOW
++    {"qcow", TSK_IMG_TYPE_QCOW_QCOW, "QEMU Copy-On-Write"},
++#endif
++#if HAVE_LIBVHDI
++    {"vhdi", TSK_IMG_TYPE_VHDI_VHDI, "Virtual Hard Disk (VHD)"},
++#endif
+     {0},
+ };
+ 
+diff -Naurp sleuthkit-4.1.3/tsk/img/Makefile.am sleuthkit-4.1.3-libqemu/tsk/img/Makefile.am
+--- sleuthkit-4.1.3/tsk/img/Makefile.am	2014-01-27 03:27:03.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/Makefile.am	2014-08-26 22:08:57.563074019 +0000
+@@ -3,7 +3,7 @@ EXTRA_DIST = .indent.pro
+ 
+ noinst_LTLIBRARIES = libtskimg.la
+ libtskimg_la_SOURCES = img_open.c img_types.c raw.c raw.h \
+-    aff.c aff.h ewf.c ewf.h tsk_img_i.h img_io.c mult_files.c
++    aff.c aff.h ewf.c ewf.h qcow.c qcow.h vhdi.c vhdi.h tsk_img_i.h img_io.c mult_files.c
+ 
+ indent:
+ 	indent *.c *.h
+diff -Naurp sleuthkit-4.1.3/tsk/img/qcow.c sleuthkit-4.1.3-libqemu/tsk/img/qcow.c
+--- sleuthkit-4.1.3/tsk/img/qcow.c	1970-01-01 00:00:00.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/qcow.c	2014-08-26 22:08:57.563074019 +0000
+@@ -0,0 +1,223 @@
++/*
++ * The Sleuth Kit - Add on for QEMU Copy-On-Write (QCOW) image support
++ *
++ * Copyright (c) 2011-2012 Joachim Metz <joachim.metz@gmail.com>
++ *
++ * qcow
++ *
++ * This software is distributed under the Common Public License 1.0
++ */
++
++/** \file qcow.c
++ * Internal code for TSK to interface with libqcow.
++ */
++
++#include "tsk_img_i.h"
++
++#if HAVE_LIBQCOW
++#include "qcow.h"
++
++#define TSK_QCOW_ERROR_STRING_SIZE 512
++
++
++/**
++ * Get error string from libqcow and make buffer emtpy if that didn't work. 
++ * @returns 1 if error message was not set
++ */
++static uint8_t
++getError(libqcow_error_t * qcow_error,
++    char error_string[TSK_QCOW_ERROR_STRING_SIZE])
++{
++    int retval;
++    error_string[0] = '\0';
++    retval = libqcow_error_backtrace_sprint(qcow_error,
++        error_string, TSK_QCOW_ERROR_STRING_SIZE);
++    if (retval)
++        return 1;
++    return 0;
++}
++
++static ssize_t
++qcow_image_read(TSK_IMG_INFO * img_info, TSK_OFF_T offset, char *buf,
++    size_t len)
++{
++    char error_string[TSK_QCOW_ERROR_STRING_SIZE];
++    libqcow_error_t *qcow_error = NULL;
++
++    ssize_t cnt;
++    IMG_QCOW_INFO *qcow_info = (IMG_QCOW_INFO *) img_info;
++
++    if (tsk_verbose)
++        tsk_fprintf(stderr,
++            "qcow_image_read: byte offset: %" PRIuOFF " len: %" PRIuSIZE
++            "\n", offset, len);
++
++    if (offset > img_info->size) {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_READ_OFF);
++        tsk_error_set_errstr("qcow_image_read - %" PRIuOFF, offset);
++        return -1;
++    }
++
++    tsk_take_lock(&(qcow_info->read_lock));
++    cnt = libqcow_file_read_random(qcow_info->file,
++        buf, len, offset, &qcow_error);
++    if (cnt < 0) {
++        char *errmsg = NULL;
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_READ);
++        if (getError(qcow_error, error_string))
++            errmsg = strerror(errno);
++        else
++            errmsg = error_string;
++
++        tsk_error_set_errstr("qcow_image_read - offset: %" PRIuOFF
++            " - len: %" PRIuSIZE " - %s", offset, len, errmsg);
++        tsk_release_lock(&(qcow_info->read_lock));
++        return -1;
++    }
++    tsk_release_lock(&(qcow_info->read_lock));
++
++    return cnt;
++}
++
++static void
++qcow_image_imgstat(TSK_IMG_INFO * img_info, FILE * hFile)
++{
++    tsk_fprintf(hFile, "IMAGE FILE INFORMATION\n");
++    tsk_fprintf(hFile, "--------------------------------------------\n");
++    tsk_fprintf(hFile, "Image Type:\t\tqcow\n");
++    tsk_fprintf(hFile, "\nSize of data in bytes:\t%" PRIuOFF "\n",
++        img_info->size);
++
++    return;
++}
++
++static void
++qcow_image_close(TSK_IMG_INFO * img_info)
++{
++    IMG_QCOW_INFO *qcow_info = (IMG_QCOW_INFO *) img_info;
++
++    libqcow_file_close(qcow_info->file, NULL);
++    libqcow_file_free(&(qcow_info->file), NULL);
++
++    tsk_deinit_lock(&(qcow_info->read_lock));
++    free(img_info);
++}
++
++TSK_IMG_INFO *
++qcow_open(int a_num_img,
++    const TSK_TCHAR * const a_images[], unsigned int a_ssize)
++{
++    char error_string[TSK_QCOW_ERROR_STRING_SIZE];
++
++    libqcow_error_t *qcow_error = NULL;
++
++    IMG_QCOW_INFO *qcow_info = NULL;
++    TSK_IMG_INFO *img_info = NULL;
++
++    if ((qcow_info =
++            (IMG_QCOW_INFO *) tsk_img_malloc(sizeof(IMG_QCOW_INFO))) ==
++        NULL) {
++        return NULL;
++    }
++    img_info = (TSK_IMG_INFO *) qcow_info;
++
++    // Check the file signature before we call the library open
++#if defined( TSK_WIN32 )
++    if (libqcow_check_file_signature_wide(a_images[0], &qcow_error) != 1)
++#else
++    if (libqcow_check_file_signature(a_images[0], &qcow_error) != 1)
++#endif
++    {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_MAGIC);
++
++        getError(qcow_error, error_string);
++        tsk_error_set_errstr("qcow_open: Not an QCOW file (%s)",
++            error_string);
++        libqcow_error_free(&qcow_error);
++
++        free(qcow_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Not an QCOW file\n");
++        }
++        return (NULL);
++    }
++
++    if (libqcow_file_initialize(&(qcow_info->file), &qcow_error) != 1) {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_OPEN);
++
++        getError(qcow_error, error_string);
++        tsk_error_set_errstr("qcow_open file: %" PRIttocTSK
++            ": Error initializing file (%s)", a_images[0], error_string);
++        libqcow_error_free(&qcow_error);
++
++        free(qcow_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Unable to create QCOW file\n");
++        }
++        return (NULL);
++    }
++#if defined( TSK_WIN32 )
++    if (libqcow_file_open_wide(qcow_info->file,
++            (const wchar_t *) a_images[0],
++            LIBQCOW_OPEN_READ, &qcow_error) != 1)
++#else
++    if (libqcow_file_open(qcow_info->file,
++            (const char *) a_images[0],
++            LIBQCOW_OPEN_READ, &qcow_error) != 1)
++#endif
++    {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_OPEN);
++
++        getError(qcow_error, error_string);
++        tsk_error_set_errstr("qcow_open file: %" PRIttocTSK
++            ": Error opening (%s)", a_images[0], error_string);
++        libqcow_error_free(&qcow_error);
++
++        free(qcow_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Error opening QCOW file\n");
++        }
++        return (NULL);
++    }
++    if (libqcow_file_get_media_size(qcow_info->file,
++            (size64_t *) & (img_info->size), &qcow_error) != 1) {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_OPEN);
++
++        getError(qcow_error, error_string);
++        tsk_error_set_errstr("qcow_open file: %" PRIttocTSK
++            ": Error getting size of image (%s)", a_images[0], error_string);
++        libqcow_error_free(&qcow_error);
++
++        free(qcow_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Error getting size of QCOW file\n");
++        }
++        return (NULL);
++    }
++    if (a_ssize != 0) {
++        img_info->sector_size = a_ssize;
++    }
++    else {
++        img_info->sector_size = 512;
++    }
++    img_info->itype = TSK_IMG_TYPE_QCOW_QCOW;
++    img_info->read = &qcow_image_read;
++    img_info->close = &qcow_image_close;
++    img_info->imgstat = &qcow_image_imgstat;
++
++    // initialize the read lock
++    tsk_init_lock(&(qcow_info->read_lock));
++
++    return (img_info);
++}
++#endif                          /* HAVE_LIBQCOW */
+diff -Naurp sleuthkit-4.1.3/tsk/img/qcow.h sleuthkit-4.1.3-libqemu/tsk/img/qcow.h
+--- sleuthkit-4.1.3/tsk/img/qcow.h	1970-01-01 00:00:00.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/qcow.h	2014-08-26 22:08:57.563074019 +0000
+@@ -0,0 +1,42 @@
++/*
++ * The Sleuth Kit - Add on for QEMU Copy-On-Write (QCOW) image support
++ *
++ * Copyright (c) 2011-2012 Joachim Metz <joachim.metz@gmail.com>
++ *
++ * This software is distributed under the Common Public License 1.0
++ */
++
++/* 
++ * Header files for QCOW-specific data structures and functions. 
++ */
++
++#ifndef _TSK_IMG_QCOW_H
++#define _TSK_IMG_QCOW_H
++
++#if HAVE_LIBQCOW
++
++// we used to check only for TSK_WIN32, but that fails on mingw
++#if defined(_MSC_VER)
++#include <config_msc.h>
++#endif
++
++#include <libqcow.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++    extern TSK_IMG_INFO *qcow_open(int, const TSK_TCHAR * const images[],
++        unsigned int a_ssize);
++
++    typedef struct {
++        TSK_IMG_INFO img_info;
++        libqcow_file_t *file;
++        tsk_lock_t read_lock;   ///< Lock for reads since libqcow is not thread safe -- only works if you have a single instance of QCOW_INFO for all threads.
++    } IMG_QCOW_INFO;
++
++#ifdef __cplusplus
++}
++#endif
++#endif
++#endif
+diff -Naurp sleuthkit-4.1.3/tsk/img/tsk_img.h sleuthkit-4.1.3-libqemu/tsk/img/tsk_img.h
+--- sleuthkit-4.1.3/tsk/img/tsk_img.h	2014-01-27 03:27:03.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/tsk_img.h	2014-08-26 22:08:57.563074019 +0000
+@@ -66,6 +66,10 @@ extern "C" {
+ 
+         TSK_IMG_TYPE_EWF_EWF = 0x0040,  ///< EWF version
+ 
++        TSK_IMG_TYPE_QCOW_QCOW = 0x0050,  ///< QCOW version
++
++        TSK_IMG_TYPE_VHDI_VHDI = 0x0051,  ///< VHDI version
++
+         TSK_IMG_TYPE_UNSUPP = 0xffff,   ///< Unsupported disk image type
+     } TSK_IMG_TYPE_ENUM;
+ 
+diff -Naurp sleuthkit-4.1.3/tsk/img/vhdi.c sleuthkit-4.1.3-libqemu/tsk/img/vhdi.c
+--- sleuthkit-4.1.3/tsk/img/vhdi.c	1970-01-01 00:00:00.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/vhdi.c	2014-08-26 22:08:57.563074019 +0000
+@@ -0,0 +1,223 @@
++/*
++ * The Sleuth Kit - Add on for Virtual Hard Disk (VHD) image support
++ *
++ * Copyright (c) 2012 Joachim Metz <joachim.metz@gmail.com>
++ *
++ * vhdi
++ *
++ * This software is distributed under the Common Public License 1.0
++ */
++
++/** \file vhdi.c
++ * Internal code for TSK to interface with libvhdi.
++ */
++
++#include "tsk_img_i.h"
++
++#if HAVE_LIBVHDI
++#include "vhdi.h"
++
++#define TSK_VHDI_ERROR_STRING_SIZE 512
++
++
++/**
++ * Get error string from libvhdi and make buffer emtpy if that didn't work. 
++ * @returns 1 if error message was not set
++ */
++static uint8_t
++getError(libvhdi_error_t * vhdi_error,
++    char error_string[TSK_VHDI_ERROR_STRING_SIZE])
++{
++    int retval;
++    error_string[0] = '\0';
++    retval = libvhdi_error_backtrace_sprint(vhdi_error,
++        error_string, TSK_VHDI_ERROR_STRING_SIZE);
++    if (retval)
++        return 1;
++    return 0;
++}
++
++static ssize_t
++vhdi_image_read(TSK_IMG_INFO * img_info, TSK_OFF_T offset, char *buf,
++    size_t len)
++{
++    char error_string[TSK_VHDI_ERROR_STRING_SIZE];
++    libvhdi_error_t *vhdi_error = NULL;
++
++    ssize_t cnt;
++    IMG_VHDI_INFO *vhdi_info = (IMG_VHDI_INFO *) img_info;
++
++    if (tsk_verbose)
++        tsk_fprintf(stderr,
++            "vhdi_image_read: byte offset: %" PRIuOFF " len: %" PRIuSIZE
++            "\n", offset, len);
++
++    if (offset > img_info->size) {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_READ_OFF);
++        tsk_error_set_errstr("vhdi_image_read - %" PRIuOFF, offset);
++        return -1;
++    }
++
++    tsk_take_lock(&(vhdi_info->read_lock));
++    cnt = libvhdi_file_read_random(vhdi_info->file,
++        buf, len, offset, &vhdi_error);
++    if (cnt < 0) {
++        char *errmsg = NULL;
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_READ);
++        if (getError(vhdi_error, error_string))
++            errmsg = strerror(errno);
++        else
++            errmsg = error_string;
++
++        tsk_error_set_errstr("vhdi_image_read - offset: %" PRIuOFF
++            " - len: %" PRIuSIZE " - %s", offset, len, errmsg);
++        tsk_release_lock(&(vhdi_info->read_lock));
++        return -1;
++    }
++    tsk_release_lock(&(vhdi_info->read_lock));
++
++    return cnt;
++}
++
++static void
++vhdi_image_imgstat(TSK_IMG_INFO * img_info, FILE * hFile)
++{
++    tsk_fprintf(hFile, "IMAGE FILE INFORMATION\n");
++    tsk_fprintf(hFile, "--------------------------------------------\n");
++    tsk_fprintf(hFile, "Image Type:\t\tvhdi\n");
++    tsk_fprintf(hFile, "\nSize of data in bytes:\t%" PRIuOFF "\n",
++        img_info->size);
++
++    return;
++}
++
++static void
++vhdi_image_close(TSK_IMG_INFO * img_info)
++{
++    IMG_VHDI_INFO *vhdi_info = (IMG_VHDI_INFO *) img_info;
++
++    libvhdi_file_close(vhdi_info->file, NULL);
++    libvhdi_file_free(&(vhdi_info->file), NULL);
++
++    tsk_deinit_lock(&(vhdi_info->read_lock));
++    free(img_info);
++}
++
++TSK_IMG_INFO *
++vhdi_open(int a_num_img,
++    const TSK_TCHAR * const a_images[], unsigned int a_ssize)
++{
++    char error_string[TSK_VHDI_ERROR_STRING_SIZE];
++
++    libvhdi_error_t *vhdi_error = NULL;
++
++    IMG_VHDI_INFO *vhdi_info = NULL;
++    TSK_IMG_INFO *img_info = NULL;
++
++    if ((vhdi_info =
++            (IMG_VHDI_INFO *) tsk_img_malloc(sizeof(IMG_VHDI_INFO))) ==
++        NULL) {
++        return NULL;
++    }
++    img_info = (TSK_IMG_INFO *) vhdi_info;
++
++    // Check the file signature before we call the library open
++#if defined( TSK_WIN32 )
++    if (libvhdi_check_file_signature_wide(a_images[0], &vhdi_error) != 1)
++#else
++    if (libvhdi_check_file_signature(a_images[0], &vhdi_error) != 1)
++#endif
++    {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_MAGIC);
++
++        getError(vhdi_error, error_string);
++        tsk_error_set_errstr("vhdi_open: Not an VHDI file (%s)",
++            error_string);
++        libvhdi_error_free(&vhdi_error);
++
++        free(vhdi_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Not an VHDI file\n");
++        }
++        return (NULL);
++    }
++
++    if (libvhdi_file_initialize(&(vhdi_info->file), &vhdi_error) != 1) {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_OPEN);
++
++        getError(vhdi_error, error_string);
++        tsk_error_set_errstr("vhdi_open file: %" PRIttocTSK
++            ": Error initializing file (%s)", a_images[0], error_string);
++        libvhdi_error_free(&vhdi_error);
++
++        free(vhdi_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Unable to create VHDI file\n");
++        }
++        return (NULL);
++    }
++#if defined( TSK_WIN32 )
++    if (libvhdi_file_open_wide(vhdi_info->file,
++            (const wchar_t *) a_images[0],
++            LIBVHDI_OPEN_READ, &vhdi_error) != 1)
++#else
++    if (libvhdi_file_open(vhdi_info->file,
++            (const char *) a_images[0],
++            LIBVHDI_OPEN_READ, &vhdi_error) != 1)
++#endif
++    {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_OPEN);
++
++        getError(vhdi_error, error_string);
++        tsk_error_set_errstr("vhdi_open file: %" PRIttocTSK
++            ": Error opening (%s)", a_images[0], error_string);
++        libvhdi_error_free(&vhdi_error);
++
++        free(vhdi_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Error opening VHDI file\n");
++        }
++        return (NULL);
++    }
++    if (libvhdi_file_get_media_size(vhdi_info->file,
++            (size64_t *) & (img_info->size), &vhdi_error) != 1) {
++        tsk_error_reset();
++        tsk_error_set_errno(TSK_ERR_IMG_OPEN);
++
++        getError(vhdi_error, error_string);
++        tsk_error_set_errstr("vhdi_open file: %" PRIttocTSK
++            ": Error getting size of image (%s)", a_images[0], error_string);
++        libvhdi_error_free(&vhdi_error);
++
++        free(vhdi_info);
++
++        if (tsk_verbose != 0) {
++            tsk_fprintf(stderr, "Error getting size of VHDI file\n");
++        }
++        return (NULL);
++    }
++    if (a_ssize != 0) {
++        img_info->sector_size = a_ssize;
++    }
++    else {
++        img_info->sector_size = 512;
++    }
++    img_info->itype = TSK_IMG_TYPE_VHDI_VHDI;
++    img_info->read = &vhdi_image_read;
++    img_info->close = &vhdi_image_close;
++    img_info->imgstat = &vhdi_image_imgstat;
++
++    // initialize the read lock
++    tsk_init_lock(&(vhdi_info->read_lock));
++
++    return (img_info);
++}
++#endif                          /* HAVE_LIBVHDI */
+diff -Naurp sleuthkit-4.1.3/tsk/img/vhdi.h sleuthkit-4.1.3-libqemu/tsk/img/vhdi.h
+--- sleuthkit-4.1.3/tsk/img/vhdi.h	1970-01-01 00:00:00.000000000 +0000
++++ sleuthkit-4.1.3-libqemu/tsk/img/vhdi.h	2014-08-26 22:08:57.563074019 +0000
+@@ -0,0 +1,42 @@
++/*
++ * The Sleuth Kit - Add on for Virtual Hard Disk (VHD) image support
++ *
++ * Copyright (c) 2012 Joachim Metz <joachim.metz@gmail.com>
++ *
++ * This software is distributed under the Common Public License 1.0
++ */
++
++/* 
++ * Header files for VHDI-specific data structures and functions. 
++ */
++
++#ifndef _TSK_IMG_VHDI_H
++#define _TSK_IMG_VHDI_H
++
++#if HAVE_LIBVHDI
++
++// we used to check only for TSK_WIN32, but that fails on mingw
++#if defined(_MSC_VER)
++#include <config_msc.h>
++#endif
++
++#include <libvhdi.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++    extern TSK_IMG_INFO *vhdi_open(int, const TSK_TCHAR * const images[],
++        unsigned int a_ssize);
++
++    typedef struct {
++        TSK_IMG_INFO img_info;
++        libvhdi_file_t *file;
++        tsk_lock_t read_lock;   ///< Lock for reads since libvhdi is not thread safe -- only works if you have a single instance of VHDI_INFO for all threads.
++    } IMG_VHDI_INFO;
++
++#ifdef __cplusplus
++}
++#endif
++#endif
++#endif
