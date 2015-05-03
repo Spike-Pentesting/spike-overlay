@@ -1,0 +1,19 @@
+--- src/Makefile.in.old	2012-08-21 22:54:34.910711588 +0200
++++ src/Makefile.in	2012-08-21 22:55:54.767708115 +0200
+@@ -30,10 +30,14 @@
+ srcdir         = @srcdir@
+ VPATH          = @srcdir@
+ 
++CFLAGS +=$(shell pkg-config --cflags vte gtksourceview-2.0)
++LIBS +=$(shell pkg-config --libs vte gtksourceview-2.0)
++
++
+ all: x2
+ 
+ x2: main.c
+-	gcc -Wall -g -O0 -o $@ $+ `pkg-config --libs --cflags vte gtksourceview-2.0`
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $+ $(LIBS)
+ clean:
+ 	-rm x2 &>/dev/null
+ 
+

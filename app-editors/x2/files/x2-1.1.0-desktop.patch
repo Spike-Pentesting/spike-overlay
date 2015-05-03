@@ -1,0 +1,18 @@
+--- data/x2.desktop.old	2012-08-19 23:22:18.982183528 +0200
++++ data/x2.desktop	2012-08-19 23:24:26.628185215 +0200
+@@ -1,6 +1,5 @@
+ 
+ [Desktop Entry]
+-Version=1.0.4
+ Name=X2
+ Comment=Simple text editor
+ Comment[bg]=Опростен текстов редактор
+@@ -45,7 +45,6 @@
+ Icon=accessories-text-editor
+ Terminal=false
+ Type=Application
+-MimeType=text/plain
++MimeType=text/plain;
+ Categories=GTK;Utility;TextEditor;
+ StartupNotify=true
+-Path=
