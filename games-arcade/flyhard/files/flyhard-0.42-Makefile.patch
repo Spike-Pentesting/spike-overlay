@@ -1,0 +1,25 @@
+Drop optimization flag
+Take care of DESTDIR
+--- src/Makefile.am.old	2012-08-18 02:42:52.506530215 +0200
++++ src/Makefile.am	2012-08-18 02:48:02.191538017 +0200
+@@ -10,7 +10,7 @@
+ #...it's where the hi-score file goes.
+ savedir = $(pkgdatadir)/save
+ 
+-AM_CPPFLAGS = -Wall -O3 -Wno-sign-compare \
++AM_CPPFLAGS = -Wall -Wno-sign-compare \
+ ## Having directories defined by automake is nice, but how is the program
+ ## expected to know about them?  This is the best I can come up with.
+               -DIMAGESDIR=\"$(pkgdatadir)/images\" -DSOUNDSDIR=\"$(pkgdatadir)/sounds\" \
+@@ -36,8 +36,8 @@
+ #since automake doesn't directly put anything in $(savedir), it may not exist
+ install-data-hook:
+ 	@echo "Creating blank hi-score file"
+-	mkdir -p $(savedir)
+-	touch $(savedir)/scores
+-	chmod a+rw $(savedir)/scores
++	install -d $(DESTDIR)$(savedir)
++	touch $(DESTDIR)$(savedir)/scores
++	chmod a+rw $(DESTDIR)$(savedir)/scores
+ 
+ 
