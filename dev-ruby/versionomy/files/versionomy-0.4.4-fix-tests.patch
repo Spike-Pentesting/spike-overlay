@@ -1,0 +1,53 @@
+From e35b5dc021e61ac6342916a0f07522244336f72f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Manuel=20R=C3=BCger?= <manuel@rueg.eu>
+Date: Sun, 6 Jan 2013 20:46:08 +0100
+Subject: [PATCH 49/49] Fix tests, missing require 'yaml'
+
+---
+ test/tc_rubygems_basic.rb | 2 +-
+ test/tc_semver_basic.rb   | 2 +-
+ test/tc_standard_misc.rb  | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/test/tc_rubygems_basic.rb b/test/tc_rubygems_basic.rb
+index d64f3ce..c19909f 100644
+--- a/test/tc_rubygems_basic.rb
++++ b/test/tc_rubygems_basic.rb
+@@ -37,7 +37,7 @@
+ 
+ require 'test/unit'
+ require 'versionomy'
+-
++require 'yaml'
+ 
+ module Versionomy
+   module Tests  # :nodoc:
+diff --git a/test/tc_semver_basic.rb b/test/tc_semver_basic.rb
+index 24eb341..dc8434c 100644
+--- a/test/tc_semver_basic.rb
++++ b/test/tc_semver_basic.rb
+@@ -37,7 +37,7 @@
+ 
+ require 'test/unit'
+ require 'versionomy'
+-
++require 'yaml'
+ 
+ module Versionomy
+   module Tests  # :nodoc:
+diff --git a/test/tc_standard_misc.rb b/test/tc_standard_misc.rb
+index f47f86d..b29bdfc 100644
+--- a/test/tc_standard_misc.rb
++++ b/test/tc_standard_misc.rb
+@@ -37,7 +37,7 @@
+ 
+ require 'test/unit'
+ require 'versionomy'
+-
++require 'yaml'
+ 
+ module Versionomy
+   module Tests  # :nodoc:
+-- 
+1.8.1
+
