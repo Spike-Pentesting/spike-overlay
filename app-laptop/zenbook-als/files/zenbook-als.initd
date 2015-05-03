@@ -1,0 +1,37 @@
+#!/sbin/runscript                                                                                                                                                        # Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+extra_started_commands="reload"
+command="/usr/sbin/als-controller"
+description="Controller for Asus Zenbook ambient light sensor"
+pidfile="/var/run/als-controller.pid"
+
+checkconfig() {
+	if [ ! -L "/sys/bus/acpi/devices/ACPI0008:00" ]; then  
+		eerror "Missing device ACPI0008:00."
+		eerror "Probably your grub bootline has wrong acpi_osi setting."
+		return 1
+	fi
+	return 0
+}
+
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Asus Zenbook ambient light sensor controller"
+	start-stop-daemon --start --exec "${command}" --pidfile "${pidfile}"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Asus Zenbook ambient light sensor controller"
+	start-stop-daemon --stop --exec "${command}" --pidfile "${pidfile}"
+	eend $?
+
+}
+
+reload() {
+	stop
+	sleep 3
+	start
+}
