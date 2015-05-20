@@ -3,19 +3,20 @@
 # $Header: $
 
 EAPI=5
-EXTENSIONS_PREFIX="extensions.gnome.org"
 
+EXTENSIONS_PREFIX="extensions.gnome-org"
+MY_AUTHOR="micheleg"
 inherit eutils gnome2-utils
 DESCRIPTION="an extension that transform Gnome shell dash in a dock"
-HOMEPAGE="https://github.com/micheleg/dash-to-dock"
+HOMEPAGE="https://github.com/${MY_AUTHOR}/${PN}"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/micheleg/${PN}.git"
+	EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/micheleg/${PN}/archive/${EXTENSIONS_PREFIX}-v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/${MY_AUTHOR}/${PN}/archive/${EXTENSIONS_PREFIX}-v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 

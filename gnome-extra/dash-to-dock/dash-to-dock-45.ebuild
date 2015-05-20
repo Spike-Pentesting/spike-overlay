@@ -3,19 +3,20 @@
 # $Header: $
 
 EAPI=5
-EXTENSIONS_PREFIX="extensions.gnome.org"
 
+EXTENSIONS_PREFIX="extensions.gnome-org"
+MY_AUTHOR="micheleg"
 inherit eutils gnome2-utils
 DESCRIPTION="an extension that transform Gnome shell dash in a dock"
-HOMEPAGE="https://github.com/micheleg/dash-to-dock"
+HOMEPAGE="https://github.com/${MY_AUTHOR}/${PN}"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/micheleg/${PN}.git"
+	EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/micheleg/${PN}/archive/${EXTENSIONS_PREFIX}-v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/${MY_AUTHOR}/${PN}/archive/${EXTENSIONS_PREFIX}-v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -27,7 +28,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	       >=gnome-base/libgtop-2.28.3[introspection]
 	       >=app-eselect/eselect-gnome-shell-extensions-20120911"
 RDEPEND="${COMMON_DEPEND}
-	 =gnome-base/gnome-shell-3.16*
+	 =gnome-base/gnome-shell-3.14*
 	 >=dev-libs/gjs-1.29
 	 dev-libs/gobject-introspection
 	 gnome-base/gnome-menus:3[introspection]
@@ -37,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 	 dev-lang/vala
 	 dev-libs/vala-common
 	 dev-libs/gom
-	 =gnome-base/gnome-desktop-3.16*
+	 =gnome-base/gnome-desktop-3.14*
 	 media-libs/gstreamer
 	 sys-apps/dbus
 	 dev-libs/dbus-glib
