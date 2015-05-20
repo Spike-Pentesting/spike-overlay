@@ -1,0 +1,10 @@
+--- scudcloud-1.0/scudcloud.desktop	2015-05-20 03:09:32.378596696 +0200
++++ scudcloud-1.0/scudcloud.desktop	2015-05-20 03:10:09.687376383 +0200
+@@ -6,6 +6,6 @@ Type=Application
+ Categories=Network;Chat;
+ Name=ScudCloud
+ Comment=ScudCloud is an open-source client for Slack
+-Keywords=slack;chat;instant-messaging;collaboration
++Keywords=slack;chat;instant-messaging;collaboration;
+ Exec=/opt/scudcloud/scudcloud
+ Icon=/opt/scudcloud/resources/scudcloud.png
