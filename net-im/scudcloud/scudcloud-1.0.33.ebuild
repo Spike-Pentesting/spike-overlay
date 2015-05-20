@@ -40,8 +40,10 @@ src_install() {
 	if use doc; then
 		dodoc README.md CONTRIBUTING.md
 	fi
+	exeinto "${MY_INSTALLDIR}"
+	doexe "${MY_S}/scudcloud"
 	insinto "${MY_INSTALLDIR}"
-	doins "${MY_S}/scudcloud" "${MY_S}/LICENSE"
+	doins "${MY_S}/LICENSE"
 	insinto "${MY_INSTALLDIR}/lib"
 	doins "${MY_S}/lib/"*
 	insinto "${MY_INSTALLDIR}/resources"
@@ -49,7 +51,7 @@ src_install() {
 	insinto "/usr/share/applications"
 	doins "${MY_S}/scudcloud.desktop"
 	doicon -s scalable "${MY_S}/systray/hicolor/"*
-	doicon -s scalable -t mono-dark "${MY_S}/systray/mono-dark/"* 
+	doicon -s scalable -t mono-dark "${MY_S}/systray/mono-dark/"*
 	doicon -s scalable -t mono-light "${MY_S}/systray/mono-light/"*
 	dosym  "${MY_INSTALLDIR}/scudcloud" "/usr/bin/scudcloud"
 }

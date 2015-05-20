@@ -36,8 +36,10 @@ src_install() {
 	if use doc; then
                 dodoc README.md CONTRIBUTING.md
         fi
-	insinto "${MY_INSTALLDIR}"
-	doins "${MY_S}/scudcloud" "${MY_S}/LICENSE"
+	exeinto "${MY_INSTALLDIR}"
+        doexe "${MY_S}/scudcloud"
+        insinto "${MY_INSTALLDIR}"
+        doins "${MY_S}/LICENSE"
 	insinto "${MY_INSTALLDIR}/lib"
 	doins "${MY_S}/lib/"*
 	insinto "${MY_INSTALLDIR}/resources"
