@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
+	</maintainer>
+	<use>
+		<flag name='git'>Install grml gitconfig systemwide</flag>
+		<flag name='tmux'>Install grml tmux.conf systemwide</flag>
+		<flag name='vim'>Install grml vimrc systemwide</flag>
+		<flag name='zsh'>Install grml zshrc systemwide</flag>
+	</use>
+</pkgmetadata>
