@@ -4,16 +4,17 @@
 
 EAPI=5
 
+MY_AUTHOR="snwh"
 DESCRIPTION="the Paper gtk theme by snwh"
-HOMEPAGE="https://github.com/snwh/${PN}"
+HOMEPAGE="https://github.com/${MY_AUTHOR}/${PN}"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/snwh/${PN}.git"
+	EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/snwh/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/${MY_AUTHOR}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -21,7 +22,8 @@ LICENSE="GPL-3.0"
 SLOT="0"
 
 DEPEND=">=gnome-base/gnome-shell-3.12
-        gnome-extra/gnome-shell-extensions"
+        gnome-extra/gnome-shell-extensions
+	x11-libs/gdk-pixbuf"
 RDEPEND="${DEPEND}"
 
 src_install() {

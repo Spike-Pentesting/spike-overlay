@@ -4,19 +4,20 @@
 
 EAPI=5
 
+MY_AUTHOR="snwh"
 DESCRIPTION="the Paper gtk theme by snwh"
-HOMEPAGE="https://github.com/snwh/${PN}"
+HOMEPAGE="https://github.com/${MY_AUTHOR}/${PN}"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/snwh/${PN}.git"
+	EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
 	KEYWORDS=""
 else
 	inherit git-r3
         SRC_URI=""
-        EGIT_REPO_URI="https://github.com/snwh/${PN}.git"
-	EGIT_COMMIT="ead9b4d36f83ff9475f649f8dc2c3b7a3315adbd"
+        EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
+	EGIT_COMMIT="3aa17ec9117f5c4a99e8031ea20f0d2b5804af87"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -24,7 +25,8 @@ LICENSE="GPL-3.0"
 SLOT="0"
 
 DEPEND=">=gnome-base/gnome-shell-3.12
-        gnome-extra/gnome-shell-extensions"
+        gnome-extra/gnome-shell-extensions
+	x11-libs/gdk-pixbuf"
 RDEPEND="${DEPEND}"
 
 src_install() {
