@@ -18,13 +18,12 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	inherit git-r3
-        SRC_URI=""
-        EGIT_REPO_URI="git://github.com/${MY_AUTHOR}/${PN}.git
-                       https://github.com/${MY_AUTHOR}/${PN}.git"
+	SRC_URI=""
+	EGIT_REPO_URI="git://github.com/${MY_AUTHOR}/${PN}.git
+		       https://github.com/${MY_AUTHOR}/${PN}.git"
 	EGIT_COMMIT=
 	KEYWORDS="~amd64 ~x86"
 fi
-
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -64,7 +63,7 @@ src_prepare() {
 	       PYTHON_INCLUDE_PATH="$(python_get_library_path)"\
 	       PYTHON_CFLAGS="$(python_get_CFLAGS)"\
 	       PYTHON_LIBS="$(python_get_LIBS)"
-        export QT_SELECT=qt5
+	export QT_SELECT=qt5
 }
 
 src_configure() {
