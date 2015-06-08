@@ -15,17 +15,17 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	inherit git-r3
-        SRC_URI=""
-        EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
+	SRC_URI=""
+	EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
 	EGIT_COMMIT="3aa17ec9117f5c4a99e8031ea20f0d2b5804af87"
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 
 DEPEND=">=gnome-base/gnome-shell-3.12
-        gnome-extra/gnome-shell-extensions
+	gnome-extra/gnome-shell-extensions
 	x11-libs/gdk-pixbuf"
 RDEPEND="${DEPEND}"
 
