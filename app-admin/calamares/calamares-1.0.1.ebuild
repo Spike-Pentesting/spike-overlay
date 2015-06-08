@@ -54,7 +54,9 @@ RDEPEND="${DEPEND}
 	>=sys-block/parted-3.0
 	>=sys-apps/gptfdisk-0.8.10
 	sys-fs/udisks:2[systemd]
-	virtual/udev[systemd]"
+	virtual/udev[systemd]
+	sys-boot/grub:2
+	sys-apps/gptfdisk"
 
 src_prepare() {
 	python_setup
