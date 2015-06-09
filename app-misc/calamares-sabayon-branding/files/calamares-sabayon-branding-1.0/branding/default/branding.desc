@@ -1,0 +1,26 @@
+---
+componentName:  default
+
+strings:
+    productName:         Sabayon Linux
+    shortProductName:    Sabayon
+    version:             15.07
+    shortVersion:        15.07
+    versionedName:       Sabayon Linux 15.07
+    shortVersionedName:  Sabayon 15.07
+    bootloaderEntryName: Sabayon Linux 15.07
+    productUrl:          http://www.sabayon.org/
+    supportUrl:          https://forum.sabayon.org/
+    knownIssuesUrl:      https://wiki.sabayon.org/index.php?title=En:FAQ
+    releaseNotesUrl:     http://www.sabayon.org/latest
+
+images:
+    productLogo:         "sabayon_logo.png"
+    productIcon:         "sabayon_logo.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#292F34"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#292F34"
