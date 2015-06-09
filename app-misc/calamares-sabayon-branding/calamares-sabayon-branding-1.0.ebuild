@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Sabayon Official Calamares branding"
 HOMEPAGE="http://www.sabayon.org/"
-SRC_URI=""
+SRC_URI="mirror://spike/${CATEGORY}/${PN}/${PN}-${PVR}.tar.xz"
 LICENSE="CC-BY-SA-4.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -15,7 +15,6 @@ IUSE=""
 DEPEND=">=app-admin/calamares-1.0"
 RDEPEND="${DEPEND}"
 
-S="${FILESDIR}/${P}"
 src_install() {
 	insinto "/etc/calamares/"
 	doins -r "${S}/"*
