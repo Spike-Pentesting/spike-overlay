@@ -17,8 +17,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="${DEPEND}"
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )
-	"
+RDEPEND=""
 
 S="${WORKDIR}"
 RESTRICT="strip"
