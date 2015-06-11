@@ -41,7 +41,7 @@ DEPEND="${PYTHON_DEPS}
 	>=dev-qt/qtwidgets-5.4.0:5
 	sys-auth/polkit-qt[qt5]
 	>=dev-cpp/yaml-cpp-0.5.1
-	>=dev-libs/boost-1.54[${PYTHON_USEDEP}]
+	>=dev-libs/boost-1.55[${PYTHON_USEDEP}]
 	>=kde-frameworks/extra-cmake-modules-5.10.0"
 
 RDEPEND="${DEPEND}
@@ -54,8 +54,9 @@ RDEPEND="${DEPEND}
 	>=sys-apps/gptfdisk-0.8.10
 	sys-fs/udisks:2[systemd]
 	virtual/udev[systemd]
-	sys-boot/grub:2
-	sys-apps/gptfdisk"
+	>=sys-power/upower-0.99.2
+	net-misc/networkmanager
+	|| ( sys-boot/grub:2 sys-boot/gummiboot )"
 
 src_prepare() {
 	python_setup
