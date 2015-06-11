@@ -56,7 +56,8 @@ RDEPEND="${DEPEND}
 	virtual/udev[systemd]
 	>=sys-power/upower-0.99.2
 	net-misc/networkmanager
-	|| ( sys-boot/grub:2 sys-boot/gummiboot )"
+	|| ( sys-boot/grub:2 sys-boot/gummiboot )
+	sys-fs/squashfs-tools"
 
 src_prepare() {
 	python_setup

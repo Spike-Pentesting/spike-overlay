@@ -21,7 +21,7 @@ else
 	SRC_URI=""
 	EGIT_REPO_URI="git://github.com/${MY_AUTHOR}/${PN}.git
 		       https://github.com/${MY_AUTHOR}/${PN}.git"
-	EGIT_COMMIT=35d853e5098afce61942bf3119ad447339b4a725
+	EGIT_COMMIT=0dab164e9ca4efae6ddb944876a53383a1289bf3
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -56,7 +56,8 @@ RDEPEND="${DEPEND}
 	virtual/udev[systemd]
 	>=sys-power/upower-0.99.2
 	net-misc/networkmanager
-	|| ( sys-boot/grub:2 sys-boot/gummiboot )"
+	|| ( sys-boot/grub:2 sys-boot/gummiboot )
+	sys-fs/squashfs-tools"
 
 src_prepare() {
 	python_setup
