@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby20"
+USE_RUBY="ruby20"
 inherit ruby-ng user
 
 DESCRIPTION="A Redmine plugin which adds an issue dashboard that supports drag and drop and various filters"

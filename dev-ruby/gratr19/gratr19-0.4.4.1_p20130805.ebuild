@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby20 ruby21"
+USE_RUBY="ruby20 ruby21"
 RUBY_FAKEGEM_EXTRADOC="README"
 RUBY_FAKEGEM_VERSION="0.4.4.1.20130805"
 inherit ruby-fakegem
