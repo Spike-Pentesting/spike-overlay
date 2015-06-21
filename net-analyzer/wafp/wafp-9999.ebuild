@@ -5,7 +5,7 @@
 EAPI="4"
 
 #TODO: the tool is outdated and ruby19 might not be supported properly
-USE_RUBY="ruby19"
+USE_RUBY="ruby20"
 inherit ruby-ng subversion
 
 DESCRIPTION="A webapplication fingerprinter written in ruby"
