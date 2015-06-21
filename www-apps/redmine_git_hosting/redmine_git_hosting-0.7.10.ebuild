@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby20 ruby20"
 inherit ruby-ng user
 
 DESCRIPTION="A Redmine plugin which makes configuring your own Git hosting easy"

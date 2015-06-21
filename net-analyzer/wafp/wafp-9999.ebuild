@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-#TODO: the tool is outdated and ruby19 might not be supported properly
+#TODO: the tool is outdated and ruby20 might not be supported properly
 USE_RUBY="ruby20"
 inherit ruby-ng subversion
 

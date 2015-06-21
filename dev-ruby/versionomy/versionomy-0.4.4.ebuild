@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby20"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc History.rdoc Versionomy.rdoc "
 
 inherit multilib ruby-fakegem

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby20 ruby20"
 inherit ruby-ng user
 
 DESCRIPTION="Installs JQuery UI Bootstrap as Redmine plugins to load it globally"

@@ -36,7 +36,7 @@ src_prepare() {
 	sed -i "/require 'bundler\/setup'/d" lib/environment.rb
 	#dev-lang/ruby might need the "hardened" flag to enforce the following:
 	if use hardened; then
-		paxctl -v /usr/bin/ruby19 2>/dev/null | grep MPROTECT | grep disabled || ewarn '!!! Some dependencies such as typhoeus may only work if ruby19 has MPROTECT flag disabled\n  You can disable it running paxctl -m /usr/bin/ruby19'
+		paxctl -v /usr/bin/ruby20 2>/dev/null | grep MPROTECT | grep disabled || ewarn '!!! Some dependencies such as typhoeus may only work if ruby20 has MPROTECT flag disabled\n  You can disable it running paxctl -m /usr/bin/ruby20'
 	fi
 }
 
