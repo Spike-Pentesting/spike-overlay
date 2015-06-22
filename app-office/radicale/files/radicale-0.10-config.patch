@@ -1,0 +1,51 @@
+From 982559df25b5abd6ca81900c477c4c1bceae92d5 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Manuel=20R=C3=BCger?= <manuel@rueg.eu>
+Date: Tue, 9 Jun 2015 14:13:53 +0200
+Subject: [PATCH] Fix paths.
+
+
+diff --git a/config b/config
+index a2e36ec..56c3df7 100644
+--- a/config
++++ b/config
+@@ -140,13 +140,13 @@
+ 
+ # Rights backend
+ # Value: None | authenticated | owner_only | owner_write | from_file | custom
+-#type = None
++type = owner_only 
+ 
+ # Custom rights handler
+ #custom_handler =
+ 
+ # File for rights management from_file
+-#file = ~/.config/radicale/rights
++file = /etc/radicale/rights
+ 
+ 
+ [storage]
+@@ -163,7 +163,7 @@
+ #custom_handler =
+ 
+ # Folder for storing local collections, created if not present
+-#filesystem_folder = ~/.config/radicale/collections
++filesystem_folder = /var/lib/radicale/collections
+ 
+ # Database URL for SQLAlchemy
+ # dialect+driver://user:password@host/dbname[?key=value..]
+diff --git a/logging b/logging
+index f4efb88..b10f88c 100644
+--- a/logging
++++ b/logging
+@@ -45,7 +45,7 @@ formatter = simple
+ [handler_file]
+ # File handler
+ class = FileHandler
+-args = ('/var/log/radicale',)
++args = ('/var/log/radicale/radicale.log',)
+ formatter = full
+ 
+ 
+-- 
+2.4.3
+
