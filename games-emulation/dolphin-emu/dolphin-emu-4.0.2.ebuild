@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,7 +11,7 @@ inherit cmake-utils eutils flag-o-matic git-2 pax-utils toolchain-funcs wxwidget
 DESCRIPTION="Free, open source emulator for Nintendo GameCube and Wii"
 HOMEPAGE="http://www.dolphin-emu.com/"
 EGIT_REPO_URI="https://github.com/dolphin-emu/dolphin.git"
-EGIT_COMMIT="b79015186e548805e1d1f2a1713dd6b9f9e7f737"
+EGIT_COMMIT="6818f2e092ee0484fce7403414ddcd6dfcc38fab"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,9 +23,9 @@ IUSE="alsa ao bluetooth doc encode +lzo openal opengl openmp portaudio pulseaudi
 
 RDEPEND=">=media-libs/glew-1.5
 	>=media-libs/libsdl-1.2[joystick]
-        media-libs/libsoundtouch
-        net-libs/polarssl[havege]
-        net-libs/miniupnpc
+	media-libs/libsoundtouch
+	net-libs/polarssl[havege]
+	net-libs/miniupnpc
 	sys-libs/readline
 	x11-libs/libXext
 	x11-libs/libXrandr
@@ -45,8 +45,8 @@ DEPEND="${RDEPEND}
 	media-gfx/nvidia-cg-toolkit"
 
 src_prepare() {
-        append-cflags $(test-flags-CC -fpermissive)
-        append-cxxflags $(test-flags-CXX -fpermissive)
+	append-cflags $(test-flags-CC -fpermissive)
+	append-cxxflags $(test-flags-CXX -fpermissive)
 
 	# Remove automagic dependencies
 	if use !alsa; then
