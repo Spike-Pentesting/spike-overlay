@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/Neroth/${PN}.git"
-	EGIT_COMMIT="329139f7238d439613780e6f520c5259c1390019"
+	EGIT_COMMIT="746debe26ce31ad23040e03cb24b4d3e026863ac"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
