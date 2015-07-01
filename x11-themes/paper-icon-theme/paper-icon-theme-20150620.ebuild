@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
-	EGIT_COMMIT="c201da4453fb914d0ecae9f2773e43da9c780280"
+	EGIT_COMMIT="64ca5d753b8dfbb352ed309047547d59560e01d7"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
