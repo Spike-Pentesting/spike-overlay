@@ -4,7 +4,7 @@
 
 EAPI=5
 
-EXTENSIONS_PREFIX="extensions.gnome-org"
+EXTENSIONS_PREFIX="extensions.gnome.org"
 MY_AUTHOR="micheleg"
 inherit eutils gnome2-utils
 DESCRIPTION="an extension that transform Gnome shell dash in a dock"

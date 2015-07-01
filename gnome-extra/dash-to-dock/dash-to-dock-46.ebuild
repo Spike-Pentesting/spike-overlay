@@ -4,7 +4,7 @@
 
 EAPI=5
 
-EXTENSIONS_PREFIX="extensions.gnome-org"
+EXTENSIONS_PREFIX="extensions.gnome.org"
 MY_AUTHOR="micheleg"
 inherit eutils gnome2-utils
 DESCRIPTION="an extension that transform Gnome shell dash in a dock"
@@ -28,7 +28,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	       >=gnome-base/libgtop-2.28.3[introspection]
 	       >=app-eselect/eselect-gnome-shell-extensions-20120911"
 RDEPEND="${COMMON_DEPEND}
-	 =gnome-base/gnome-shell-3.14*
+	 =gnome-base/gnome-shell-3.16*
 	 >=dev-libs/gjs-1.29
 	 dev-libs/gobject-introspection
 	 gnome-base/gnome-menus:3[introspection]
@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 	 dev-lang/vala
 	 dev-libs/vala-common
 	 dev-libs/gom
-	 =gnome-base/gnome-desktop-3.14*
+	 =gnome-base/gnome-desktop-3.16*
 	 media-libs/gstreamer
 	 sys-apps/dbus
 	 dev-libs/dbus-glib
