@@ -15,7 +15,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/eonpatapon/${PN}.git"
-	EGIT_COMMIT="09bb911b3560a709f1c31894c6031247851093ff"
+	EGIT_COMMIT="f3053b3665273f18d956a576284aeda8c6c07a40"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
