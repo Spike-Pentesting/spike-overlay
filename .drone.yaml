@@ -1,0 +1,16 @@
+image: mudler/builder-witchcraft
+git:
+  path: git.dark-lab.net/spike/gentoo-overlay
+env:
+  - FOLLOW_VERSIONING=1
+  - GIT_REPOSITORY=/var/lib/layman/sabayon-distro
+  - OVERLAY_NAME=sabayon-distro
+  - BUILDS_FAIL_EXITS=1
+  - VERBOSE=1
+script:
+  - cd /etc/portage;git checkout master; git pull
+  - layman -S
+  - layman -a spike
+  - witchcraft align $(cd $GIT_REPOSITORY;git --no-pager log --pretty=format:"%H" -2 | xargs echo | cut -d ' ' -f 2) $DRONE_COMMIT
+cache:
+  - /usr/portage/packages
