@@ -9,9 +9,8 @@ env:
   - BUILDS_FAIL_EXITS=1
   - VERBOSE=1
 script:
+  - wget 'https://codeload.github.com/Spike-Pentesting/App-witchcraft/tar.gz/master' -O witchcraft.tar.gz && tar xvf witchcraft.tar.gz && cd App-witchcraft-master && cpanm --installdeps -n . && cpanm .
   - cd /etc/portage;git checkout master; git pull
-  - layman -S
-  - layman -a spike
   - witchcraft align $(cd $GIT_REPOSITORY;git --no-pager log --pretty=format:"%H" -2 | xargs echo | cut -d ' ' -f 2) $DRONE_COMMIT
 cache:
   - /usr/portage/packages
