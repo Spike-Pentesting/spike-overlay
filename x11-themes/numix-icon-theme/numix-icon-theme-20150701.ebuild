@@ -6,7 +6,7 @@ EAPI=5
 
 inherit git-r3
 
-DESCRIPTION="Official icon theme from the Numix project."
+DESCRIPTION="Official icon theme from the Numix project"
 HOMEPAGE="https://numixproject.org"
 
 if [[ ${PV} == "9999" ]] ; then
