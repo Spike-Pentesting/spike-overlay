@@ -1,4 +1,4 @@
-image: mudler/builder-witchcraft
+image: mudler/builder-witchcraft-squashed
 git:
   path: git.dark-lab.net/spike/gentoo-overlay
 env:
@@ -7,10 +7,12 @@ env:
   - OVERLAY_NAME=spike
   - PORTDIR_OVERLAY=$DRONE_BUILD_DIR
   - BUILDS_FAIL_EXITS=1
+  - IRC_NICKNAME=SpikeDrone
   - VERBOSE=1
 script:
-  - wget 'https://codeload.github.com/Spike-Pentesting/App-witchcraft/tar.gz/master' -O witchcraft.tar.gz && tar xvf witchcraft.tar.gz && cd App-witchcraft-master && cpanm --installdeps -n . && cpanm .
-  - cd /etc/portage;git checkout master; git pull
+  - mkdir -p /usr/portage/distfiles/ && wget http://www.gentoo.org/dtd/metadata.dtd -O /usr/portage/distfiles/metadata.dtd
+  - wget -q 'https://codeload.github.com/Spike-Pentesting/App-witchcraft/tar.gz/master' -O witchcraft.tar.gz && tar xf witchcraft.tar.gz && cd App-witchcraft-master && cpanm --installdeps -nq . && cpanm -q .
+  - cd /etc/portage;git checkout master; git pull -q
   - witchcraft align $(cd $GIT_REPOSITORY;git --no-pager log --pretty=format:"%H" -2 | xargs echo | cut -d ' ' -f 2) $DRONE_COMMIT
 cache:
-  - /usr/portage/packages
+  - /usr/portage
