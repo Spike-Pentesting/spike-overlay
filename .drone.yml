@@ -9,10 +9,21 @@ env:
   - BUILDS_FAIL_EXITS=1
   - IRC_NICKNAME=SpikeDrone
   - VERBOSE=1
+  - DEPGRAPH_ATOM=1
 script:
+  - echo -e "Host dev.dark-lab.net\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - git clone ssh://git@dev.dark-lab.net:2222/spike/scripts.git /root/scripts
   - mkdir -p /usr/portage/distfiles/ && wget http://www.gentoo.org/dtd/metadata.dtd -O /usr/portage/distfiles/metadata.dtd
   - wget -q 'https://codeload.github.com/Spike-Pentesting/App-witchcraft/tar.gz/master' -O witchcraft.tar.gz && tar xf witchcraft.tar.gz && cd App-witchcraft-master && cpanm --installdeps -nq . && cpanm -q .
   - cd /etc/portage;git checkout master; git pull -q
+  - sed -i 's:Entropy:Entropy, Scripting:g' /root/.witchcraft/witchcraft.conf
+  - echo "SCRIPTING_DIR:/root/scripts/" >> /root/.witchcraft/witchcraft.conf
+  - wget 'https://raw.githubusercontent.com/Spike-Pentesting/spike-overlay/master/overlay.xml' -O /etc/layman/overlays/spike.xml
+  - sed -i 's|https://github.com/Spike-Pentesting/spike-overlay.git|http://dev.dark-lab.net/spike/gentoo-overlay.git|g' /etc/layman/overlays/spike.xml
+  - sed -i 's|<name>spike</name>|<name>spike-dev</name>|g' /etc/layman/overlays/spike.xml && layman -S
+  - echo "y" | layman -a spike-dev
   - witchcraft align $(cd $GIT_REPOSITORY;git --no-pager log --pretty=format:"%H" -2 | xargs echo | cut -d ' ' -f 2) $DRONE_COMMIT
 cache:
   - /usr/portage
+  - /var/tmp/entropy
+  - /var/lib/entropy/client

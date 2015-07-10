@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,7 +7,7 @@ EAPI=5
 inherit eutils fdo-mime multilib versionator
 
 DESCRIPTION="Watch torrent movies instantly"
-HOMEPAGE="http://popcorn.cdnjd.com/"
+HOMEPAGE="https://popcorntime.io/"
 MY_PV=$(replace_version_separator 3 '-')
 
 SRC_URI="x86?   ( http://get.popcorntime.io/build/Popcorn-Time-${MY_PV}-Linux-32.tar.xz )
