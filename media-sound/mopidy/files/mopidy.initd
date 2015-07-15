@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+PIDFILE=/run/mopidy.pid
+
+start() {
+    ebegin "Starting mopidy"
+        start-stop-daemon --start --quiet --background \
+        --user mopidy \
+        --pidfile ${PIDFILE} --make-pidfile \
+        --exec /usr/bin/mopidy \
+        -- --config /usr/share/mopidy/conf.d:/etc/mopidy/mopidy.conf
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping mopidy"
+        start-stop-daemon --stop --quiet \
+        --pidfile ${PIDFILE}
+    eend $?
+}
