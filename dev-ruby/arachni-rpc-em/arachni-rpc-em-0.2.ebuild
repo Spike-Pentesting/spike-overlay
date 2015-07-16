@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
-USE_RUBY="ruby20"
+EAPI=4
+USE_RUBY="ruby18 ruby19"
 
 inherit multilib ruby-fakegem
 
@@ -14,6 +14,6 @@ LICENSE="BSD"
 SLOT=0
 KEYWORDS="~amd64 ~arm ~x86"
 
-ruby_add_rdepend "dev-ruby/arachni-rpc
+ruby_add_rdepend "=dev-ruby/arachni-rpc-0.1.3
 		>=dev-ruby/em-synchrony-1.0.0
 		=dev-ruby/eventmachine-1.0* >=dev-ruby/eventmachine-1.0.0"

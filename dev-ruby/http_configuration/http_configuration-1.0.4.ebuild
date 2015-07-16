@@ -4,14 +4,13 @@
 
 EAPI=5
 
-USE_RUBY="ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 inherit ruby-fakegem
 
 
 DESCRIPTION="set configuration for Net::HTTP"
-HOMEPAGE="http://rubyforge.org/projects/httpconfig/"
-#MY_P="${P/httpconfig/http_configuration}"
+HOMEPAGE="https://github.com/bdurand/http_configuration"
 SRC_URI="mirror://rubygems/${P}.gem"
 
 LICENSE="MIT"

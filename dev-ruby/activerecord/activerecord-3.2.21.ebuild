@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.2.21.ebuild,v 1.1 2014/11/17 20:20:00 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 # this is not null so that the dependencies will actually be filled
 RUBY_FAKEGEM_TASK_TEST="test"

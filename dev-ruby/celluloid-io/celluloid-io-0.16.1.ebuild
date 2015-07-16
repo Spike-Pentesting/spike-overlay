@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid-io/celluloid-io-0.16.1.ebuild,v 1.1 2014/11/03 06:48:02 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC=""
