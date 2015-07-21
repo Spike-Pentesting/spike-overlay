@@ -26,4 +26,3 @@ script:
 cache:
   - /usr/portage
   - /var/tmp/entropy
-  - /var/lib/entropy/client
