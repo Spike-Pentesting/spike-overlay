@@ -24,22 +24,26 @@ RDEPEND="dev-libs/nss
 	gnome-base/gconf
 	media-fonts/corefonts
 	media-libs/alsa-lib
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:2
+	net-libs/nodejs"
 
 S="${WORKDIR}"
 
 src_install() {
 	exeinto /opt/${PN}
-	doexe Popcorn-Time libffmpegsumo.so nw.pak package.nw
+	doexe Popcorn-Time
+	
+	insinto /opt/${PN}
+	doins -r src node_modules icudtl.dat locales LICENSE.txt libffmpegsumo.so nw.pak install package.json
 
 	dosym /$(get_libdir)/libudev.so.1 /opt/${PN}/libudev.so.0
-	make_wrapper ${PN} ./Popcorn-Time /opt/${PN} /opt/${PN} /opt/bin
+	dosym /opt/${PN}/Popcorn-Time /usr/bin/${PN}
 
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/${PN}.desktop
 
 	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/${PN}.png
+	doins popcorntime.png
 }
 
 pkg_postinst() {
@@ -49,3 +53,4 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 }
+
