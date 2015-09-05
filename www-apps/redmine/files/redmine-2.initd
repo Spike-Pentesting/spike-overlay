@@ -33,7 +33,7 @@ start() {
 	cd "${REDMINE_DIR}"
 	start-stop-daemon --start --quiet --user ${REDMINE_USER}:${REDMINE_GROUP} \
 		--pidfile "${REDMINE_PIDFILE}" \
-		--exec /usr/bin/ruby "${REDMINE_DIR}"/script/rails server -- \
+		--exec /usr/bin/ruby "${REDMINE_DIR}"/bin/rails server -- \
 		--daemon --environment=${RAILS_ENV} \
 		--binding=${REDMINE_ADDRESS} --port=${REDMINE_PORT} \
 		--pid="${REDMINE_PIDFILE}" \
