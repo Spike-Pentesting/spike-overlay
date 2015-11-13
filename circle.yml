@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+dependencies:
+  cache_directories:
+    - ~/.bosonstate
+  override:
+    - ./scripts/setup.sh
+    - ./scripts/build.sh https://api.github.com/repos/Spike-Pentesting/spike-overlay/commits/master ~/.bosonstate/spike-overlay-current_commit ~/.bosonstate/spike-overlay-last_commit .spike-overlay-amd64.boson
+test:
+  override:
+    - if [[ -e /artifacts_dir ]]; then sudo cp -rvf /artifacts_dir/* $CIRCLE_ARTIFACTS/; fi
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./scripts/deploy.sh

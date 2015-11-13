@@ -1,0 +1,8 @@
+---
+repository: https://github.com/Spike-Pentesting/spike-overlay.git
+docker_image: sabayon/builder-amd64-squashed
+preprocessor: gentoo.Gentoo
+separate_artifacts: false
+tmpdir: /tmp/boson
+artifacts_dir: /artifacts_dir/spike-overlay
+log_dir: /log_dir/spike-overlay
