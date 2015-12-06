@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT="python2_7"
+PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 multilib
 
 DESCRIPTION="An TCP/UDP transparent proxy that can be used to intercept network streams"

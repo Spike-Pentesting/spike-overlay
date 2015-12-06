@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT="python2_7"
+PYTHON_COMPAT=( python2_7 )
 inherit python-single-r1 multilib
 
 DESCRIPTION="Wfuzz is a tool designed for bruteforcing Web Applications"

@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT="python2_7"
+PYTHON_COMPAT=( python2_7 )
 inherit python-single-r1
 
 DESCRIPTION="Metagoofil is an information gathering tool designed for extracting metadata of public documents"

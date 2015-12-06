@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT="python2_7"
+PYTHON_COMPAT=( python2_7 )
 inherit python-single-r1
 
 DESCRIPTION="a python script for extracting the password policy information from a Windows/Samba machine"

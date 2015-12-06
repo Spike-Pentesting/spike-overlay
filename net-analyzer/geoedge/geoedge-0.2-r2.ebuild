@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT="python2_7"
+PYTHON_COMPAT=( python2_7 )
 inherit python-single-r1
 
 DESCRIPTION="This little tools is designed to get geolocalization information of a host"
