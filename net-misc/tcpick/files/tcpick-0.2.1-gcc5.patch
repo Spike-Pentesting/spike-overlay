@@ -1,0 +1,45 @@
+diff -ur /tcpick-0.2.1/src/fragments.c /tcpick-0.2.1.gcc5/src/fragments.c
+--- /tcpick-0.2.1/src/fragments.c	2004-12-31 16:56:38.000000000 +0100
++++ /tcpick-0.2.1.gcc5/src/fragments.c	2015-12-20 23:17:55.005603512 +0100
+@@ -83,7 +83,7 @@
+                         * list = ( * list )->next;      \
+                         FREE_FR (tmp)                   \
+                         }
+-__inline__ int 
++int 
+ addfr( struct FRAGMENT ** first,
+        int wlen,
+        u_int32_t data_off,
+@@ -156,7 +156,7 @@
+ 	}
+ }
+ 
+-__inline__ int
++int
+ flush_ack ( struct HOST_DESC * desc,
+ 	    struct CONN * conn_ptr,
+ 	    int ack_num )
+diff -ur /tcpick-0.2.1/src/verify.c /tcpick-0.2.1.gcc5/src/verify.c
+--- /tcpick-0.2.1/src/verify.c	2005-01-13 16:35:33.000000000 +0100
++++ /tcpick-0.2.1.gcc5/src/verify.c	2015-12-20 23:11:43.585587623 +0100
+@@ -121,7 +121,7 @@
+ 
+ }
+ 
+-__inline__ int  
++int  
+ verify()
+ /* called by got_packet().
+    this is the engine that matches the packets with their connection */
+diff -ur /tcpick-0.2.1/src/write.c /tcpick-0.2.1.gcc5/src/write.c
+--- /tcpick-0.2.1/src/write.c	2015-12-20 23:26:10.622291381 +0100
++++ /tcpick-0.2.1.gcc5/src/write.c	2015-12-20 23:19:07.405606609 +0100
+@@ -184,7 +184,7 @@
+ 	return;
+ }
+ 
+-__inline__ int
++int
+ flowflush ( struct CONN * conn_ptr, 
+ 	    struct HOST_DESC * desc, 
+ 	    u_char * buf,
