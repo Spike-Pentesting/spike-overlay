@@ -14,8 +14,14 @@ curl -s $1 | \
         sed 's/",//g'  > $2
 
 if [[ ! -e $3 ]]  || [[ ! -s $3 ]]; then
-  cp -rfv $2 $3
-  echo ">> There wasn't a previous commit, saving it to $3"
+
+  echo ">> There wasn't a previous commit, picking up from github api"
+  #  cp -rfv $2 $3
+  curl -s $1 | \
+          grep '"sha": "' | \
+          sed -n '3p' | \
+          sed 's/  "sha": "//g' | \
+          sed 's/",//g'  > $2
 fi
 
 echo ">> Starting build from "
