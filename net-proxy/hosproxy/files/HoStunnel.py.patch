@@ -1,7 +1,0 @@
---- HoStunnel.py	2012-11-12 01:32:40.605262517 +0100
-+++ HoStunnel.py	2012-11-12 01:48:25.582448677 +0100
-@@ -1,3 +1,4 @@
-+#!/usr/bin/python
- #Covered by GPL V2.0
- # Coded By deepbit (Carlos del Ojo Elias) based on simple, extensible Python SMTP Server (smtps.py,v 1.10 2003/12/01 22:12:23 lsmithso)
- # email deepbit@gmail.com
