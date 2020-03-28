@@ -58,7 +58,7 @@ E_LIVE_SERVER_DEFAULT_SVN="http://svn.enlightenment.org/svn/e/trunk"
 # magic for it
 : ${E_EXTERNAL:=}
 
-# @ECLASS-VARIABLE: E_EXTERNAL
+# @ECLASS-VARIABLE: E_GIt_PROJECT
 # @DESCRIPTION:
 # If defined, efl.eclass will not automatically inherit subversion and do any
 # magic for it
